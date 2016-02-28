@@ -19,10 +19,10 @@
             </objects>
             <point key="canvasLocation" x="-444" y="294"/>
         </scene>
-        <!--Table View Controller-->
+        <!--MenuVC Table View Controller-->
         <scene sceneID="7k6-2x-RYP">
             <objects>
-                <tableViewController id="BF4-yi-VMm" sceneMemberID="viewController">
+                <tableViewController id="BF4-yi-VMm" customClass="MenuVCTableViewController" customModule="SmogApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bYb-GB-5Jl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,8 +74,30 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="RPV-dW-bUU">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="brh-LS-v0y">
                                         <rect key="frame" x="0.0" y="88" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="brh-LS-v0y" id="XNt-pT-iIY">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Galeria" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yyj-Av-pj2">
+                                                    <rect key="frame" x="8" y="8" width="584" height="35"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Yyj-Av-pj2" firstAttribute="trailing" secondItem="XNt-pT-iIY" secondAttribute="trailingMargin" id="HkP-GD-WzG"/>
+                                                <constraint firstAttribute="bottom" secondItem="Yyj-Av-pj2" secondAttribute="bottom" id="ORF-Hh-5Id"/>
+                                                <constraint firstItem="Yyj-Av-pj2" firstAttribute="top" secondItem="XNt-pT-iIY" secondAttribute="topMargin" id="hqD-GD-Hlg"/>
+                                                <constraint firstItem="Yyj-Av-pj2" firstAttribute="leading" secondItem="XNt-pT-iIY" secondAttribute="leadingMargin" id="wbc-fS-hsh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="RPV-dW-bUU">
+                                        <rect key="frame" x="0.0" y="132" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RPV-dW-bUU" id="9Za-gp-Cmz">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -97,7 +119,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ycp-sc-Afz">
-                                        <rect key="frame" x="0.0" y="132" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="176" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ycp-sc-Afz" id="WQu-21-Fa7">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -130,6 +152,105 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6fi-XN-Yup" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="299" y="294"/>
+        </scene>
+        <!--MapVC-->
+        <scene sceneID="siz-WY-dj6">
+            <objects>
+                <viewController id="7Rq-Gw-K9c" customClass="MapVC" customModule="SmogApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="68X-h4-cr9"/>
+                        <viewControllerLayoutGuide type="bottom" id="80K-eD-GpC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fXK-VO-UxA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Zoh-UK-D6t">
+                                <rect key="frame" x="0.0" y="51" width="600" height="549"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rodzaj zanieczyszczenia:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOe-Nq-bEb">
+                                <rect key="frame" x="0.0" y="0.0" width="301" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hp2-fp-BEE">
+                                <rect key="frame" x="309" y="12" width="291" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="291" id="n9M-ch-y9W"/>
+                                </constraints>
+                                <state key="normal" title="Wysuwane menu"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Hp2-fp-BEE" firstAttribute="trailing" secondItem="Zoh-UK-D6t" secondAttribute="trailing" id="4II-Ug-StH"/>
+                            <constraint firstItem="Hp2-fp-BEE" firstAttribute="centerY" secondItem="nOe-Nq-bEb" secondAttribute="centerY" id="5xj-tj-9st"/>
+                            <constraint firstItem="Hp2-fp-BEE" firstAttribute="leading" secondItem="nOe-Nq-bEb" secondAttribute="trailing" constant="8" symbolic="YES" id="D7N-Jf-7cn"/>
+                            <constraint firstItem="80K-eD-GpC" firstAttribute="top" secondItem="nOe-Nq-bEb" secondAttribute="bottom" constant="547" id="Jnx-zw-cVV"/>
+                            <constraint firstItem="Zoh-UK-D6t" firstAttribute="leading" secondItem="fXK-VO-UxA" secondAttribute="leading" id="Jxe-8x-HC8"/>
+                            <constraint firstItem="Zoh-UK-D6t" firstAttribute="top" secondItem="68X-h4-cr9" secondAttribute="bottom" constant="31" id="ZFA-nI-lft"/>
+                            <constraint firstAttribute="trailing" secondItem="Zoh-UK-D6t" secondAttribute="trailing" id="aGI-aB-Sbb"/>
+                            <constraint firstItem="nOe-Nq-bEb" firstAttribute="leading" secondItem="Zoh-UK-D6t" secondAttribute="leading" id="bbF-DU-QxF"/>
+                            <constraint firstItem="nOe-Nq-bEb" firstAttribute="top" secondItem="fXK-VO-UxA" secondAttribute="top" id="bji-6y-5Ew"/>
+                            <constraint firstItem="Zoh-UK-D6t" firstAttribute="bottom" secondItem="80K-eD-GpC" secondAttribute="top" id="qqN-NW-zll"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bmN-8M-KP6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1078" y="-167"/>
+        </scene>
+        <!--InformationVC-->
+        <scene sceneID="d9g-Se-Mrx">
+            <objects>
+                <viewController id="zeU-zv-J4v" customClass="InformationVC" customModule="SmogApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UP5-9e-gSn"/>
+                        <viewControllerLayoutGuide type="bottom" id="oRS-Ks-Eej"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HEd-7j-Qcg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hhR-Ee-bwj">
+                                <rect key="frame" x="0.0" y="28" width="600" height="137"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hhR-Ee-bwj" secondAttribute="trailing" id="EpR-xN-prj"/>
+                            <constraint firstItem="hhR-Ee-bwj" firstAttribute="leading" secondItem="HEd-7j-Qcg" secondAttribute="leading" id="Uf7-tD-NMZ"/>
+                            <constraint firstItem="oRS-Ks-Eej" firstAttribute="top" secondItem="hhR-Ee-bwj" secondAttribute="bottom" constant="435" id="g8w-BC-0f1"/>
+                            <constraint firstItem="hhR-Ee-bwj" firstAttribute="top" secondItem="UP5-9e-gSn" secondAttribute="bottom" constant="8" symbolic="YES" id="vGp-kW-glp"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b2u-6j-Yxq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1078" y="526"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="LKy-Pm-iu8">
+            <objects>
+                <viewController id="HVL-JJ-R8X" customClass="SettingsViewController" customModule="SmogApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AQ3-vk-d9N"/>
+                        <viewControllerLayoutGuide type="bottom" id="nhS-XL-3wj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OzI-E3-Vfq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZdT-uq-WqL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1073" y="1182"/>
         </scene>
     </scenes>
 </document>
