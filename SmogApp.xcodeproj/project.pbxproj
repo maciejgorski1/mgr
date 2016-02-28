@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		034D323F0DED150C62D1A1A3 /* Pods_SmogApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00FBF8F5BB91CA8CA73AE94A /* Pods_SmogApp.framework */; };
+		051E60F61C8302F7004FF0D1 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051E60F51C8302F7004FF0D1 /* MapVC.swift */; };
 		054E2E051C81B3C1004AAACD /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 054E2E041C81B3C1004AAACD /* SWRevealViewController.m */; };
 		057B3C031C81A5C800FCCC8B /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057B3C021C81A5C800FCCC8B /* RequestManager.swift */; };
 		05899A0F1C81A0F4006068BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05899A0E1C81A0F4006068BD /* AppDelegate.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		00FBF8F5BB91CA8CA73AE94A /* Pods_SmogApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmogApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		051E60F51C8302F7004FF0D1 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapVC.swift; path = SmogApp/MapViewController/MapVC.swift; sourceTree = "<group>"; };
 		054E2E021C81B3C1004AAACD /* SmogApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmogApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		054E2E031C81B3C1004AAACD /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		054E2E041C81B3C1004AAACD /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -67,6 +69,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		051E60F41C8302A8004FF0D1 /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				051E60F51C8302F7004FF0D1 /* MapVC.swift */,
+			);
+			name = MapViewController;
+			sourceTree = "<group>";
+		};
 		054E2E011C81B3A9004AAACD /* SWRevealViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +98,7 @@
 		05899A021C81A0F4006068BD = {
 			isa = PBXGroup;
 			children = (
+				051E60F41C8302A8004FF0D1 /* MapViewController */,
 				054E2E011C81B3A9004AAACD /* SWRevealViewController */,
 				057B3C011C81A54B00FCCC8B /* Managers */,
 				05899A0D1C81A0F4006068BD /* SmogApp */,
@@ -300,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				051E60F61C8302F7004FF0D1 /* MapVC.swift in Sources */,
 				057B3C031C81A5C800FCCC8B /* RequestManager.swift in Sources */,
 				05899A111C81A0F4006068BD /* ViewController.swift in Sources */,
 				05899A0F1C81A0F4006068BD /* AppDelegate.swift in Sources */,
