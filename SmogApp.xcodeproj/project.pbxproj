@@ -21,6 +21,7 @@
 		05899A161C81A0F4006068BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05899A151C81A0F4006068BD /* Assets.xcassets */; };
 		05899A191C81A0F4006068BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05899A171C81A0F4006068BD /* LaunchScreen.storyboard */; };
 		05899A241C81A0F5006068BD /* SmogAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05899A231C81A0F5006068BD /* SmogAppTests.swift */; };
+		0599B6351C84B3380090257D /* PollutionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0599B6341C84B3380090257D /* PollutionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		05899A1F1C81A0F5006068BD /* SmogAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmogAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05899A231C81A0F5006068BD /* SmogAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmogAppTests.swift; sourceTree = "<group>"; };
 		05899A251C81A0F5006068BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0599B6341C84B3380090257D /* PollutionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PollutionModel.swift; path = SmogApp/RealmModels/PollutionModel.swift; sourceTree = "<group>"; };
 		14032D218B46E7EB1F5A3933 /* Pods-SmogApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmogApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmogApp/Pods-SmogApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A922D983BDEB298DDFED8B75 /* Pods-SmogApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmogApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmogApp/Pods-SmogApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,6 +140,7 @@
 		05899A021C81A0F4006068BD = {
 			isa = PBXGroup;
 			children = (
+				0599B6331C84B3070090257D /* RealmModels */,
 				052558501C830FD000EB59EF /* GaleryViewController */,
 				0525584D1C830EB200EB59EF /* SettingsViewController */,
 				0525584A1C830C8E00EB59EF /* MenuViewController */,
@@ -182,6 +185,14 @@
 				05899A251C81A0F5006068BD /* Info.plist */,
 			);
 			path = SmogAppTests;
+			sourceTree = "<group>";
+		};
+		0599B6331C84B3070090257D /* RealmModels */ = {
+			isa = PBXGroup;
+			children = (
+				0599B6341C84B3380090257D /* PollutionModel.swift */,
+			);
+			name = RealmModels;
 			sourceTree = "<group>";
 		};
 		3889CBDF414A70C44ECD403B /* Frameworks */ = {
@@ -361,6 +372,7 @@
 				05899A111C81A0F4006068BD /* ViewController.swift in Sources */,
 				05899A0F1C81A0F4006068BD /* AppDelegate.swift in Sources */,
 				054E2E051C81B3C1004AAACD /* SWRevealViewController.m in Sources */,
+				0599B6351C84B3380090257D /* PollutionModel.swift in Sources */,
 				052558521C83102000EB59EF /* GalleryViewController.swift in Sources */,
 				0525584C1C830CAF00EB59EF /* MenuVCTableViewController.swift in Sources */,
 				0525584F1C830EDB00EB59EF /* SettingsViewController.swift in Sources */,
