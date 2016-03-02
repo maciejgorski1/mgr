@@ -19,6 +19,11 @@ class GalleryViewController: UIViewController {
 			menuButton.action = "revealToggle:"
 			self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
 		}
+        
+        
+        RequestManager.allCitiesWithHandler { (response) -> Void in
+            PollutionModel.citiesSerialization(response.data!)
+        }
 	}
 
 	override func didReceiveMemoryWarning() {
