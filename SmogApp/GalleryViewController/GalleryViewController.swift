@@ -7,37 +7,40 @@
 //
 
 import UIKit
+import RealmSwift
 
 class GalleryViewController: UIViewController {
     @IBOutlet weak var menuButton: UIBarButtonItem!
 
-	override func viewDidLoad() {
-		super.viewDidLoad()
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-		if self.revealViewController() != nil {
-			menuButton.target = self.revealViewController()
-			menuButton.action = "revealToggle:"
-			self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-		}
-        
-        
-        RequestManager.allCitiesWithHandler { (response) -> Void in
-            PollutionModel.citiesSerialization(response.data!)
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
-	}
+        debugPrint(Realm.Configuration.defaultConfiguration)
 
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
-	}
+        let model = PollutionModel.sharedGlobalPollution()
 
-	/*
-	 // MARK: - Navigation
+        RequestManager.allCitiesWithHandler { (response) -> Void in
+            PollutionModel.pollutionSerialization(response.data!)
+        }
+    }
 
-	 // In a storyboard-based application, you will often want to do a little preparation before navigation
-	 override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-	 // Get the new view controller using segue.destinationViewController.
-	 // Pass the selected object to the new view controller.
-	 }
-	 */
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+    /*
+     // MARK: - Navigation
+
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		034D323F0DED150C62D1A1A3 /* Pods_SmogApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00FBF8F5BB91CA8CA73AE94A /* Pods_SmogApp.framework */; };
+		051B661D1C955FA8008B0E40 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051B661C1C955FA8008B0E40 /* StringExtension.swift */; };
 		051E60F61C8302F7004FF0D1 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051E60F51C8302F7004FF0D1 /* MapVC.swift */; };
 		052558491C83095300EB59EF /* InformationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052558481C83095300EB59EF /* InformationVC.swift */; };
 		0525584C1C830CAF00EB59EF /* MenuVCTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525584B1C830CAF00EB59EF /* MenuVCTableViewController.swift */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		00FBF8F5BB91CA8CA73AE94A /* Pods_SmogApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmogApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		051B661C1C955FA8008B0E40 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = SmogApp/Extensions/StringExtension.swift; sourceTree = "<group>"; };
 		051E60F51C8302F7004FF0D1 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapVC.swift; path = SmogApp/MapViewController/MapVC.swift; sourceTree = "<group>"; };
 		052558481C83095300EB59EF /* InformationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InformationVC.swift; path = SmogApp/Information/InformationVC.swift; sourceTree = "<group>"; };
 		0525584B1C830CAF00EB59EF /* MenuVCTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuVCTableViewController.swift; path = SmogApp/MenuVC/MenuVCTableViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		051B661B1C955F81008B0E40 /* Extenstions */ = {
+			isa = PBXGroup;
+			children = (
+				051B661C1C955FA8008B0E40 /* StringExtension.swift */,
+			);
+			name = Extenstions;
+			sourceTree = "<group>";
+		};
 		051E60F41C8302A8004FF0D1 /* MapViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +150,7 @@
 		05899A021C81A0F4006068BD = {
 			isa = PBXGroup;
 			children = (
+				051B661B1C955F81008B0E40 /* Extenstions */,
 				0599B6331C84B3070090257D /* RealmModels */,
 				052558501C830FD000EB59EF /* GaleryViewController */,
 				0525584D1C830EB200EB59EF /* SettingsViewController */,
@@ -375,6 +386,7 @@
 				0599B6351C84B3380090257D /* PollutionModel.swift in Sources */,
 				052558521C83102000EB59EF /* GalleryViewController.swift in Sources */,
 				0525584C1C830CAF00EB59EF /* MenuVCTableViewController.swift in Sources */,
+				051B661D1C955FA8008B0E40 /* StringExtension.swift in Sources */,
 				0525584F1C830EDB00EB59EF /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +517,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SmogApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = moo.idk.SmogApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -520,6 +533,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SmogApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = moo.idk.SmogApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
