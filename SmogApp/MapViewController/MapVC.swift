@@ -21,13 +21,17 @@ class MapVC: UIViewController {
      // Drawing code
      }
      */
-
+    func prepareData()
+    {
+        City.getLocationNames()
+    }
     override func viewDidLoad() {
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        prepareData()
 
         let camera = GMSCameraPosition.cameraWithLatitude(-33.86,
             longitude: 151.20, zoom: 6)

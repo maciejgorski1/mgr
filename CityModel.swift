@@ -19,6 +19,34 @@ class City: Object {
         return "id"
     }
 
+    class func getLocationNames() -> Set<String> {
+        var citySet = Set<String>()
+
+        let realm = try! Realm()
+
+        var results = realm.objects(PollutionModel)
+
+        for item in results {
+
+            citySet.insert(item.location!)
+        }
+
+        return citySet
+    }
+
+    class func citiesSerialization(jsonArray: NSData) {
+        var citySet = Set<String>()
+        let json = JSON(data: jsonArray)
+        // debugPrint(json)
+
+        for (_, subJSON): (String, JSON) in json {
+
+            debugPrint(subJSON)
+            citySet.insert(subJSON["citydesc"].string!)
+        }
+        debugPrint(citySet)
+    }
+
     class func serializationPollutionModel(jsonArray: NSData) {
 
         let realm = try! Realm()
