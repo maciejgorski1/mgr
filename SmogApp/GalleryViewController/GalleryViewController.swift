@@ -22,11 +22,16 @@ class GalleryViewController: UIViewController {
         }
         debugPrint(Realm.Configuration.defaultConfiguration)
 
-        let model = PollutionModel.sharedGlobalPollution()
+     
 
         RequestManager.allCitiesWithHandler { (response) -> Void in
-            PollutionModel.pollutionSerialization(response.data!)
+            City.serializationPollutionModel(response.data!)
+//            PollutionModel.pollutionSerialization(response.data!)
         }
+        
+//        let realm = try! Realm()
+//        let pollutionArray = realm.objects(PollutionModel)
+        
     }
 
     override func didReceiveMemoryWarning() {

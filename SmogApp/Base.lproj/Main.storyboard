@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Reveal View Controller-->
@@ -184,26 +185,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rodzaj zanieczyszczenia:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOe-Nq-bEb">
-                                <rect key="frame" x="20" y="52" width="242" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Rodzaj zanieczyszczenia:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOe-Nq-bEb">
+                                <rect key="frame" x="20" y="52" width="195" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hp2-fp-BEE">
-                                <rect key="frame" x="442" y="52" width="138" height="30"/>
-                                <state key="normal" title="Wysuwane menu"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hp2-fp-BEE">
+                                <rect key="frame" x="223" y="52" width="357" height="30"/>
+                                <state key="normal" title="Menu"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Hp2-fp-BEE" firstAttribute="leading" secondItem="fXK-VO-UxA" secondAttribute="leadingMargin" constant="422" id="MC6-sk-oeT"/>
+                            <constraint firstItem="Hp2-fp-BEE" firstAttribute="leading" secondItem="nOe-Nq-bEb" secondAttribute="trailing" constant="8" id="Tyk-zu-t1E"/>
                             <constraint firstAttribute="leadingMargin" secondItem="nOe-Nq-bEb" secondAttribute="leading" id="UZ4-fj-Ufc"/>
                             <constraint firstItem="Hp2-fp-BEE" firstAttribute="leading" secondItem="nOe-Nq-bEb" secondAttribute="trailing" constant="180" id="dNF-Lv-iFo"/>
                             <constraint firstItem="nOe-Nq-bEb" firstAttribute="top" secondItem="68X-h4-cr9" secondAttribute="bottom" constant="8" id="gl8-oV-jd0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Hp2-fp-BEE" secondAttribute="trailing" id="gvw-HC-FAX"/>
                             <constraint firstItem="Hp2-fp-BEE" firstAttribute="top" secondItem="68X-h4-cr9" secondAttribute="bottom" constant="8" id="nw9-Rb-WMl"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="MC6-sk-oeT"/>
+                                <exclude reference="dNF-Lv-iFo"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Map" id="fCb-7y-8YG">
@@ -232,9 +240,12 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hhR-Ee-bwj">
-                                <rect key="frame" x="0.0" y="168" width="600" height="125"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hhR-Ee-bwj">
+                                <rect key="frame" x="15" y="26" width="570" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="M86-jc-TE0"/>
+                                </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -243,10 +254,23 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="hhR-Ee-bwj" secondAttribute="trailing" id="EpR-xN-prj"/>
+                            <constraint firstItem="hhR-Ee-bwj" firstAttribute="centerX" secondItem="HEd-7j-Qcg" secondAttribute="centerX" id="FJe-zk-tck"/>
+                            <constraint firstItem="hhR-Ee-bwj" firstAttribute="top" secondItem="UP5-9e-gSn" secondAttribute="bottom" constant="26" id="H3I-cA-HCp"/>
                             <constraint firstItem="hhR-Ee-bwj" firstAttribute="leading" secondItem="HEd-7j-Qcg" secondAttribute="leading" id="Uf7-tD-NMZ"/>
+                            <constraint firstItem="hhR-Ee-bwj" firstAttribute="width" secondItem="HEd-7j-Qcg" secondAttribute="width" multiplier="0.95" id="dQG-vj-G9C"/>
                             <constraint firstItem="oRS-Ks-Eej" firstAttribute="top" secondItem="hhR-Ee-bwj" secondAttribute="bottom" constant="307" id="g8w-BC-0f1"/>
                             <constraint firstItem="hhR-Ee-bwj" firstAttribute="top" secondItem="UP5-9e-gSn" secondAttribute="bottom" constant="148" id="vGp-kW-glp"/>
+                            <constraint firstItem="oRS-Ks-Eej" firstAttribute="top" secondItem="hhR-Ee-bwj" secondAttribute="bottom" constant="417" id="y6a-fr-q3I"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="EpR-xN-prj"/>
+                                <exclude reference="Uf7-tD-NMZ"/>
+                                <exclude reference="vGp-kW-glp"/>
+                                <exclude reference="g8w-BC-0f1"/>
+                                <exclude reference="y6a-fr-q3I"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Information" id="hnB-R1-g24">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="Utj-ve-MXl"/>
