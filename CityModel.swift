@@ -161,7 +161,14 @@ class City: Object {
                         pollution.color = subJSON["aqicolor"].string!
                     }
                     else {
-                        pollution.color = ""
+
+                        if (subJSON["caqicolor"].rawString()! != "null")
+                        {
+                            pollution.color = subJSON["caqicolor"].string!
+                        }
+                        else {
+                            pollution.color = ""
+                        }
                     }
 
                     cityModel.pollutions.append(pollution)
@@ -251,7 +258,14 @@ class City: Object {
                         pollution.color = subJSON["aqicolor"].string!
                     }
                     else {
-                        pollution.color = ""
+
+                        if (subJSON["caqicolor"].rawString()! != "null")
+                        {
+                            pollution.color = subJSON["caqicolor"].string!
+                        }
+                        else {
+                            pollution.color = ""
+                        }
                     }
 
                     if let index = cityModel.pollutions.indexOf(pollution) {

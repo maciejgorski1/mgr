@@ -16,12 +16,6 @@ class MapVC: UIViewController {
     var pollutionType : String? = "caqi"
     @IBOutlet weak var menuButton: UIBarButtonItem!
 
-    func prepareData()
-    {
-        let cities = City.getLocationNames()
-        locations = Array(cities)
-    }
-
     override func viewDidLoad() {
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
@@ -29,6 +23,17 @@ class MapVC: UIViewController {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         prepareData()
+        mapSetup()
+    }
+
+    func prepareData()
+    {
+        let cities = City.getLocationNames()
+        locations = Array(cities)
+    }
+
+    func mapSetup()
+    {
         let camera = GMSCameraPosition.cameraWithLatitude(50.010575,
             longitude: 19.949189, zoom: 7)
         let mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
@@ -51,9 +56,17 @@ class MapVC: UIViewController {
 
             if pollution != nil {
                 let circle = GMSCircle(position: position, radius: 10000)
-                circle.strokeColor = UIColor.init(hexString: (pollution?.color)!)
-                circle.fillColor = UIColor.init(hexString: (pollution?.color)!)
-                circle.map = mapView
+                if pollution?.color != "" {
+
+                    circle.strokeColor = UIColor.init(hexString: (pollution?.color)!)
+                    circle.fillColor = UIColor.init(hexString: (pollution?.color)!)
+                    circle.map = mapView
+                }
+                else {
+                    circle.strokeColor = UIColor.clearColor()
+                    circle.fillColor = UIColor.clearColor()
+                    circle.map = mapView
+                }
             }
         }
     }

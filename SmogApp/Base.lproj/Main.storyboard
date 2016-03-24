@@ -184,42 +184,20 @@
                     <view key="view" contentMode="scaleToFill" id="fXK-VO-UxA">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Rodzaj zanieczyszczenia:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOe-Nq-bEb">
-                                <rect key="frame" x="20" y="52" width="195" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hp2-fp-BEE">
-                                <rect key="frame" x="223" y="52" width="357" height="30"/>
-                                <state key="normal" title="Menu"/>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Hp2-fp-BEE" firstAttribute="leading" secondItem="fXK-VO-UxA" secondAttribute="leadingMargin" constant="422" id="MC6-sk-oeT"/>
-                            <constraint firstItem="Hp2-fp-BEE" firstAttribute="leading" secondItem="nOe-Nq-bEb" secondAttribute="trailing" constant="8" id="Tyk-zu-t1E"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="nOe-Nq-bEb" secondAttribute="leading" id="UZ4-fj-Ufc"/>
-                            <constraint firstItem="Hp2-fp-BEE" firstAttribute="leading" secondItem="nOe-Nq-bEb" secondAttribute="trailing" constant="180" id="dNF-Lv-iFo"/>
-                            <constraint firstItem="nOe-Nq-bEb" firstAttribute="top" secondItem="68X-h4-cr9" secondAttribute="bottom" constant="8" id="gl8-oV-jd0"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Hp2-fp-BEE" secondAttribute="trailing" id="gvw-HC-FAX"/>
-                            <constraint firstItem="Hp2-fp-BEE" firstAttribute="top" secondItem="68X-h4-cr9" secondAttribute="bottom" constant="8" id="nw9-Rb-WMl"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="MC6-sk-oeT"/>
-                                <exclude reference="dNF-Lv-iFo"/>
-                            </mask>
-                        </variation>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Map" id="fCb-7y-8YG">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="gbj-P8-byR"/>
+                        <barButtonItem key="rightBarButtonItem" image="filter" id="b6L-ac-HYT">
+                            <connections>
+                                <segue destination="rnE-7z-dwf" kind="presentation" id="a0M-p5-cYs"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="menuButton" destination="gbj-P8-byR" id="mUe-P2-swY"/>
                     </connections>
@@ -240,23 +218,105 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hhR-Ee-bwj">
-                                <rect key="frame" x="15" y="26" width="570" height="100"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhR-Ee-bwj">
+                                <rect key="frame" x="15" y="20" width="570" height="496"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="M86-jc-TE0"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <mutableString key="text">Normy jakości powietrza
+Normy dla prognozowanych zanieczyszczeń powietrza
+wg Rozporządzenia Ministra Środowiska z dnia 24 sierpnia 2012 r. w sprawie poziomów niektórych substancji w powietrzu
+
+Zanieczyszczenie powietrza
+Normy stężeń ze względu na ochronę zdrowia
+
+Pył zawieszony PM10
+
+mieszanina stałych i ciekłych cząstek o średnicy mniejszej niż 10 μm (mikrometrów) znajdujących się w powietrzu w postaci aerozolu
+w skład cząstek wchodzą m.in. siarka, metale ciężkie, silnie toksyczne chemiczne związki organiczne takie jak dioksyny i wielopierścieniowe węglowodory aromatyczne (np. benzo-a-piren), a także alergeny takie jak pyłki roślin i zarodniki grzybów
+szkodliwy dla oczu (spojówki) i układu oddechowego (nos, gardło, płuca)
+
+
+
+
+Poziom dopuszczalny stężenia średniorocznego: 40 μg/m3
+
+Poziom dopuszczalny stężenia średniego 24-godzinnego: 50 μg/m3
+(przekroczenie tego poziomu dozwolone 35 razy w ciągu roku)
+
+Poziom informowania o ryzyku przekroczenia poziomu alarmowego stężenia średniego 24-godzinnego: 200 μg/m3
+
+Poziom alarmowy stężenia średniego 24-godzinnego: 300 μg/m3
+
+
+Pył zawieszony PM2.5
+(drobny)
+
+mieszanina stałych i ciekłych cząstek o średnicy mniejszej niż 2,5 μm (mikrometrów) znajdujących się w powietrzu w postaci aerozolu
+w skład cząstek wchodzą m.in. siarka, metale ciężkie, silnie toksyczne chemiczne związki organiczne takie jak dioksyny i wielopierścieniowe węglowodory aromatyczne (np. benzo-a-piren), a także alergeny takie jak pyłki roślin i zarodniki grzybów
+niebezpieczny dla układu oddechowego (dociera do pęcherzyków płucnych) i układu krążenia (przenika do naczyń krwionośnych i krwiobiegu)
+
+
+
+
+
+Poziom dopuszczalny stężenia średniorocznego:
+w latach 2013-2014: 26 μg/m3
+w roku 2015: 25 μg/m3
+w roku 2020: 20 μg/m3
+
+
+Dwutlenek azotu NO2
+
+brunatny gaz o ostrym zapachu, silnie toksyczny dla układu oddechowego i odpornościowego
+powstaje m.in. w wyniku utlenienia tlenku azotu NO
+w wilgotnym powietrzu z NO2 tworzy się kwas azotowy HNO3 (składnik kwaśnego deszczu)
+
+
+
+
+Poziom dopuszczalny stężenia średniorocznego: 40 μg/m3
+
+Poziom dopuszczalny stężenia średniego 1-godzinnego: 200 μg/m3
+(przekroczenie tego poziomu dozwolone 18 razy w ciągu roku)
+
+Poziom alarmowy stężenia średniego 1-godzinnego: 400 μg/m3
+
+
+Dwutlenek siarki SO2
+
+bezbarwny gaz o gryzącym i duszącym zapachu, silnie drażniący drogi oddechowe (nos, gardło, płuca)
+w wilgotnym powietrzu z SO2 tworzy się kwas siarkowy H2SO4 (składnik kwaśnego deszczu)
+
+
+
+
+Poziom dopuszczalny stężenia średniego 24-godzinnego: 125 μg/m3
+(przekroczenie tego poziomu dozwolone 3 razy w ciągu roku)
+
+Poziom dopuszczalny stężenia średniego 1-godzinnego: 350 μg/m3
+(przekroczenie tego poziomu dozwolone 24 razy w ciągu roku)
+
+Poziom alarmowy stężenia średniego 1-godzinnego: 500 μg/m3
+</mutableString>
+                                <color key="textColor" red="0.41721584841738857" green="0.57891013311443595" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="M86-jc-TE0"/>
+                                    </mask>
+                                </variation>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="hhR-Ee-bwj" secondAttribute="trailing" id="EpR-xN-prj"/>
-                            <constraint firstItem="hhR-Ee-bwj" firstAttribute="centerX" secondItem="HEd-7j-Qcg" secondAttribute="centerX" id="FJe-zk-tck"/>
-                            <constraint firstItem="hhR-Ee-bwj" firstAttribute="top" secondItem="UP5-9e-gSn" secondAttribute="bottom" constant="26" id="H3I-cA-HCp"/>
+                            <constraint firstItem="oRS-Ks-Eej" firstAttribute="top" secondItem="hhR-Ee-bwj" secondAttribute="bottom" constant="20" id="Lpz-eS-8sW"/>
+                            <constraint firstItem="hhR-Ee-bwj" firstAttribute="centerX" secondItem="HEd-7j-Qcg" secondAttribute="centerX" id="QDs-jW-2BC"/>
                             <constraint firstItem="hhR-Ee-bwj" firstAttribute="leading" secondItem="HEd-7j-Qcg" secondAttribute="leading" id="Uf7-tD-NMZ"/>
+                            <constraint firstItem="hhR-Ee-bwj" firstAttribute="top" secondItem="UP5-9e-gSn" secondAttribute="bottom" constant="20" id="YuD-ao-f0S"/>
                             <constraint firstItem="hhR-Ee-bwj" firstAttribute="width" secondItem="HEd-7j-Qcg" secondAttribute="width" multiplier="0.95" id="dQG-vj-G9C"/>
                             <constraint firstItem="oRS-Ks-Eej" firstAttribute="top" secondItem="hhR-Ee-bwj" secondAttribute="bottom" constant="307" id="g8w-BC-0f1"/>
                             <constraint firstItem="hhR-Ee-bwj" firstAttribute="top" secondItem="UP5-9e-gSn" secondAttribute="bottom" constant="148" id="vGp-kW-glp"/>
@@ -406,8 +466,71 @@
             </objects>
             <point key="canvasLocation" x="1078" y="1874"/>
         </scene>
+        <!--Choose Types-->
+        <scene sceneID="VFn-Mt-rak">
+            <objects>
+                <tableViewController id="G8K-y1-6O1" customClass="TypesTableViewController" customModule="SmogApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="nwB-ol-vDo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TypeCell" textLabel="Ubj-rD-sqX" style="IBUITableViewCellStyleDefault" id="vFP-4D-ktt">
+                                <rect key="frame" x="0.0" y="66" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vFP-4D-ktt" id="74p-W2-yXK">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ubj-rD-sqX">
+                                            <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="G8K-y1-6O1" id="6Id-Uy-VkW"/>
+                            <outlet property="delegate" destination="G8K-y1-6O1" id="Ngu-kH-Kie"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Choose Types" id="6dJ-7J-Ygn">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="YPB-h7-TX1">
+                            <connections>
+                                <action selector="donePressed:" destination="G8K-y1-6O1" id="f8E-Wh-W1g"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SRc-dq-G7W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3389" y="-147"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="e4l-kw-tz5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rnE-7z-dwf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sfw-bo-mMB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="G8K-y1-6O1" kind="relationship" relationship="rootViewController" id="Pvf-H5-cY4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="npQ-ke-L8S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2662" y="-167"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="filter" width="25" height="25"/>
         <image name="menu" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>

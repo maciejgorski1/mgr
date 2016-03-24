@@ -8,6 +8,7 @@ target 'SmogApp' do
 pod 'Alamofire', '~> 3.0'
 pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 pod 'RealmSwift'
+pod 'GoogleMaps'
 end
 
 target 'SmogAppTests' do
