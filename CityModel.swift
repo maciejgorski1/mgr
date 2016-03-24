@@ -47,7 +47,7 @@ class City: Object {
         debugPrint(citySet)
     }
 
-    class func serializationPollutionModel(jsonArray: NSData) {
+    class func  serializationPollutionModel(jsonArray: NSData) {
 
         let realm = try! Realm()
 
