@@ -1,6 +1,0 @@
-framework module Pods_SmogApp {
-  umbrella header "Pods-SmogApp-umbrella.h"
-
-  export *
-  module * { export * }
-}
