@@ -47,7 +47,7 @@ class City: Object {
         debugPrint(citySet)
     }
 
-    class func  serializationPollutionModel(jsonArray: NSData) {
+    class func serializationPollutionModel(jsonArray: NSData) {
 
         let realm = try! Realm()
 
@@ -156,6 +156,14 @@ class City: Object {
                         pollution.unit = ""
                     }
 
+                    if (subJSON["aqicolor"].rawString()! != "null")
+                    {
+                        pollution.color = subJSON["aqicolor"].string!
+                    }
+                    else {
+                        pollution.color = ""
+                    }
+
                     cityModel.pollutions.append(pollution)
                 }
                 realm.add(cityModel, update: true)
@@ -237,6 +245,13 @@ class City: Object {
                     }
                     else {
                         pollution.unit = ""
+                    }
+                    if (subJSON["aqicolor"].rawString()! != "null")
+                    {
+                        pollution.color = subJSON["aqicolor"].string!
+                    }
+                    else {
+                        pollution.color = ""
                     }
 
                     if let index = cityModel.pollutions.indexOf(pollution) {

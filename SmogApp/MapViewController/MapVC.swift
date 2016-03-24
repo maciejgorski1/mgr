@@ -13,7 +13,7 @@ import RealmSwift
 class MapVC: UIViewController {
     var locations : Array<String> = []
     // google map api AIzaSyDSD_EDnw9Ipz8D88vc8blO5vcPul_OGKI
-
+    var pollutionType : String? = "caqi"
     @IBOutlet weak var menuButton: UIBarButtonItem!
 
     func prepareData()
@@ -29,29 +29,32 @@ class MapVC: UIViewController {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         prepareData()
-        let camera = GMSCameraPosition.cameraWithLatitude(-33.86,
-            longitude: 151.20, zoom: 6)
+        let camera = GMSCameraPosition.cameraWithLatitude(50.010575,
+            longitude: 19.949189, zoom: 7)
         let mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
         mapView.myLocationEnabled = true
         self.view = mapView
+
         for location in locations {
 
             let realm = try! Realm()
 
             let point = realm.objects(PollutionModel).filter("location = '\(location)'").first
+            let pollution = realm.objects(PollutionModel).filter("location = '\(location)' AND parameter = '\(pollutionType!)'").first
 
             let marker = GMSMarker()
-            marker.position = CLLocationCoordinate2DMake((point?.lattitude)!, (point?.longitute)!)
-            marker.title = point?.locationDesc
-//            marker.snippet = "Australia"
-            marker.map = mapView
-//            debugPrint(point)
-        }
+            let position = CLLocationCoordinate2DMake((point?.lattitude)!, (point?.longitute)!)
 
-//        let marker = GMSMarker()
-//        marker.position = CLLocationCoordinate2DMake(-33.86, 151.20)
-//        marker.title = "Sydney"
-//        marker.snippet = "Australia"
-//        marker.map = mapView
+            marker.position = position
+            marker.title = point?.locationDesc
+            marker.map = mapView
+
+            if pollution != nil {
+                let circle = GMSCircle(position: position, radius: 10000)
+                circle.strokeColor = UIColor.init(hexString: (pollution?.color)!)
+                circle.fillColor = UIColor.init(hexString: (pollution?.color)!)
+                circle.map = mapView
+            }
+        }
     }
 }
