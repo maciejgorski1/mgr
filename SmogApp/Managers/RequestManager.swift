@@ -15,12 +15,16 @@ typealias ResponseHandler = (response: Response<AnyObject, NSError>) -> Void
 enum BaseURL {
     case SmartMeasurement
     case Measurement
+    case NewAPI
     var address: String {
         switch self {
         case .SmartMeasurement:
             return "http://powietrze.malopolska.pl/data/data.php?type=smartmeasurement"
         case .Measurement:
-            return "http://powietrze.malopolska.pl/data/data.php?type=measurement" }
+            return "http://powietrze.malopolska.pl/data/data.php?type=measurement"
+            case.NewAPI:
+            return "powietrze.malopolska.pl/_powietrzeapi/api/dane?act=danemiasta&ci_id="
+        }
     }
 }
 
@@ -48,6 +52,13 @@ struct RequestManager {
     {
         let url = "\(BaseURL.SmartMeasurement.address)"
 //        debugPrint(url)
+        manager.request(.GET, url, headers: headers).responseJSON(completionHandler: completionHandler)
+    }
+
+    static func citiesWithHandler(cityID: Int, completionHandler: ResponseHandler)
+    {
+        let url = "\(BaseURL.NewAPI.address)\(cityID)"
+        // debugPrint(url)
         manager.request(.GET, url, headers: headers).responseJSON(completionHandler: completionHandler)
     }
 }

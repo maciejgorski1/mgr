@@ -16,6 +16,9 @@
 		052558521C83102000EB59EF /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052558511C83102000EB59EF /* GalleryViewController.swift */; };
 		054E2E051C81B3C1004AAACD /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 054E2E041C81B3C1004AAACD /* SWRevealViewController.m */; };
 		057B3C031C81A5C800FCCC8B /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057B3C021C81A5C800FCCC8B /* RequestManager.swift */; };
+		058945361CB3CD6F00FBD163 /* StationsCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058945351CB3CD6F00FBD163 /* StationsCoordinates.swift */; };
+		058945381CB3CE6800FBD163 /* ActualModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058945371CB3CE6800FBD163 /* ActualModel.swift */; };
+		0589453A1CB3CF1F00FBD163 /* DetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058945391CB3CF1F00FBD163 /* DetailsModel.swift */; };
 		05899A0F1C81A0F4006068BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05899A0E1C81A0F4006068BD /* AppDelegate.swift */; };
 		05899A111C81A0F4006068BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05899A101C81A0F4006068BD /* ViewController.swift */; };
 		05899A141C81A0F4006068BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05899A121C81A0F4006068BD /* Main.storyboard */; };
@@ -51,6 +54,9 @@
 		054E2E031C81B3C1004AAACD /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		054E2E041C81B3C1004AAACD /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		057B3C021C81A5C800FCCC8B /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RequestManager.swift; path = SmogApp/Managers/RequestManager.swift; sourceTree = "<group>"; };
+		058945351CB3CD6F00FBD163 /* StationsCoordinates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StationsCoordinates.swift; path = SmogApp/Constants/StationsCoordinates.swift; sourceTree = "<group>"; };
+		058945371CB3CE6800FBD163 /* ActualModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActualModel.swift; path = SmogApp/RealmModels/ActualModel.swift; sourceTree = "<group>"; };
+		058945391CB3CF1F00FBD163 /* DetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailsModel.swift; path = SmogApp/RealmModels/DetailsModel.swift; sourceTree = "<group>"; };
 		05899A0B1C81A0F4006068BD /* SmogApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmogApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05899A0E1C81A0F4006068BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05899A101C81A0F4006068BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -157,9 +163,18 @@
 			name = Managers;
 			sourceTree = "<group>";
 		};
+		058945341CB3CD3700FBD163 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				058945351CB3CD6F00FBD163 /* StationsCoordinates.swift */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
 		05899A021C81A0F4006068BD = {
 			isa = PBXGroup;
 			children = (
+				058945341CB3CD3700FBD163 /* Constants */,
 				051B661B1C955F81008B0E40 /* Extenstions */,
 				0599B6331C84B3070090257D /* RealmModels */,
 				052558501C830FD000EB59EF /* GaleryViewController */,
@@ -213,6 +228,8 @@
 			children = (
 				0599B6341C84B3380090257D /* PollutionModel.swift */,
 				05F4CC891CA337C800522EE0 /* CityModel.swift */,
+				058945371CB3CE6800FBD163 /* ActualModel.swift */,
+				058945391CB3CF1F00FBD163 /* DetailsModel.swift */,
 			);
 			name = RealmModels;
 			sourceTree = "<group>";
@@ -400,11 +417,14 @@
 				051E60F61C8302F7004FF0D1 /* MapVC.swift in Sources */,
 				052558491C83095300EB59EF /* InformationVC.swift in Sources */,
 				057B3C031C81A5C800FCCC8B /* RequestManager.swift in Sources */,
+				058945381CB3CE6800FBD163 /* ActualModel.swift in Sources */,
 				05899A111C81A0F4006068BD /* ViewController.swift in Sources */,
+				058945361CB3CD6F00FBD163 /* StationsCoordinates.swift in Sources */,
 				05899A0F1C81A0F4006068BD /* AppDelegate.swift in Sources */,
 				054E2E051C81B3C1004AAACD /* SWRevealViewController.m in Sources */,
 				05C1C9CE1CA4565D007B9C4D /* UIColorExtension.swift in Sources */,
 				0599B6351C84B3380090257D /* PollutionModel.swift in Sources */,
+				0589453A1CB3CF1F00FBD163 /* DetailsModel.swift in Sources */,
 				05A34CD41CA4933100EFDDB6 /* PollutionTypeTableViewCell.swift in Sources */,
 				052558521C83102000EB59EF /* GalleryViewController.swift in Sources */,
 				05F4CC8A1CA337C800522EE0 /* CityModel.swift in Sources */,
