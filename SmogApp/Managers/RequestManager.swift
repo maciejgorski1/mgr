@@ -23,7 +23,7 @@ enum BaseURL {
         case .Measurement:
             return "http://powietrze.malopolska.pl/data/data.php?type=measurement"
             case.NewAPI:
-            return "powietrze.malopolska.pl/_powietrzeapi/api/dane?act=danemiasta&ci_id="
+            return "http://powietrze.malopolska.pl/_powietrzeapi/api/dane?act=danemiasta&ci_id="
         }
     }
 }
@@ -58,7 +58,7 @@ struct RequestManager {
     static func citiesWithHandler(cityID: Int, completionHandler: ResponseHandler)
     {
         let url = "\(BaseURL.NewAPI.address)\(cityID)"
-        // debugPrint(url)
+        debugPrint(url)
         manager.request(.GET, url, headers: headers).responseJSON(completionHandler: completionHandler)
     }
 }

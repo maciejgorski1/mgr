@@ -9,11 +9,12 @@
 import UIKit
 import GoogleMaps
 import RealmSwift
+import SwiftyJSON
 
 class MapVC: UIViewController {
     var locations : Array<String> = []
     // google map api AIzaSyDSD_EDnw9Ipz8D88vc8blO5vcPul_OGKI
-    var pollutionType : String? = "caqi"
+    var pollutionType : String? = "aqi"
     @IBOutlet weak var menuButton: UIBarButtonItem!
 
     override func viewDidLoad() {
@@ -22,14 +23,28 @@ class MapVC: UIViewController {
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
-        prepareData()
-        mapSetup()
+        prepareData { (isFinished) -> Void in
+        }
     }
 
-    func prepareData()
-    {
-        let cities = City.getLocationNames()
-        locations = Array(cities)
+    func prepareData(callback: (isFinished : Bool) -> Void)
+    { let indexes = [1, 2, 3, 4, 5, 6, 12, 13]
+        for index in indexes {
+            RequestManager.citiesWithHandler(index, completionHandler: { (response) -> Void in
+                let json = JSON(data: (response.data! as NSData))
+                let dataToParse = json["dane"]
+                let cityData = dataToParse["city"]
+                let actualData = dataToParse["actual"]
+                let forecastData = dataToParse["forecast"]
+                let messageData = dataToParse["message"]
+                if actualData != nil {
+                    for (index, value) in actualData.enumerate() {
+
+                        debugPrint(value)
+                    }
+                }
+            })
+        }
     }
 
     func mapSetup()
