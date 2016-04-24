@@ -21,17 +21,6 @@ class GalleryViewController: UIViewController {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         debugPrint(Realm.Configuration.defaultConfiguration)
-
-     
-
-        RequestManager.allCitiesWithHandler { (response) -> Void in
-            City.serializationPollutionModel(response.data!)
-//            PollutionModel.pollutionSerialization(response.data!)
-        }
-        
-//        let realm = try! Realm()
-//        let pollutionArray = realm.objects(PollutionModel)
-        
     }
 
     override func didReceiveMemoryWarning() {

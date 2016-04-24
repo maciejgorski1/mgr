@@ -5,9 +5,9 @@ platform :ios, '8.0'
 
 target 'SmogApp' do
 
-pod 'Alamofire', '~> 3.0'
+pod 'Alamofire', '<= 3.2.0'
 pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
-pod 'RealmSwift'
+pod 'RealmSwift', '<= 0.98.3'
 pod 'GoogleMaps'
 end
 

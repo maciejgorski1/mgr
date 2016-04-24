@@ -8,7 +8,7 @@
 
 import UIKit
 import GoogleMaps
-import RealmSwift
+import Realm
 import SwiftyJSON
 
 class MapVC: UIViewController {
@@ -38,7 +38,7 @@ class MapVC: UIViewController {
     }
     func prepareData(callback: (isFinished: Bool) -> Void)
     { let indexes = [1, 2, 3, 4, 5, 6, 12, 13]
-        for index in indexes {
+        for index in 1 ... 24 {
             RequestManager.citiesWithHandler(index, completionHandler: { (response) -> Void in
                 let json = JSON(data: (response.data! as NSData))
                 let dataToParse = json["dane"]
@@ -47,19 +47,30 @@ class MapVC: UIViewController {
                 let forecastData = dataToParse["forecast"]
                 let messageData = dataToParse["message"]
                 if actualData != nil {
+                    var color: UIColor
+                    var stationDesc = ""
+                    var pollutionType = ""
                     for (_, actualJSON): (String, JSON) in actualData {
                         let station_id = Int(actualJSON["station_id"].string!)
+                        stationDesc = actualJSON["station_name"].string!
+
                         let coordinates = StationsCoordinates.getCoordinatesForStationId(station_id!)
-                        let color = Colors.getColorFromDescription(actualJSON["details"][0]["g_nazwa"].string!)
-                        self.mapSetup(coordinates.long, lattitude: coordinates.lat, color: color)
-                        // debugPrint(actualJSON)
+                        if actualJSON["details"][0] != nil {
+                            color = Colors.getColorFromDescription(actualJSON["details"][0]["g_nazwa"].string!)
+                            pollutionType = actualJSON["details"][0]["par_desc"].string!
+                        } else {
+                            color = Colors.getColorFromDescription("empty")
+                        }
+
+                        self.mapSetup(coordinates.long, lattitude: coordinates.lat, color: color, stationDescription: stationDesc, pollutionType: pollutionType) // debugPrint(actualJSON)
                     }
+                } else {
                 }
             })
         }
     }
 
-    func mapSetup(longitude: Double, lattitude: Double, color: UIColor)
+    func mapSetup(longitude: Double, lattitude: Double, color: UIColor, stationDescription: String, pollutionType: String)
     {
         debugPrint("\(longitude)  \(lattitude)   \(color.description)   ")
 
@@ -69,6 +80,8 @@ class MapVC: UIViewController {
         marker.position = position
 //            marker.title = point?.locationDesc
         marker.map = self.mapView
+        marker.title = stationDescription
+        marker.snippet = pollutionType
         marker.icon = GMSMarker.markerImageWithColor(color)
         let circle = GMSCircle(position: position, radius: 10000)
 

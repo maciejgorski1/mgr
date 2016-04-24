@@ -29,7 +29,6 @@ enum BaseURL {
 }
 
 struct RequestManager {
-
     private static let manager: Alamofire.Manager = {
         let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
         configuration.HTTPAdditionalHeaders = Alamofire.Manager.defaultHTTPHeaders
@@ -47,18 +46,9 @@ struct RequestManager {
         return headers
     }
 
-    // MARK: - all cities
-    static func allCitiesWithHandler(completionHandler: ResponseHandler)
-    {
-        let url = "\(BaseURL.SmartMeasurement.address)"
-//        debugPrint(url)
-        manager.request(.GET, url, headers: headers).responseJSON(completionHandler: completionHandler)
-    }
-
     static func citiesWithHandler(cityID: Int, completionHandler: ResponseHandler)
     {
         let url = "\(BaseURL.NewAPI.address)\(cityID)"
-        debugPrint(url)
         manager.request(.GET, url, headers: headers).responseJSON(completionHandler: completionHandler)
     }
 }

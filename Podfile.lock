@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (3.2.0)
-  - GoogleMaps (1.12.3)
+  - GoogleMaps (1.13.0)
   - Realm (0.98.3):
     - Realm/Headers (= 0.98.3)
   - Realm/Headers (0.98.3)
@@ -9,9 +9,9 @@ PODS:
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
-  - Alamofire (~> 3.0)
+  - Alamofire (<= 3.2.0)
   - GoogleMaps
-  - RealmSwift
+  - RealmSwift (<= 0.98.3)
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
 
 EXTERNAL SOURCES:
@@ -20,12 +20,12 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   SwiftyJSON:
-    :commit: 42bdb102d2624b143c07850ebdc1537d5b6579b6
+    :commit: 2a5b70f06001316d4fb54501edc70b4084705da0
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
   Alamofire: 4da478599fccddff361205c8929333d7fe18dceb
-  GoogleMaps: a4ac67918d0b5ba5f6b9893ac80487e357779e6c
+  GoogleMaps: 7a6caeb8336d7cb42982e969fc9b1b20a889fe79
   Realm: c6a7d00221a2d5177810a674aebd40c5e0b70b0f
   RealmSwift: d6ecad6e4c2a645d6ac956c2c7e9efb375f39c31
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
