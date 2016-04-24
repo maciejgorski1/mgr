@@ -30,4 +30,27 @@ struct Colors {
 
         return color
     }
+
+    static func getColorFromID(id: String) -> UIColor {
+        var color = UIColor()
+
+        if id == "1" {
+            color = UIColor.init(hexString: "#00B050")
+        } else if id == "2" {
+            color = UIColor.init(hexString: "#00E400")
+        } else if id == "3" {
+            color = UIColor.init(hexString: "#FFFF00")
+        } else if id == "4" {
+            color = UIColor.init(hexString: "#FFFF00")
+        } else if id == "5" {
+            color = UIColor.init(hexString: "#FF0000")
+        } else if id == "6" {
+            color = UIColor.init(hexString: "#7E0023")
+        } else {
+            color = UIColor.init(hexString: "#C6D6D5")
+        }
+
+        return color
+    }
+
 }
