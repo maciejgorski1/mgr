@@ -37,8 +37,8 @@ class MapVC: UIViewController {
         self.view = mapView
     }
     func prepareData(callback: (isFinished: Bool) -> Void)
-    { let indexes = [1, 2, 3, 4, 5, 6, 12, 13]
-        for index in 1 ... 24 {
+    {
+        for index in 1 ... 23 {
             RequestManager.citiesWithHandler(index, completionHandler: { (response) -> Void in
                 let json = JSON(data: (response.data! as NSData))
                 let dataToParse = json["dane"]
@@ -49,14 +49,14 @@ class MapVC: UIViewController {
                 var color: UIColor
                 var stationDesc = ""
                 var pollutionType = ""
-                if actualData != nil {
-                    debugPrint("\(index)   \(cityData["ci_name"])")
+                if !actualData.isEmpty {
+                    // debugPrint("\(index)   \(cityData["ci_name"])")
                     for (_, actualJSON): (String, JSON) in actualData {
 
                         // debugPrint()
                         let station_id = Int(actualJSON["station_id"].string!)
                         stationDesc = actualJSON["station_name"].string!
-                       // debugPrint("\(index)  \(station_id!) \(cityData["ci_name"])")
+                        // debugPrint("\(index)  \(station_id!) \(cityData["ci_name"])")
 
                         let coordinates = StationsCoordinates.getCoordinatesForStationId(station_id!)
                         if actualJSON["details"][0] != nil {
@@ -70,20 +70,21 @@ class MapVC: UIViewController {
                     }
                 } else {
 
-//                    for (_, forecastJSON): (String, JSON) in forecastData {
-//                        let station_id = Int(forecastJSON["station_id"].string!)
-//                        stationDesc = forecastJSON["station_name"].string!
-//
-//                        let coordinates = StationsCoordinates.getCoordinatesForStationId(station_id!)
-//                        if forecastJSON["details"][0] != nil {
-//                            color = Colors.getColorFromDescription(forecastJSON["details"][0]["g_nazwa"].string!)
-//                            pollutionType = forecastJSON["details"][0]["par_desc"].string!
-//                        } else {
-//                            color = Colors.getColorFromDescription("empty")
-//                        }
-//
-//                        self.mapSetup(coordinates.long, lattitude: coordinates.lat, color: color, stationDescription: stationDesc, pollutionType: pollutionType) // debugPrint(actualJSON)
-//                    }
+                    for (_, forecastJSON): (String, JSON) in forecastData {
+                        let station_id = Int("5\(cityData["ci_id"].string!)")
+                        stationDesc = cityData["ci_citydesc"].string!
+
+                        let coordinates = StationsCoordinates.getCoordinatesForStationId(station_id!)
+                        if forecastJSON["dzisiaj"] != nil {
+                            let todayJSON = forecastJSON["dzisiaj"]
+                            color = Colors.getColorFromID(todayJSON["max"].string!)
+                            pollutionType = todayJSON["details"][0]["par_desc"].string!
+                        } else {
+                            color = Colors.getColorFromDescription("empty")
+                        }
+
+                        self.mapSetup(coordinates.long, lattitude: coordinates.lat, color: color, stationDescription: stationDesc, pollutionType: pollutionType) // debugPrint(actualJSON)
+                    }
                 }
             })
         }

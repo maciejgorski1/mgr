@@ -57,53 +57,53 @@ struct StationsCoordinates {
             longitude = 20.992580 // tarnow
             lattitude = 50.018263
         case 54:
-            longitude = 20.053492 // bochnia
-            lattitude = 50.057678
+            longitude = 20.439511 // bochnia
+            lattitude = 49.969017
         case 55:
-            longitude = 20.053492 // brzesko
-            lattitude = 50.057678
+            longitude = 20.60638900 // brzesko
+            lattitude = 49.96888900
         case 56:
-            longitude = 20.053492 // chrzanów
-            lattitude = 50.057678
+            longitude = 19.40000000 // chrzanów
+            lattitude = 50.13333300
         case 57:
-            longitude = 20.053492 // dabrowatarnowska
-            lattitude = 50.057678
+            longitude = 20.98638900 // dabrowatarnowska
+            lattitude = 50.17472200
         case 58:
-            longitude = 20.053492 // gorlice
-            lattitude = 50.057678
+            longitude = 21.15916700 // gorlice
+            lattitude = 49.65444400
         case 59:
-            longitude = 20.053492 // krynicazdroj
-            lattitude = 50.057678
+            longitude = 20.95500000 // krynicazdroj
+            lattitude = 49.41166700
         case 510:
-            longitude = 20.053492 // limanowa
-            lattitude = 50.057678
+            longitude = 20.42555600 // limanowa
+            lattitude = 49.70166700
         case 511:
-            longitude = 20.053492 // miechow
-            lattitude = 50.057678
+            longitude = 20.03250000 // miechow
+            lattitude = 50.35777800
         case 512:
-            longitude = 20.053492 // myslenice
-            lattitude = 50.057678
+            longitude = 19.94055600 // myslenice
+            lattitude = 49.83333300
         case 513:
-            longitude = 20.053492 // nowytarg
-            lattitude = 50.057678
+            longitude = 20.03000000 // nowytarg
+            lattitude = 49.47777800
         case 515:
-            longitude = 20.053492 // oswiecim
-            lattitude = 50.057678
+            longitude = 19.22083300 // oswiecim
+            lattitude = 50.03916700
         case 516:
-            longitude = 20.053492 // proszowice
-            lattitude = 50.057678
+            longitude = 20.28871700 // proszowice
+            lattitude = 50.19313900
         case 520:
-            longitude = 20.053492 // tuchow
-            lattitude = 50.057678
+            longitude = 21.05416700 // tuchow
+            lattitude = 49.89500000
         case 521:
-            longitude = 20.053492 // wadowice
-            lattitude = 50.057678
+            longitude = 19.50000000 // wadowice
+            lattitude = 49.88333300
         case 522:
-            longitude = 20.053492 // wieliczka
-            lattitude = 50.057678
+            longitude = 20.06166700 // wieliczka
+            lattitude = 49.98611100
         case 519:
-            longitude = 20.053492 // trzebinia
-            lattitude = 50.057678
+            longitude = 19.47055600 // trzebinia
+            lattitude = 50.15972200
         case 524:
             longitude = 20.053492 // gminaklaj
             lattitude = 50.057678
