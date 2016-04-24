@@ -12,12 +12,16 @@ import RealmSwift
 import SwiftyJSON
 
 class MapVC: UIViewController {
-    var locations : Array<String> = []
+    var locations: Array<String> = []
     // google map api AIzaSyDSD_EDnw9Ipz8D88vc8blO5vcPul_OGKI
-    var pollutionType : String? = "aqi"
+    var pollutionType: String? = "aqi"
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    let camera = GMSCameraPosition.cameraWithLatitude(50.010575,
+        longitude: 19.949189, zoom: 7)
+    var mapView = GMSMapView()
 
     override func viewDidLoad() {
+        setUpMapView()
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"
@@ -27,7 +31,12 @@ class MapVC: UIViewController {
         }
     }
 
-    func prepareData(callback: (isFinished : Bool) -> Void)
+    func setUpMapView() {
+        mapView = .mapWithFrame(CGRectZero, camera: camera)
+        mapView.myLocationEnabled = true
+        self.view = mapView
+    }
+    func prepareData(callback: (isFinished: Bool) -> Void)
     { let indexes = [1, 2, 3, 4, 5, 6, 12, 13]
         for index in indexes {
             RequestManager.citiesWithHandler(index, completionHandler: { (response) -> Void in
@@ -38,51 +47,33 @@ class MapVC: UIViewController {
                 let forecastData = dataToParse["forecast"]
                 let messageData = dataToParse["message"]
                 if actualData != nil {
-                    for (index, value) in actualData.enumerate() {
-
-                        debugPrint(value)
+                    for (_, actualJSON): (String, JSON) in actualData {
+                        let station_id = Int(actualJSON["station_id"].string!)
+                        let coordinates = StationsCoordinates.getCoordinatesForStationId(station_id!)
+                        let color = Colors.getColorFromDescription(actualJSON["details"][0]["g_nazwa"].string!)
+                        self.mapSetup(coordinates.long, lattitude: coordinates.lat, color: color)
+                        // debugPrint(actualJSON)
                     }
                 }
             })
         }
     }
 
-    func mapSetup()
+    func mapSetup(longitude: Double, lattitude: Double, color: UIColor)
     {
-        let camera = GMSCameraPosition.cameraWithLatitude(50.010575,
-            longitude: 19.949189, zoom: 7)
-        let mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
-        mapView.myLocationEnabled = true
-        self.view = mapView
+        debugPrint("\(longitude)  \(lattitude)   \(color.description)   ")
 
-        for location in locations {
+        let marker = GMSMarker()
+        let position = CLLocationCoordinate2DMake((lattitude), (longitude))
 
-            let realm = try! Realm()
+        marker.position = position
+//            marker.title = point?.locationDesc
+        marker.map = self.mapView
+        marker.icon = GMSMarker.markerImageWithColor(color)
+        let circle = GMSCircle(position: position, radius: 10000)
 
-            let point = realm.objects(PollutionModel).filter("location = '\(location)'").first
-            let pollution = realm.objects(PollutionModel).filter("location = '\(location)' AND parameter = '\(pollutionType!)'").first
-
-            let marker = GMSMarker()
-            let position = CLLocationCoordinate2DMake((point?.lattitude)!, (point?.longitute)!)
-
-            marker.position = position
-            marker.title = point?.locationDesc
-            marker.map = mapView
-
-            if pollution != nil {
-                let circle = GMSCircle(position: position, radius: 10000)
-                if pollution?.color != "" {
-
-                    circle.strokeColor = UIColor.init(hexString: (pollution?.color)!)
-                    circle.fillColor = UIColor.init(hexString: (pollution?.color)!)
-                    circle.map = mapView
-                }
-                else {
-                    circle.strokeColor = UIColor.clearColor()
-                    circle.fillColor = UIColor.clearColor()
-                    circle.map = mapView
-                }
-            }
-        }
+        circle.strokeColor = color
+        circle.fillColor = color
+        circle.map = mapView
     }
 }

@@ -14,6 +14,7 @@
 		0525584C1C830CAF00EB59EF /* MenuVCTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525584B1C830CAF00EB59EF /* MenuVCTableViewController.swift */; };
 		0525584F1C830EDB00EB59EF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525584E1C830EDB00EB59EF /* SettingsViewController.swift */; };
 		052558521C83102000EB59EF /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052558511C83102000EB59EF /* GalleryViewController.swift */; };
+		054A389D1CCC9F2E0079B159 /* ColorsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054A389C1CCC9F2E0079B159 /* ColorsConstants.swift */; };
 		054E2E051C81B3C1004AAACD /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 054E2E041C81B3C1004AAACD /* SWRevealViewController.m */; };
 		057B3C031C81A5C800FCCC8B /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057B3C021C81A5C800FCCC8B /* RequestManager.swift */; };
 		058945361CB3CD6F00FBD163 /* StationsCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058945351CB3CD6F00FBD163 /* StationsCoordinates.swift */; };
@@ -50,6 +51,7 @@
 		0525584B1C830CAF00EB59EF /* MenuVCTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuVCTableViewController.swift; path = SmogApp/MenuVC/MenuVCTableViewController.swift; sourceTree = "<group>"; };
 		0525584E1C830EDB00EB59EF /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = SmogApp/SettingsViewController/SettingsViewController.swift; sourceTree = "<group>"; };
 		052558511C83102000EB59EF /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GalleryViewController.swift; path = SmogApp/GalleryViewController/GalleryViewController.swift; sourceTree = "<group>"; };
+		054A389C1CCC9F2E0079B159 /* ColorsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorsConstants.swift; path = SmogApp/Constants/ColorsConstants.swift; sourceTree = "<group>"; };
 		054E2E021C81B3C1004AAACD /* SmogApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmogApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		054E2E031C81B3C1004AAACD /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		054E2E041C81B3C1004AAACD /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				058945351CB3CD6F00FBD163 /* StationsCoordinates.swift */,
+				054A389C1CCC9F2E0079B159 /* ColorsConstants.swift */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				052558491C83095300EB59EF /* InformationVC.swift in Sources */,
 				057B3C031C81A5C800FCCC8B /* RequestManager.swift in Sources */,
 				058945381CB3CE6800FBD163 /* ActualModel.swift in Sources */,
+				054A389D1CCC9F2E0079B159 /* ColorsConstants.swift in Sources */,
 				05899A111C81A0F4006068BD /* ViewController.swift in Sources */,
 				058945361CB3CD6F00FBD163 /* StationsCoordinates.swift in Sources */,
 				05899A0F1C81A0F4006068BD /* AppDelegate.swift in Sources */,
