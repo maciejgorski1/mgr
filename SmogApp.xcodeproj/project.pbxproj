@@ -30,6 +30,7 @@
 		05A34CD41CA4933100EFDDB6 /* PollutionTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A34CD31CA4933100EFDDB6 /* PollutionTypeTableViewCell.swift */; };
 		05A34CD61CA4975800EFDDB6 /* TypesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A34CD51CA4975800EFDDB6 /* TypesTableViewController.swift */; };
 		05C1C9CE1CA4565D007B9C4D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C1C9CD1CA4565D007B9C4D /* UIColorExtension.swift */; };
+		05ED1D021CCED01400F7F975 /* PollutionConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ED1D011CCED01400F7F975 /* PollutionConstant.swift */; };
 		05F4CC8A1CA337C800522EE0 /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F4CC891CA337C800522EE0 /* CityModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		05A34CD31CA4933100EFDDB6 /* PollutionTypeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PollutionTypeTableViewCell.swift; path = SmogApp/MapViewController/Filter/PollutionTypeTableViewCell.swift; sourceTree = "<group>"; };
 		05A34CD51CA4975800EFDDB6 /* TypesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TypesTableViewController.swift; path = SmogApp/MapViewController/Filter/TypesTableViewController.swift; sourceTree = "<group>"; };
 		05C1C9CD1CA4565D007B9C4D /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		05ED1D011CCED01400F7F975 /* PollutionConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PollutionConstant.swift; path = SmogApp/Constants/PollutionConstant.swift; sourceTree = "<group>"; };
 		05F4CC891CA337C800522EE0 /* CityModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
 		14032D218B46E7EB1F5A3933 /* Pods-SmogApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmogApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmogApp/Pods-SmogApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A922D983BDEB298DDFED8B75 /* Pods-SmogApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmogApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmogApp/Pods-SmogApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			children = (
 				058945351CB3CD6F00FBD163 /* StationsCoordinates.swift */,
 				054A389C1CCC9F2E0079B159 /* ColorsConstants.swift */,
+				05ED1D011CCED01400F7F975 /* PollutionConstant.swift */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 				05A34CD61CA4975800EFDDB6 /* TypesTableViewController.swift in Sources */,
 				0525584C1C830CAF00EB59EF /* MenuVCTableViewController.swift in Sources */,
 				051B661D1C955FA8008B0E40 /* StringExtension.swift in Sources */,
+				05ED1D021CCED01400F7F975 /* PollutionConstant.swift in Sources */,
 				0525584F1C830EDB00EB59EF /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

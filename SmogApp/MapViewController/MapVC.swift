@@ -75,21 +75,20 @@ class MapVC: UIViewController, GMSMapViewDelegate {
                     }
                 } else {
 
-            
-                        let station_id = Int("5\(cityData["ci_id"].string!)")
-                        stationDesc = cityData["ci_citydesc"].string!
+                    let station_id = Int("5\(cityData["ci_id"].string!)")
+                    stationDesc = cityData["ci_citydesc"].string!
 
-                        let coordinates = StationsCoordinates.getCoordinatesForStationId(station_id!)
-                        if forecastData["dzisiaj"] != nil {
-                            let todayJSON = forecastData["dzisiaj"]
-                            color = Colors.getColorFromID(todayJSON["max"].string!)
-                            pollutionType = todayJSON["details"][0]["par_desc"].string!
-                        } else {
-                            color = Colors.getColorFromDescription("empty")
-                        }
+                    let coordinates = StationsCoordinates.getCoordinatesForStationId(station_id!)
+                    if forecastData["dzisiaj"] != nil {
+                        let todayJSON = forecastData["dzisiaj"]
+                        color = Colors.getColorFromID(todayJSON["max"].string!)
+                        pollutionType = todayJSON["details"][0]["par_desc"].string!
+                    } else {
+                        color = Colors.getColorFromDescription("empty")
+                    }
 
-                        self.mapSetup(coordinates.long, lattitude: coordinates.lat, color: color, stationDescription: stationDesc, pollutionType: pollutionType) // debugPrint(actualJSON)
-                    
+                    self.mapSetup(coordinates.long, lattitude: coordinates.lat, color: color, stationDescription: stationDesc, pollutionType: pollutionType) // debugPrint(actualJSON)
+
                 }
             })
         }

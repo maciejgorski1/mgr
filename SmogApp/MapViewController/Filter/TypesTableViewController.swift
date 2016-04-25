@@ -14,42 +14,73 @@ protocol TypesTableViewControllerDelegate: class {
 
 class TypesTableViewController: UITableViewController {
 
-    let possibleTypesDictionary = ["pm10": "pył PM10", "pm2.5": "pył PM2.5", "no2": "Dwutlenek azotu", "nox": "Tlenki azotu", "no": "Tlenek azotu"]
+    var possibleTypesDictionary = [String: String]()
     var selectedTypes: [String]!
     weak var delegate: TypesTableViewControllerDelegate!
-    var sortedKeys: [String] {
-        return possibleTypesDictionary.keys.sort()
+    var selectedKey = ""
+
+    func getLanguageDictionary () -> Dictionary<String, String> {
+
+        if possibleTypesDictionary.isEmpty {
+            possibleTypesDictionary = ["pm10": "pył PM10", "pm2.5": "pył PM2.5", "no2": "Dwutlenek azotu", "nox": "Tlenki azotu", "no": "Tlenek azotu"]
+        }
+        return possibleTypesDictionary
+
     }
 
-    // MARK: - Actions
-    @IBAction func donePressed(sender: AnyObject) {
-        delegate?.typesController(self, didSelectTypes: selectedTypes)
+    override func viewDidLoad() {
+
+        super.viewDidLoad()
+        getLanguageDictionary()
+
     }
 
-    // MARK: - Table view data source
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return possibleTypesDictionary.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("TypeCell", forIndexPath: indexPath)
-        let key = sortedKeys[indexPath.row]
-        let type = possibleTypesDictionary[key]!
+
+        let type = Array(self.possibleTypesDictionary.values)[indexPath.row]
+        let key = Array(self.possibleTypesDictionary.keys)[indexPath.row]
         cell.textLabel?.text = type
-        cell.accessoryType = (selectedTypes).contains(key) ? .Checkmark : .None
+
+        let identifier = NSUserDefaults.standardUserDefaults().objectForKey(PollutionChosen.Pollution) as! String // getCurrentLanguage()
+        //
+
+        if identifier == key {
+            cell.accessoryType = .Checkmark
+            tableView.selectRowAtIndexPath(indexPath, animated: false, scrollPosition: UITableViewScrollPosition.Bottom)
+        } else {
+            cell.accessoryType = .None
+        }
+        // cell.accessoryType = (selectedTypes).contains(key) ? .Checkmark : .None
         return cell
     }
 
-    // MARK: - Table view delegate
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        let key = sortedKeys[indexPath.row]
-        if (selectedTypes!).contains(key) {
-            selectedTypes = selectedTypes.filter({ $0 != key })
-        } else {
-            selectedTypes.append(key)
+        if let cell = tableView.cellForRowAtIndexPath(indexPath) {
+            cell.accessoryType = .Checkmark
+            let key = Array(self.possibleTypesDictionary.keys)[indexPath.row]
+            let defaults = NSUserDefaults.standardUserDefaults()
+            defaults.setObject(key, forKey: PollutionChosen.Pollution)
+            selectedKey = key
         }
 
-        tableView.reloadData()
+        self.dismissViewControllerAnimated(false, completion: nil)
+    }
+    // MARK: - Table view delegate
+    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        if let cell = tableView.cellForRowAtIndexPath(indexPath) {
+            cell.accessoryType = .None
+        }
+    }
+    @IBAction func donePressed(sender: AnyObject) {
+
+        self.dismissViewControllerAnimated(false, completion: nil)
     }
 }

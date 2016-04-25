@@ -311,7 +311,7 @@
                         <barButtonItem key="leftBarButtonItem" image="menu" id="gbj-P8-byR"/>
                         <barButtonItem key="rightBarButtonItem" image="filter" id="b6L-ac-HYT">
                             <connections>
-                                <segue destination="rnE-7z-dwf" kind="presentation" id="a0M-p5-cYs"/>
+                                <segue destination="G8K-y1-6O1" kind="show" identifier="showFilter" id="HZM-Pj-BM8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -623,32 +623,14 @@ Poziom alarmowy stężenia średniego 1-godzinnego: 500 μg/m3
                     <navigationItem key="navigationItem" title="Choose Types" id="6dJ-7J-Ygn">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="YPB-h7-TX1">
                             <connections>
-                                <action selector="donePressed:" destination="G8K-y1-6O1" id="f8E-Wh-W1g"/>
+                                <action selector="donePressed:" destination="G8K-y1-6O1" id="oUa-wS-TmF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRc-dq-G7W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3389" y="-147"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="e4l-kw-tz5">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rnE-7z-dwf" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sfw-bo-mMB">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="G8K-y1-6O1" kind="relationship" relationship="rootViewController" id="Pvf-H5-cY4"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="npQ-ke-L8S" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2662" y="-167"/>
+            <point key="canvasLocation" x="2616" y="-167"/>
         </scene>
     </scenes>
     <resources>
