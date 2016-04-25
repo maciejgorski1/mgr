@@ -35,7 +35,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     }
 
     func setUpMapView() {
-        
+
         storyBoardMapView.delegate = self
         storyBoardMapView.camera = camera
         storyBoardMapView.myLocationEnabled = true
@@ -75,13 +75,13 @@ class MapVC: UIViewController, GMSMapViewDelegate {
                     }
                 } else {
 
-                    for (_, forecastJSON): (String, JSON) in forecastData {
+            
                         let station_id = Int("5\(cityData["ci_id"].string!)")
                         stationDesc = cityData["ci_citydesc"].string!
 
                         let coordinates = StationsCoordinates.getCoordinatesForStationId(station_id!)
-                        if forecastJSON["dzisiaj"] != nil {
-                            let todayJSON = forecastJSON["dzisiaj"]
+                        if forecastData["dzisiaj"] != nil {
+                            let todayJSON = forecastData["dzisiaj"]
                             color = Colors.getColorFromID(todayJSON["max"].string!)
                             pollutionType = todayJSON["details"][0]["par_desc"].string!
                         } else {
@@ -89,7 +89,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
                         }
 
                         self.mapSetup(coordinates.long, lattitude: coordinates.lat, color: color, stationDescription: stationDesc, pollutionType: pollutionType) // debugPrint(actualJSON)
-                    }
+                    
                 }
             })
         }

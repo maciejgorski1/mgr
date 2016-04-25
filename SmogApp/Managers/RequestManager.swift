@@ -49,6 +49,7 @@ struct RequestManager {
     static func citiesWithHandler(cityID: Int, completionHandler: ResponseHandler)
     {
         let url = "\(BaseURL.NewAPI.address)\(cityID)"
+        debugPrint(url)
         manager.request(.GET, url, headers: headers).responseJSON(completionHandler: completionHandler)
     }
 }
