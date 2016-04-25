@@ -11,14 +11,17 @@ import GoogleMaps
 import Realm
 import SwiftyJSON
 
-class MapVC: UIViewController {
+class MapVC: UIViewController, GMSMapViewDelegate {
     var locations: Array<String> = []
     // google map api AIzaSyDSD_EDnw9Ipz8D88vc8blO5vcPul_OGKI
     var pollutionType: String? = "aqi"
+
+    @IBOutlet weak var storyBoardMapView: GMSMapView!
+    @IBOutlet weak var legendView: UIView!
+
     @IBOutlet weak var menuButton: UIBarButtonItem!
     let camera = GMSCameraPosition.cameraWithLatitude(50.010575,
         longitude: 19.949189, zoom: 7)
-    var mapView = GMSMapView()
 
     override func viewDidLoad() {
         setUpMapView()
@@ -32,9 +35,11 @@ class MapVC: UIViewController {
     }
 
     func setUpMapView() {
-        mapView = .mapWithFrame(CGRectZero, camera: camera)
-        mapView.myLocationEnabled = true
-        self.view = mapView
+        
+        storyBoardMapView.delegate = self
+        storyBoardMapView.camera = camera
+        storyBoardMapView.myLocationEnabled = true
+
     }
     func prepareData(callback: (isFinished: Bool) -> Void)
     {
@@ -99,7 +104,7 @@ class MapVC: UIViewController {
 
         marker.position = position
 //            marker.title = point?.locationDesc
-        marker.map = self.mapView
+        marker.map = storyBoardMapView
         marker.title = stationDescription
         marker.snippet = pollutionType
         marker.icon = GMSMarker.markerImageWithColor(color)
@@ -107,6 +112,6 @@ class MapVC: UIViewController {
 
         circle.strokeColor = color
         circle.fillColor = color
-        circle.map = mapView
+        circle.map = storyBoardMapView
     }
 }
