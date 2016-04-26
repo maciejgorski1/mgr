@@ -8,7 +8,7 @@
 
 import UIKit
 import GoogleMaps
-import Realm
+import RealmSwift
 import SwiftyJSON
 
 class MapVC: UIViewController, GMSMapViewDelegate {
@@ -31,7 +31,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         prepareData(pollutionType) { (isFinished) -> Void in
-
+            self.removeAllOverlays()
         }
     }
 
@@ -43,7 +43,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
 
     }
     func prepareData(pollutionTypeFromNSDefaults: String, callback: (isFinished: Bool) -> Void)
-    {
+    { self.showWaitOverlay()
         for index in 1 ... 23 {
             RequestManager.citiesWithHandler(index, completionHandler: { (response) -> Void in
                 let json = JSON(data: (response.data! as NSData))
@@ -105,6 +105,9 @@ class MapVC: UIViewController, GMSMapViewDelegate {
 
                     }
 
+                }
+                if index == 23 {
+                    callback(isFinished: true)
                 }
             })
         }

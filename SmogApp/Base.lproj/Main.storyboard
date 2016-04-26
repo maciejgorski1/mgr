@@ -173,7 +173,7 @@
             </objects>
             <point key="canvasLocation" x="395" y="519"/>
         </scene>
-        <!--Map-->
+        <!--Mapa-->
         <scene sceneID="siz-WY-dj6">
             <objects>
                 <viewController id="7Rq-Gw-K9c" customClass="MapVC" customModule="SmogApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -307,7 +307,7 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Map" id="fCb-7y-8YG">
+                    <navigationItem key="navigationItem" title="Mapa" id="fCb-7y-8YG">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="gbj-P8-byR"/>
                         <barButtonItem key="rightBarButtonItem" image="filter" id="b6L-ac-HYT">
                             <connections>
@@ -328,7 +328,7 @@
             </objects>
             <point key="canvasLocation" x="1890" y="-167"/>
         </scene>
-        <!--Information-->
+        <!--Baza wiedzy-->
         <scene sceneID="d9g-Se-Mrx">
             <objects>
                 <viewController id="zeU-zv-J4v" customClass="InformationVC" customModule="SmogApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -454,7 +454,7 @@ Poziom alarmowy stężenia średniego 1-godzinnego: 500 μg/m3
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Information" id="hnB-R1-g24">
+                    <navigationItem key="navigationItem" title="Baza wiedzy" id="hnB-R1-g24">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="Utj-ve-MXl"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
@@ -466,7 +466,7 @@ Poziom alarmowy stężenia średniego 1-godzinnego: 500 μg/m3
             </objects>
             <point key="canvasLocation" x="1890" y="526"/>
         </scene>
-        <!--Settings-->
+        <!--Ustawienia-->
         <scene sceneID="LKy-Pm-iu8">
             <objects>
                 <viewController id="HVL-JJ-R8X" customClass="SettingsViewController" customModule="SmogApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -479,7 +479,7 @@ Poziom alarmowy stężenia średniego 1-godzinnego: 500 μg/m3
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Settings" id="8hK-EU-UBn">
+                    <navigationItem key="navigationItem" title="Ustawienia" id="8hK-EU-UBn">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="sfa-hN-d4c"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
@@ -504,7 +504,7 @@ Poziom alarmowy stężenia średniego 1-godzinnego: 500 μg/m3
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Photo" id="YFL-cv-KHB">
+                    <navigationItem key="navigationItem" title="Zdjęcia" id="YFL-cv-KHB">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="hFD-bj-OoO"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -588,7 +588,7 @@ Poziom alarmowy stężenia średniego 1-godzinnego: 500 μg/m3
             </objects>
             <point key="canvasLocation" x="1078" y="1874"/>
         </scene>
-        <!--Choose Types-->
+        <!--Filtruj-->
         <scene sceneID="VFn-Mt-rak">
             <objects>
                 <tableViewController id="G8K-y1-6O1" customClass="TypesTableViewController" customModule="SmogApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -620,8 +620,8 @@ Poziom alarmowy stężenia średniego 1-godzinnego: 500 μg/m3
                             <outlet property="delegate" destination="G8K-y1-6O1" id="Ngu-kH-Kie"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Choose Types" id="6dJ-7J-Ygn">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="YPB-h7-TX1">
+                    <navigationItem key="navigationItem" title="Filtruj" id="6dJ-7J-Ygn">
+                        <barButtonItem key="rightBarButtonItem" title="OK" id="YPB-h7-TX1">
                             <connections>
                                 <action selector="donePressed:" destination="G8K-y1-6O1" id="oUa-wS-TmF"/>
                                 <segue destination="7Rq-Gw-K9c" kind="show" identifier="showFilteredData" id="mlp-SM-4P5"/>
