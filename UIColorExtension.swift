@@ -22,6 +22,6 @@ extension UIColor {
         default:
             (a, r, g, b) = (1, 1, 1, 0)
         }
-        self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: 0.22)
+        self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: 0.5)
     }
 }

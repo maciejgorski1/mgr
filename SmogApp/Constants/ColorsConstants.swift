@@ -19,7 +19,7 @@ struct Colors {
         } else if description == "Umiarkowany" {
             color = UIColor.init(hexString: "#FFFF00")
         } else if description == "Dostateczny" {
-            color = UIColor.init(hexString: "#FFFF00")
+            color = UIColor.init(hexString: "#FF7E00")
         } else if description == "Zły" {
             color = UIColor.init(hexString: "#FF0000")
         } else if description == "Bardzo zły" {
@@ -41,7 +41,7 @@ struct Colors {
         } else if id == "3" {
             color = UIColor.init(hexString: "#FFFF00")
         } else if id == "4" {
-            color = UIColor.init(hexString: "#FFFF00")
+            color = UIColor.init(hexString: "#FF7E00")
         } else if id == "5" {
             color = UIColor.init(hexString: "#FF0000")
         } else if id == "6" {
@@ -51,6 +51,27 @@ struct Colors {
         }
 
         return color
+    }
+    static func getImageNameFromID(id: String) -> String {
+        var imageName = ""
+
+        if id == "1" {
+            imageName = "icon_green"
+        } else if id == "2" {
+            imageName = "icon_greener"
+        } else if id == "3" {
+            imageName = "icon_yellow"
+        } else if id == "4" {
+            imageName = "icon_dst"
+        } else if id == "5" {
+            imageName = "icon_red"
+        } else if id == "6" {
+            imageName = "icon_veryBad" }
+        else {
+            imageName = "icon_noData"
+        }
+
+        return imageName
     }
 
 }

@@ -52,7 +52,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
                 let actualData = dataToParse["actual"]
                 let forecastData = dataToParse["forecast"]
                 let messageData = dataToParse["message"]
-                var color = UIColor.whiteColor().colorWithAlphaComponent(0.8)
+                var color = ""
                 var stationDesc = ""
                 var pollutionType = ""
                 if !actualData.isEmpty {
@@ -66,7 +66,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
                             let detailsJSON = actualJSON["details"]
                             for (_, detailsRow): (String, JSON) in detailsJSON {
                                 if detailsRow["o_wskaznik"].string! == pollutionTypeFromNSDefaults {
-                                    color = Colors.getColorFromID(detailsRow["max"].string!)
+                                    color = detailsRow["max"].string!
                                     pollutionType = detailsRow["par_desc"].string!
                                     self.mapSetup(coordinates.long, lattitude: coordinates.lat, color: color, stationDescription: stationDesc, pollutionType: pollutionType)
                                 }
@@ -91,7 +91,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
                         for (_, detailsJSON): (String, JSON) in todayJSON {
                             if detailsJSON["fo_wskaznik"].string! == pollutionTypeFromNSDefaults {
 
-                                color = Colors.getColorFromID(detailsJSON["max"].string!)
+                                color = detailsJSON["max"].string!
                                 pollutionType = "\(detailsJSON["par_desc"].string!)  "
                                 self.mapSetup(coordinates.long, lattitude: coordinates.lat, color: color, stationDescription: stationDesc, pollutionType: pollutionType)
                             }
@@ -113,23 +113,17 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         }
     }
 
-    func mapSetup(longitude: Double, lattitude: Double, color: UIColor, stationDescription: String, pollutionType: String)
+    func mapSetup(longitude: Double, lattitude: Double, color: String, stationDescription: String, pollutionType: String)
     {
-        // debugPrint("\(longitude)  \(lattitude)   \(color.description)   ")
 
         let marker = GMSMarker()
         let position = CLLocationCoordinate2DMake((lattitude), (longitude))
 
         marker.position = position
-//            marker.title = point?.locationDesc
         marker.map = storyBoardMapView
         marker.title = stationDescription
         marker.snippet = pollutionType
-        marker.icon = GMSMarker.markerImageWithColor(color)
-        let circle = GMSCircle(position: position, radius: 10000)
+        marker.icon = UIImage(named: Colors.getImageNameFromID(color))
 
-        circle.strokeColor = color
-        circle.fillColor = color
-        circle.map = storyBoardMapView
     }
 }
