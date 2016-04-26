@@ -624,6 +624,7 @@ Poziom alarmowy stężenia średniego 1-godzinnego: 500 μg/m3
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="YPB-h7-TX1">
                             <connections>
                                 <action selector="donePressed:" destination="G8K-y1-6O1" id="oUa-wS-TmF"/>
+                                <segue destination="7Rq-Gw-K9c" kind="show" identifier="showFilteredData" id="mlp-SM-4P5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -639,5 +640,6 @@ Poziom alarmowy stężenia średniego 1-godzinnego: 500 μg/m3
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="vtg-sK-yZz"/>
+        <segue reference="mlp-SM-4P5"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -22,7 +22,7 @@ class TypesTableViewController: UITableViewController {
     func getLanguageDictionary () -> Dictionary<String, String> {
 
         if possibleTypesDictionary.isEmpty {
-            possibleTypesDictionary = ["pm10": "pył PM10", "pm2.5": "pył PM2.5", "no2": "Dwutlenek azotu", "nox": "Tlenki azotu", "no": "Tlenek azotu"]
+            possibleTypesDictionary = ["pm10": "Pył PM10", "pm2.5": "Pył PM2.5", "no2": "Dwutlenek azotu", "so2": "Dwutlenek siarki", "co": "Tlenek węgla", "caqi": "CAQI"]
         }
         return possibleTypesDictionary
 
@@ -31,6 +31,8 @@ class TypesTableViewController: UITableViewController {
     override func viewDidLoad() {
 
         super.viewDidLoad()
+        let defaults = NSUserDefaults.standardUserDefaults()
+        debugPrint(defaults.stringForKey(PollutionChosen.Pollution)!)
         getLanguageDictionary()
 
     }
@@ -58,7 +60,6 @@ class TypesTableViewController: UITableViewController {
         } else {
             cell.accessoryType = .None
         }
-        // cell.accessoryType = (selectedTypes).contains(key) ? .Checkmark : .None
         return cell
     }
 
@@ -67,7 +68,7 @@ class TypesTableViewController: UITableViewController {
             cell.accessoryType = .Checkmark
             let key = Array(self.possibleTypesDictionary.keys)[indexPath.row]
             let defaults = NSUserDefaults.standardUserDefaults()
-            defaults.setObject(key, forKey: PollutionChosen.Pollution)
+            defaults.setValue(key, forKey: PollutionChosen.Pollution)
             selectedKey = key
         }
 
@@ -81,6 +82,6 @@ class TypesTableViewController: UITableViewController {
     }
     @IBAction func donePressed(sender: AnyObject) {
 
-        self.dismissViewControllerAnimated(false, completion: nil)
+        self.performSegueWithIdentifier("showFilteredData", sender: self)
     }
 }

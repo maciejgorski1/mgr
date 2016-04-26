@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let key = "pm10"
         let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setObject(key, forKey: PollutionChosen.Pollution)
+        defaults.setValue(key, forKey: PollutionChosen.Pollution)
         return true
     }
 

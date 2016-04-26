@@ -13,9 +13,8 @@ import SwiftyJSON
 
 class MapVC: UIViewController, GMSMapViewDelegate {
     var locations: Array<String> = []
-    // google map api AIzaSyDSD_EDnw9Ipz8D88vc8blO5vcPul_OGKI
-    var pollutionType: String? = "aqi"
-
+    let defaults = NSUserDefaults.standardUserDefaults()
+    var pollutionType: String = ""
     @IBOutlet weak var storyBoardMapView: GMSMapView!
     @IBOutlet weak var legendView: UIView!
 
@@ -24,13 +23,15 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         longitude: 19.949189, zoom: 7)
 
     override func viewDidLoad() {
+        pollutionType = defaults.stringForKey(PollutionChosen.Pollution)!
         setUpMapView()
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
-        prepareData { (isFinished) -> Void in
+        prepareData(pollutionType) { (isFinished) -> Void in
+
         }
     }
 
@@ -41,7 +42,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         storyBoardMapView.myLocationEnabled = true
 
     }
-    func prepareData(callback: (isFinished: Bool) -> Void)
+    func prepareData(pollutionTypeFromNSDefaults: String, callback: (isFinished: Bool) -> Void)
     {
         for index in 1 ... 23 {
             RequestManager.citiesWithHandler(index, completionHandler: { (response) -> Void in
@@ -51,27 +52,33 @@ class MapVC: UIViewController, GMSMapViewDelegate {
                 let actualData = dataToParse["actual"]
                 let forecastData = dataToParse["forecast"]
                 let messageData = dataToParse["message"]
-                var color: UIColor
+                var color = UIColor.whiteColor().colorWithAlphaComponent(0.8)
                 var stationDesc = ""
                 var pollutionType = ""
                 if !actualData.isEmpty {
-                    // debugPrint("\(index)   \(cityData["ci_name"])")
                     for (_, actualJSON): (String, JSON) in actualData {
 
-                        // debugPrint()
                         let station_id = Int(actualJSON["station_id"].string!)
                         stationDesc = actualJSON["station_name"].string!
-                        // debugPrint("\(index)  \(station_id!) \(cityData["ci_name"])")
-
                         let coordinates = StationsCoordinates.getCoordinatesForStationId(station_id!)
-                        if actualJSON["details"][0] != nil {
-                            color = Colors.getColorFromDescription(actualJSON["details"][0]["g_nazwa"].string!)
-                            pollutionType = actualJSON["details"][0]["par_desc"].string!
-                        } else {
-                            color = Colors.getColorFromDescription("empty")
+
+                        if !actualJSON["details"].isEmpty {
+                            let detailsJSON = actualJSON["details"]
+                            for (_, detailsRow): (String, JSON) in detailsJSON {
+                                if detailsRow["o_wskaznik"].string! == pollutionTypeFromNSDefaults {
+                                    color = Colors.getColorFromID(detailsRow["max"].string!)
+                                    pollutionType = detailsRow["par_desc"].string!
+                                    self.mapSetup(coordinates.long, lattitude: coordinates.lat, color: color, stationDescription: stationDesc, pollutionType: pollutionType)
+                                }
+                                else {
+
+                                }
+                            }
                         }
 
-                        self.mapSetup(coordinates.long, lattitude: coordinates.lat, color: color, stationDescription: stationDesc, pollutionType: pollutionType) // debugPrint(actualJSON)
+                        else {
+                        }
+
                     }
                 } else {
 
@@ -79,15 +86,24 @@ class MapVC: UIViewController, GMSMapViewDelegate {
                     stationDesc = cityData["ci_citydesc"].string!
 
                     let coordinates = StationsCoordinates.getCoordinatesForStationId(station_id!)
-                    if forecastData["dzisiaj"] != nil {
-                        let todayJSON = forecastData["dzisiaj"]
-                        color = Colors.getColorFromID(todayJSON["max"].string!)
-                        pollutionType = todayJSON["details"][0]["par_desc"].string!
-                    } else {
-                        color = Colors.getColorFromDescription("empty")
-                    }
+                    if !forecastData["dzisiaj"].isEmpty {
+                        let todayJSON = forecastData["dzisiaj"]["details"]
+                        for (_, detailsJSON): (String, JSON) in todayJSON {
+                            if detailsJSON["fo_wskaznik"].string! == pollutionTypeFromNSDefaults {
 
-                    self.mapSetup(coordinates.long, lattitude: coordinates.lat, color: color, stationDescription: stationDesc, pollutionType: pollutionType) // debugPrint(actualJSON)
+                                color = Colors.getColorFromID(detailsJSON["max"].string!)
+                                pollutionType = "\(detailsJSON["par_desc"].string!)  "
+                                self.mapSetup(coordinates.long, lattitude: coordinates.lat, color: color, stationDescription: stationDesc, pollutionType: pollutionType)
+                            }
+                            else {
+
+                            }
+
+                        }
+
+                    } else {
+
+                    }
 
                 }
             })
