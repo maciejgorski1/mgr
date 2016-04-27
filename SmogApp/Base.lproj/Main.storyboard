@@ -320,7 +320,7 @@
                                             <constraint firstAttribute="height" constant="24" id="NoE-Qn-A0q"/>
                                             <constraint firstAttribute="width" constant="24" id="nsn-sm-XZe"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="filter"/>
+                                        <state key="normal" title="Button" image="Filter-32"/>
                                         <connections>
                                             <segue destination="G8K-y1-6O1" kind="show" id="hYK-ib-1dd"/>
                                         </connections>
@@ -668,8 +668,8 @@ Poziom alarmowy stężenia średniego 1-godzinnego: 500 μg/m3
         </scene>
     </scenes>
     <resources>
+        <image name="Filter-32" width="32" height="32"/>
         <image name="Globe-32" width="32" height="32"/>
-        <image name="filter" width="25" height="25"/>
         <image name="menu" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
