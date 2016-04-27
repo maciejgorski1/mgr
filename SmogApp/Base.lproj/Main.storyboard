@@ -309,10 +309,43 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Mapa" id="fCb-7y-8YG">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="gbj-P8-byR"/>
-                        <barButtonItem key="rightBarButtonItem" image="filter" id="b6L-ac-HYT">
-                            <connections>
-                                <segue destination="G8K-y1-6O1" kind="show" identifier="showFilter" id="HZM-Pj-BM8"/>
-                            </connections>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="qya-2h-Ntv">
+                            <view key="customView" contentMode="scaleToFill" id="gKa-r3-Ify">
+                                <rect key="frame" x="513" y="4" width="67" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGy-xH-IzT">
+                                        <rect key="frame" x="43" y="11" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="NoE-Qn-A0q"/>
+                                            <constraint firstAttribute="width" constant="24" id="nsn-sm-XZe"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="filter"/>
+                                        <connections>
+                                            <segue destination="G8K-y1-6O1" kind="show" id="hYK-ib-1dd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5f-0n-M4f">
+                                        <rect key="frame" x="0.0" y="11" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="i5Q-IX-F4L"/>
+                                            <constraint firstAttribute="width" constant="24" id="rmT-5P-jIS"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Globe-32"/>
+                                        <connections>
+                                            <action selector="changeMapTypeButtonClicked:" destination="7Rq-Gw-K9c" eventType="touchUpInside" id="0YH-0j-oFP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="zGy-xH-IzT" secondAttribute="trailing" id="7Zb-0h-tJ6"/>
+                                    <constraint firstAttribute="bottom" secondItem="zGy-xH-IzT" secondAttribute="bottom" id="YIq-iO-lMN"/>
+                                    <constraint firstItem="G5f-0n-M4f" firstAttribute="leading" secondItem="gKa-r3-Ify" secondAttribute="leading" id="kFg-dJ-9T8"/>
+                                    <constraint firstAttribute="bottom" secondItem="G5f-0n-M4f" secondAttribute="bottom" id="xHu-Xb-jFo"/>
+                                </constraints>
+                            </view>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -635,6 +668,7 @@ Poziom alarmowy stężenia średniego 1-godzinnego: 500 μg/m3
         </scene>
     </scenes>
     <resources>
+        <image name="Globe-32" width="32" height="32"/>
         <image name="filter" width="25" height="25"/>
         <image name="menu" width="22" height="22"/>
     </resources>

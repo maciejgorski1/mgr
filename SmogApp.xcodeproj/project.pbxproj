@@ -21,7 +21,6 @@
 		058945381CB3CE6800FBD163 /* ActualModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058945371CB3CE6800FBD163 /* ActualModel.swift */; };
 		0589453A1CB3CF1F00FBD163 /* DetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058945391CB3CF1F00FBD163 /* DetailsModel.swift */; };
 		05899A0F1C81A0F4006068BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05899A0E1C81A0F4006068BD /* AppDelegate.swift */; };
-		05899A111C81A0F4006068BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05899A101C81A0F4006068BD /* ViewController.swift */; };
 		05899A141C81A0F4006068BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05899A121C81A0F4006068BD /* Main.storyboard */; };
 		05899A161C81A0F4006068BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05899A151C81A0F4006068BD /* Assets.xcassets */; };
 		05899A191C81A0F4006068BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05899A171C81A0F4006068BD /* LaunchScreen.storyboard */; };
@@ -63,7 +62,6 @@
 		058945391CB3CF1F00FBD163 /* DetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailsModel.swift; path = SmogApp/RealmModels/DetailsModel.swift; sourceTree = "<group>"; };
 		05899A0B1C81A0F4006068BD /* SmogApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmogApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05899A0E1C81A0F4006068BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		05899A101C81A0F4006068BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		05899A131C81A0F4006068BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		05899A151C81A0F4006068BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05899A181C81A0F4006068BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -214,7 +212,6 @@
 			isa = PBXGroup;
 			children = (
 				05899A0E1C81A0F4006068BD /* AppDelegate.swift */,
-				05899A101C81A0F4006068BD /* ViewController.swift */,
 				05899A121C81A0F4006068BD /* Main.storyboard */,
 				05899A151C81A0F4006068BD /* Assets.xcassets */,
 				05899A171C81A0F4006068BD /* LaunchScreen.storyboard */,
@@ -428,7 +425,6 @@
 				057B3C031C81A5C800FCCC8B /* RequestManager.swift in Sources */,
 				058945381CB3CE6800FBD163 /* ActualModel.swift in Sources */,
 				054A389D1CCC9F2E0079B159 /* ColorsConstants.swift in Sources */,
-				05899A111C81A0F4006068BD /* ViewController.swift in Sources */,
 				058945361CB3CD6F00FBD163 /* StationsCoordinates.swift in Sources */,
 				05899A0F1C81A0F4006068BD /* AppDelegate.swift in Sources */,
 				054E2E051C81B3C1004AAACD /* SWRevealViewController.m in Sources */,

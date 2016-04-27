@@ -15,12 +15,12 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     var locations: Array<String> = []
     let defaults = NSUserDefaults.standardUserDefaults()
     var pollutionType: String = ""
-    @IBOutlet weak var storyBoardMapView: GMSMapView!
-    @IBOutlet weak var legendView: UIView!
-
-    @IBOutlet weak var menuButton: UIBarButtonItem!
     let camera = GMSCameraPosition.cameraWithLatitude(50.010575,
         longitude: 19.949189, zoom: 7)
+
+    @IBOutlet weak var storyBoardMapView: GMSMapView!
+    @IBOutlet weak var legendView: UIView!
+    @IBOutlet weak var menuButton: UIBarButtonItem!
 
     override func viewDidLoad() {
         pollutionType = defaults.stringForKey(PollutionChosen.Pollution)!
@@ -124,6 +124,18 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         marker.title = stationDescription
         marker.snippet = pollutionType
         marker.icon = UIImage(named: Colors.getImageNameFromID(color))
+
+    }
+    @IBAction func changeMapTypeButtonClicked(sender: AnyObject) {
+        if storyBoardMapView.mapType == kGMSTypeNormal {
+            storyBoardMapView.mapType = kGMSTypeSatellite
+        } else if storyBoardMapView.mapType == kGMSTypeSatellite {
+            storyBoardMapView.mapType = kGMSTypeHybrid
+        } else if storyBoardMapView.mapType == kGMSTypeHybrid {
+            storyBoardMapView.mapType = kGMSTypeTerrain
+        } else if storyBoardMapView.mapType == kGMSTypeTerrain {
+            storyBoardMapView.mapType = kGMSTypeNormal
+        }
 
     }
 //    func mapView(mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
