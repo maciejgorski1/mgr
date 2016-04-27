@@ -18,9 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         GMSServices.provideAPIKey("AIzaSyDSD_EDnw9Ipz8D88vc8blO5vcPul_OGKI")
 
-        let key = "pm10"
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setValue(key, forKey: PollutionChosen.Pollution)
+        if let _ = NSUserDefaults.standardUserDefaults().stringForKey(PollutionChosen.Pollution) {
+
+        }
+        else {
+            let key = "pm10"
+            NSUserDefaults.standardUserDefaults().setValue(key, forKey: PollutionChosen.Pollution)
+        }
+
         return true
     }
 

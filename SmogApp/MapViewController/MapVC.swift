@@ -126,4 +126,8 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         marker.icon = UIImage(named: Colors.getImageNameFromID(color))
 
     }
+//    func mapView(mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
+//        // custom view
+//
+//    }
 }
