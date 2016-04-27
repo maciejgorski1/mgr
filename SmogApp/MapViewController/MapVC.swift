@@ -148,7 +148,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     func btnTouched(sender: AnyObject) {
         let date = NSDate().toLocalTime()
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let dateString = dateFormatter.stringFromDate(date.toLocalTime())
         let fileName = "\(pollutionType)_\(dateString)"
 

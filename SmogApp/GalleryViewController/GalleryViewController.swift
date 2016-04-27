@@ -9,9 +9,12 @@
 import UIKit
 import RealmSwift
 import SwiftPhotoGallery
+import NYTPhotoViewer
 
 class GalleryViewController: UIViewController, SwiftPhotoGalleryDataSource, SwiftPhotoGalleryDelegate {
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    var images = []
+    let imageNames = ["Add.png"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,54 +24,52 @@ class GalleryViewController: UIViewController, SwiftPhotoGalleryDataSource, Swif
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
-        let gallery = SwiftPhotoGallery(delegate: self, dataSource: self)
-        
-        presentViewController(gallery, animated: true, completion: nil)
 
     }
+    override func viewWillAppear(animated: Bool) {
+        // getImageFromLocalStorage()
+    }
+    override func viewDidAppear(animated: Bool) {
 
+        let gallery = SwiftPhotoGallery(delegate: self, dataSource: self)
+        presentViewController(gallery, animated: true, completion: nil)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func numberOfImagesInGallery(gallery:SwiftPhotoGallery) -> Int {
+
+    func numberOfImagesInGallery(gallery: SwiftPhotoGallery) -> Int {
         return imageNames.count
     }
-    
-    func imageInGallery(gallery:SwiftPhotoGallery, forIndex:Int) -> UIImage? {
-        
-        return UIImage(named: imageNames[forIndex])
+
+    func imageInGallery(gallery: SwiftPhotoGallery, forIndex: Int) -> UIImage? {
+
+        return UIImage(named: String(imageNames[forIndex]))
     }
 
-    private func getImageFromLocalStorage(imageID : NSString, callback: (image: UIImage?) -> Void) {
-        
-        let imageName = "\(imageID).png"
+    func galleryDidTapToClose(gallery: SwiftPhotoGallery) {
+        dismissViewControllerAnimated(true, completion: nil)
+
+    }
+
+    private func getImageFromLocalStorage() {
         let fileManager = NSFileManager.defaultManager()
-        
-        var docsDir: String?
-        var dataFile: String?
-        let filePath = "/" + imageName
-        let dirPaths = NSSearchPathForDirectoriesInDomains(
-            .DocumentDirectory, .UserDomainMask, true)
-        
-        docsDir = dirPaths[0] as? String
-        dataFile = (docsDir?.stringByAppendingString(filePath))!
-        
-        if fileManager.fileExistsAtPath(dataFile!) {
-            callback(image: UIImage(contentsOfFile: dataFile!))
-        }
-        else {
-            callback(image: nil)
-        }
-    }
-    /*
-     // MARK: - Navigation
 
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+        var dataFile: String?
+        let filePath = "/"
+        let dirPaths = NSSearchPathForDirectoriesInDomains(
+                .DocumentDirectory, .UserDomainMask, true)
+
+        let docsDir = dirPaths[0] ?? ""
+        dataFile = (docsDir.stringByAppendingString(filePath))
+
+        if let directoryUrls = try? fileManager.contentsOfDirectoryAtPath(dataFile!) {
+            for (_, value) in directoryUrls.enumerate() {
+                images.arrayByAddingObject(UIImage(contentsOfFile: "\(dataFile)\(value)")!)
+            }
+        }
+
+    }
+
 }
