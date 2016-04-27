@@ -22,6 +22,12 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     @IBOutlet weak var legendView: UIView!
     @IBOutlet weak var menuButton: UIBarButtonItem!
 
+    override func viewWillAppear(animated: Bool) {
+        let button = UIButton(frame: CGRect(x: 0.8 * self.view.frame.size.width, y: 0.9 * self.view.frame.size.height, width: 32.0, height: 32.0))
+        button.setImage(UIImage(named: "camera"), forState: .Normal)
+        button.addTarget(self, action: "btnTouched:", forControlEvents: .TouchUpInside)
+        self.view.addSubview(button)
+    }
     override func viewDidLoad() {
         pollutionType = defaults.stringForKey(PollutionChosen.Pollution)!
         setUpMapView()
@@ -138,6 +144,16 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         }
 
     }
+
+    func btnTouched(sender: AnyObject) {
+
+        UIGraphicsBeginImageContextWithOptions(self.storyBoardMapView.bounds.size, false, 0);
+        self.view.drawViewHierarchyInRect(view.bounds, afterScreenUpdates: true)
+        var image: UIImage = UIGraphicsGetImageFromCurrentImageContext();
+
+        UIGraphicsEndImageContext();
+    }
+
 //    func mapView(mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
 //        // custom view
 //
