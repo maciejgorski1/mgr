@@ -150,9 +150,10 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         let dateString = dateFormatter.stringFromDate(date.toLocalTime())
-        let fileName = "SmogApp \(dateString)"
-        UIGraphicsBeginImageContextWithOptions(self.storyBoardMapView.bounds.size, false, 0);
-        self.view.drawViewHierarchyInRect(view.bounds, afterScreenUpdates: true)
+        let fileName = "\(pollutionType)_\(dateString)"
+
+        UIGraphicsBeginImageContextWithOptions(self.storyBoardMapView.frame.size, false, 0);
+        self.storyBoardMapView.drawViewHierarchyInRect(storyBoardMapView.bounds, afterScreenUpdates: true)
 
         let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
 
