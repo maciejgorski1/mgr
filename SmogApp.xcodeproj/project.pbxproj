@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		034D323F0DED150C62D1A1A3 /* Pods_SmogApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00FBF8F5BB91CA8CA73AE94A /* Pods_SmogApp.framework */; };
+		0508F9F01CD125180010A2E6 /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0508F9EF1CD125180010A2E6 /* NSDateExtension.swift */; };
 		051B661D1C955FA8008B0E40 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051B661C1C955FA8008B0E40 /* StringExtension.swift */; };
 		051E60F61C8302F7004FF0D1 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051E60F51C8302F7004FF0D1 /* MapVC.swift */; };
 		052558491C83095300EB59EF /* InformationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052558481C83095300EB59EF /* InformationVC.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		00FBF8F5BB91CA8CA73AE94A /* Pods_SmogApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmogApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0508F9EF1CD125180010A2E6 /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSDateExtension.swift; path = SmogApp/Extensions/NSDateExtension.swift; sourceTree = "<group>"; };
 		051B661C1C955FA8008B0E40 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = SmogApp/Extensions/StringExtension.swift; sourceTree = "<group>"; };
 		051E60F51C8302F7004FF0D1 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapVC.swift; path = SmogApp/MapViewController/MapVC.swift; sourceTree = "<group>"; };
 		052558481C83095300EB59EF /* InformationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InformationVC.swift; path = SmogApp/Information/InformationVC.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				051B661C1C955FA8008B0E40 /* StringExtension.swift */,
 				05C1C9CD1CA4565D007B9C4D /* UIColorExtension.swift */,
 				05B5526A1CD017BE006FEFFC /* SwiftOverlays.swift */,
+				0508F9EF1CD125180010A2E6 /* NSDateExtension.swift */,
 			);
 			name = Extenstions;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				05899A0F1C81A0F4006068BD /* AppDelegate.swift in Sources */,
 				054E2E051C81B3C1004AAACD /* SWRevealViewController.m in Sources */,
 				05C1C9CE1CA4565D007B9C4D /* UIColorExtension.swift in Sources */,
+				0508F9F01CD125180010A2E6 /* NSDateExtension.swift in Sources */,
 				0599B6351C84B3380090257D /* PollutionModel.swift in Sources */,
 				0589453A1CB3CF1F00FBD163 /* DetailsModel.swift in Sources */,
 				05A34CD41CA4933100EFDDB6 /* PollutionTypeTableViewCell.swift in Sources */,

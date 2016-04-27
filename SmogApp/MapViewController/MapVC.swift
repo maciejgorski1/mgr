@@ -146,12 +146,25 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     }
 
     func btnTouched(sender: AnyObject) {
-
+        let date = NSDate().toLocalTime()
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        let dateString = dateFormatter.stringFromDate(date.toLocalTime())
+        let fileName = "SmogApp \(dateString)"
         UIGraphicsBeginImageContextWithOptions(self.storyBoardMapView.bounds.size, false, 0);
         self.view.drawViewHierarchyInRect(view.bounds, afterScreenUpdates: true)
-        var image: UIImage = UIGraphicsGetImageFromCurrentImageContext();
 
-        UIGraphicsEndImageContext();
+        let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
+
+        if let image = UIGraphicsGetImageFromCurrentImageContext() {
+            UIGraphicsEndImageContext()
+
+            let fileURL = documentsURL.URLByAppendingPathComponent(fileName + ".png")
+            if let pngImageData = UIImagePNGRepresentation(image) {
+                pngImageData.writeToURL(fileURL, atomically: false)
+            }
+
+        }
     }
 
 //    func mapView(mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
