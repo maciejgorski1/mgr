@@ -8,8 +8,9 @@
 
 import UIKit
 import RealmSwift
+import SwiftPhotoGallery
 
-class GalleryViewController: UIViewController {
+class GalleryViewController: UIViewController, SwiftPhotoGalleryDataSource, SwiftPhotoGalleryDelegate {
     @IBOutlet weak var menuButton: UIBarButtonItem!
 
     override func viewDidLoad() {
@@ -20,14 +21,47 @@ class GalleryViewController: UIViewController {
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
-        debugPrint(Realm.Configuration.defaultConfiguration)
+        let gallery = SwiftPhotoGallery(delegate: self, dataSource: self)
+        
+        presentViewController(gallery, animated: true, completion: nil)
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func numberOfImagesInGallery(gallery:SwiftPhotoGallery) -> Int {
+        return imageNames.count
+    }
+    
+    func imageInGallery(gallery:SwiftPhotoGallery, forIndex:Int) -> UIImage? {
+        
+        return UIImage(named: imageNames[forIndex])
+    }
 
+    private func getImageFromLocalStorage(imageID : NSString, callback: (image: UIImage?) -> Void) {
+        
+        let imageName = "\(imageID).png"
+        let fileManager = NSFileManager.defaultManager()
+        
+        var docsDir: String?
+        var dataFile: String?
+        let filePath = "/" + imageName
+        let dirPaths = NSSearchPathForDirectoriesInDomains(
+            .DocumentDirectory, .UserDomainMask, true)
+        
+        docsDir = dirPaths[0] as? String
+        dataFile = (docsDir?.stringByAppendingString(filePath))!
+        
+        if fileManager.fileExistsAtPath(dataFile!) {
+            callback(image: UIImage(contentsOfFile: dataFile!))
+        }
+        else {
+            callback(image: nil)
+        }
+    }
     /*
      // MARK: - Navigation
 
