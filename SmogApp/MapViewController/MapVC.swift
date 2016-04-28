@@ -158,13 +158,12 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
 
         if let image = UIGraphicsGetImageFromCurrentImageContext() {
-            UIGraphicsEndImageContext()
 
             let fileURL = documentsURL.URLByAppendingPathComponent(fileName + ".png")
             if let pngImageData = UIImagePNGRepresentation(image) {
                 pngImageData.writeToURL(fileURL, atomically: false)
             }
-
+            UIGraphicsEndImageContext()
         }
     }
 

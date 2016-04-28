@@ -24,11 +24,11 @@ class GalleryViewController: UIViewController {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         getImageFromLocalStorage { (isFinished) -> Void in
-            self.imageSliderVC.images = self.images
+            self.imageSliderVC.images = self.images.reverse()
             var options = TNImageSliderViewOptions()
             options.pageControlHidden = false
             options.scrollDirection = .Horizontal
-            options.pageControlCurrentIndicatorTintColor = UIColor.yellowColor()
+            options.pageControlCurrentIndicatorTintColor = UIColor.redColor()
             options.autoSlideIntervalInSeconds = 2
             options.shouldStartFromBeginning = true
             options.imageContentMode = .ScaleAspectFit
@@ -42,7 +42,6 @@ class GalleryViewController: UIViewController {
 
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        print("[ViewController] Prepare for segue")
 
         if (segue.identifier == "seg_imageSlider") {
 
