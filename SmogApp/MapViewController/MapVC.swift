@@ -25,7 +25,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     override func viewWillAppear(animated: Bool) {
         let button = UIButton(frame: CGRect(x: 0.8 * self.view.frame.size.width, y: 0.9 * self.view.frame.size.height, width: 32.0, height: 32.0))
         button.setImage(UIImage(named: "camera"), forState: .Normal)
-        button.addTarget(self, action: "btnTouched:", forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: #selector(MapVC.btnTouched(_:)), forControlEvents: .TouchUpInside)
         self.view.addSubview(button)
     }
     override func viewDidLoad() {
@@ -33,7 +33,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         setUpMapView()
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
-            menuButton.action = "revealToggle:"
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         prepareData(pollutionType) { (isFinished) -> Void in

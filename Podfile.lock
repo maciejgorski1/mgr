@@ -1,4 +1,5 @@
 PODS:
+  - Agrume (2.3.0)
   - Alamofire (3.2.0)
   - GoogleMaps (1.13.0)
   - Realm (0.98.3):
@@ -6,33 +7,37 @@ PODS:
   - Realm/Headers (0.98.3)
   - RealmSwift (0.98.3):
     - Realm (= 0.98.3)
-  - SwiftPhotoGallery (2.0.0)
   - SwiftyJSON (2.3.2)
   - TNImageSliderViewController (1.0.4)
 
 DEPENDENCIES:
+  - Agrume (from `https://github.com/JanGorman/Agrume.git`)
   - Alamofire (<= 3.2.0)
   - GoogleMaps
   - RealmSwift (<= 0.98.3)
-  - SwiftPhotoGallery
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
   - TNImageSliderViewController
 
 EXTERNAL SOURCES:
+  Agrume:
+    :git: https://github.com/JanGorman/Agrume.git
   SwiftyJSON:
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 CHECKOUT OPTIONS:
+  Agrume:
+    :commit: 72652ffb3f97737c4fcd9b4d760b3b8f1b6aa81a
+    :git: https://github.com/JanGorman/Agrume.git
   SwiftyJSON:
     :commit: 2a5b70f06001316d4fb54501edc70b4084705da0
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
+  Agrume: 7ac838a5be139db6ea452de479c417264cd5650d
   Alamofire: 4da478599fccddff361205c8929333d7fe18dceb
   GoogleMaps: 7a6caeb8336d7cb42982e969fc9b1b20a889fe79
   Realm: c6a7d00221a2d5177810a674aebd40c5e0b70b0f
   RealmSwift: d6ecad6e4c2a645d6ac956c2c7e9efb375f39c31
-  SwiftPhotoGallery: 9e904ad9d5bd38bc2c547a5f483143d05286ddcf
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   TNImageSliderViewController: 2517ca7b658e2cfd35f12e02c3cacac7056e0010
 

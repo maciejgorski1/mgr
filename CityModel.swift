@@ -24,7 +24,7 @@ class City: Object {
 
         let realm = try! Realm()
 
-        var results = realm.objects(PollutionModel)
+        let results = realm.objects(PollutionModel)
 
         for item in results {
 
