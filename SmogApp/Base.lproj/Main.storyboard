@@ -426,7 +426,21 @@ Poziom alarmowy stężenia średniego 1-godzinnego: 500 μg/m3
                     <view key="view" contentMode="scaleToFill" id="83U-G7-JrX">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xLW-AS-YeK">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <connections>
+                                    <segue destination="xug-M4-3f3" kind="embed" identifier="seg_imageSlider" id="i8U-yy-GkP"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xLW-AS-YeK" secondAttribute="trailing" id="OcU-Tq-Hjd"/>
+                            <constraint firstItem="xLW-AS-YeK" firstAttribute="bottom" secondItem="7rm-nb-EmP" secondAttribute="top" id="jPU-Gb-Wbe"/>
+                            <constraint firstItem="xLW-AS-YeK" firstAttribute="leading" secondItem="83U-G7-JrX" secondAttribute="leading" id="rAu-Me-rNb"/>
+                            <constraint firstItem="xLW-AS-YeK" firstAttribute="top" secondItem="gby-jl-wEe" secondAttribute="bottom" id="vGd-mh-c2M"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Zdjęcia" id="YFL-cv-KHB">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="hFD-bj-OoO"/>
@@ -556,6 +570,20 @@ Poziom alarmowy stężenia średniego 1-godzinnego: 500 μg/m3
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRc-dq-G7W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2616" y="-167"/>
+        </scene>
+        <!--Image Slider View Controller-->
+        <scene sceneID="cr1-dC-APu">
+            <objects>
+                <viewController id="xug-M4-3f3" customClass="TNImageSliderViewController" customModule="TNImageSliderViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Kp-gC-sQl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xxj-MY-2GY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2623" y="1757"/>
         </scene>
     </scenes>
     <resources>

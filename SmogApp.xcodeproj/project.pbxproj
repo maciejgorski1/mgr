@@ -27,7 +27,6 @@
 		05899A191C81A0F4006068BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05899A171C81A0F4006068BD /* LaunchScreen.storyboard */; };
 		05899A241C81A0F5006068BD /* SmogAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05899A231C81A0F5006068BD /* SmogAppTests.swift */; };
 		0599B6351C84B3380090257D /* PollutionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0599B6341C84B3380090257D /* PollutionModel.swift */; };
-		059EEB361CD17B3A00BEFD2A /* ExamplePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059EEB351CD17B3A00BEFD2A /* ExamplePhoto.swift */; };
 		05A34CD41CA4933100EFDDB6 /* PollutionTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A34CD31CA4933100EFDDB6 /* PollutionTypeTableViewCell.swift */; };
 		05A34CD61CA4975800EFDDB6 /* TypesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A34CD51CA4975800EFDDB6 /* TypesTableViewController.swift */; };
 		05B5526B1CD017BE006FEFFC /* SwiftOverlays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B5526A1CD017BE006FEFFC /* SwiftOverlays.swift */; };
@@ -73,7 +72,6 @@
 		05899A231C81A0F5006068BD /* SmogAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmogAppTests.swift; sourceTree = "<group>"; };
 		05899A251C81A0F5006068BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0599B6341C84B3380090257D /* PollutionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PollutionModel.swift; path = SmogApp/RealmModels/PollutionModel.swift; sourceTree = "<group>"; };
-		059EEB351CD17B3A00BEFD2A /* ExamplePhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExamplePhoto.swift; path = SmogApp/Extensions/ExamplePhoto.swift; sourceTree = "<group>"; };
 		05A34CD31CA4933100EFDDB6 /* PollutionTypeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PollutionTypeTableViewCell.swift; path = SmogApp/MapViewController/Filter/PollutionTypeTableViewCell.swift; sourceTree = "<group>"; };
 		05A34CD51CA4975800EFDDB6 /* TypesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TypesTableViewController.swift; path = SmogApp/MapViewController/Filter/TypesTableViewController.swift; sourceTree = "<group>"; };
 		05B5526A1CD017BE006FEFFC /* SwiftOverlays.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftOverlays.swift; path = SmogApp/Extensions/SwiftOverlays.swift; sourceTree = "<group>"; };
@@ -110,7 +108,6 @@
 				05C1C9CD1CA4565D007B9C4D /* UIColorExtension.swift */,
 				05B5526A1CD017BE006FEFFC /* SwiftOverlays.swift */,
 				0508F9EF1CD125180010A2E6 /* NSDateExtension.swift */,
-				059EEB351CD17B3A00BEFD2A /* ExamplePhoto.swift */,
 			);
 			name = Extenstions;
 			sourceTree = "<group>";
@@ -427,7 +424,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				051E60F61C8302F7004FF0D1 /* MapVC.swift in Sources */,
-				059EEB361CD17B3A00BEFD2A /* ExamplePhoto.swift in Sources */,
 				052558491C83095300EB59EF /* InformationVC.swift in Sources */,
 				057B3C031C81A5C800FCCC8B /* RequestManager.swift in Sources */,
 				058945381CB3CE6800FBD163 /* ActualModel.swift in Sources */,

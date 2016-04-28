@@ -8,14 +8,13 @@
 
 import UIKit
 import RealmSwift
-import SwiftPhotoGallery
-import NYTPhotoViewer
+import TNImageSliderViewController
 
-class GalleryViewController: UIViewController, SwiftPhotoGalleryDataSource, SwiftPhotoGalleryDelegate {
+class GalleryViewController: UIViewController {
     @IBOutlet weak var menuButton: UIBarButtonItem!
-    var images = []
+    var images: [UIImage] = []
     let imageNames = ["Add.png"]
-
+    var imageSliderVC: TNImageSliderViewController!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,36 +23,36 @@ class GalleryViewController: UIViewController, SwiftPhotoGalleryDataSource, Swif
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        getImageFromLocalStorage { (isFinished) -> Void in
+            self.imageSliderVC.images = self.images
+            var options = TNImageSliderViewOptions()
+            options.pageControlHidden = false
+            options.scrollDirection = .Horizontal
+            options.pageControlCurrentIndicatorTintColor = UIColor.yellowColor()
+            options.autoSlideIntervalInSeconds = 2
+            options.shouldStartFromBeginning = true
+            options.imageContentMode = .ScaleAspectFit
+
+            self.imageSliderVC.options = options
+        }
 
     }
+
     override func viewWillAppear(animated: Bool) {
-        // getImageFromLocalStorage()
-    }
-    override func viewDidAppear(animated: Bool) {
 
-        let gallery = SwiftPhotoGallery(delegate: self, dataSource: self)
-        presentViewController(gallery, animated: true, completion: nil)
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print("[ViewController] Prepare for segue")
 
-    func numberOfImagesInGallery(gallery: SwiftPhotoGallery) -> Int {
-        return imageNames.count
-    }
+        if (segue.identifier == "seg_imageSlider") {
 
-    func imageInGallery(gallery: SwiftPhotoGallery, forIndex: Int) -> UIImage? {
+            imageSliderVC = segue.destinationViewController as! TNImageSliderViewController
 
-        return UIImage(named: String(imageNames[forIndex]))
-    }
-
-    func galleryDidTapToClose(gallery: SwiftPhotoGallery) {
-        dismissViewControllerAnimated(true, completion: nil)
+        }
 
     }
 
-    private func getImageFromLocalStorage() {
+    private func getImageFromLocalStorage(callback: (isFinished: Bool) -> Void) {
         let fileManager = NSFileManager.defaultManager()
 
         var dataFile: String?
@@ -66,8 +65,10 @@ class GalleryViewController: UIViewController, SwiftPhotoGalleryDataSource, Swif
 
         if let directoryUrls = try? fileManager.contentsOfDirectoryAtPath(dataFile!) {
             for (_, value) in directoryUrls.enumerate() {
-                images.arrayByAddingObject(UIImage(contentsOfFile: "\(dataFile)\(value)")!)
+                let imageDir = "\(docsDir)/\(value)"
+                images.append(UIImage(contentsOfFile: imageDir)!)
             }
+            callback(isFinished: true)
         }
 
     }

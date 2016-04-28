@@ -1,14 +1,6 @@
 PODS:
   - Alamofire (3.2.0)
-  - FLAnimatedImage (1.0.12)
   - GoogleMaps (1.13.0)
-  - NYTPhotoViewer (1.1.0):
-    - NYTPhotoViewer/AnimatedGifSupport (= 1.1.0)
-    - NYTPhotoViewer/Core (= 1.1.0)
-  - NYTPhotoViewer/AnimatedGifSupport (1.1.0):
-    - FLAnimatedImage (~> 1.0.8)
-    - NYTPhotoViewer/Core
-  - NYTPhotoViewer/Core (1.1.0)
   - Realm (0.98.3):
     - Realm/Headers (= 0.98.3)
   - Realm/Headers (0.98.3)
@@ -16,14 +8,15 @@ PODS:
     - Realm (= 0.98.3)
   - SwiftPhotoGallery (2.0.0)
   - SwiftyJSON (2.3.2)
+  - TNImageSliderViewController (1.0.4)
 
 DEPENDENCIES:
   - Alamofire (<= 3.2.0)
   - GoogleMaps
-  - NYTPhotoViewer (~> 1.1.0)
   - RealmSwift (<= 0.98.3)
   - SwiftPhotoGallery
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+  - TNImageSliderViewController
 
 EXTERNAL SOURCES:
   SwiftyJSON:
@@ -36,12 +29,11 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: 4da478599fccddff361205c8929333d7fe18dceb
-  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   GoogleMaps: 7a6caeb8336d7cb42982e969fc9b1b20a889fe79
-  NYTPhotoViewer: e80e8767f3780d2df37c6f72cbab15d6c7232911
   Realm: c6a7d00221a2d5177810a674aebd40c5e0b70b0f
   RealmSwift: d6ecad6e4c2a645d6ac956c2c7e9efb375f39c31
   SwiftPhotoGallery: 9e904ad9d5bd38bc2c547a5f483143d05286ddcf
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  TNImageSliderViewController: 2517ca7b658e2cfd35f12e02c3cacac7056e0010
 
 COCOAPODS: 0.39.0

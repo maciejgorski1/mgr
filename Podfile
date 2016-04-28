@@ -10,7 +10,7 @@ pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 pod 'RealmSwift', '<= 0.98.3'
 pod 'GoogleMaps'
 pod 'SwiftPhotoGallery'
-pod 'NYTPhotoViewer', '~> 1.1.0'
+pod 'TNImageSliderViewController'
 end
 
 target 'SmogAppTests' do
