@@ -419,29 +419,46 @@ Poziom alarmowy stężenia średniego 1-godzinnego: 500 μg/m3
         <scene sceneID="agk-ze-B3a">
             <objects>
                 <viewController id="zjn-SI-kFL" userLabel="Gallery" customClass="GalleryViewController" customModule="SmogApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gby-jl-wEe"/>
-                        <viewControllerLayoutGuide type="bottom" id="7rm-nb-EmP"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="83U-G7-JrX">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" id="Z9m-rM-EzI">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xLW-AS-YeK">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="cOs-om-GIV">
+                            <size key="itemSize" width="100" height="100"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="8" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="ayj-Zu-Bw3" customClass="DemoCell" customModule="SmogApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2SR-Ee-8C0">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="2SR-Ee-8C0" secondAttribute="bottom" id="Jj3-67-o5M"/>
+                                    <constraint firstItem="2SR-Ee-8C0" firstAttribute="top" secondItem="ayj-Zu-Bw3" secondAttribute="top" id="mYi-XW-QON"/>
+                                    <constraint firstAttribute="trailing" secondItem="2SR-Ee-8C0" secondAttribute="trailing" id="x9N-sv-dJ1"/>
+                                    <constraint firstItem="2SR-Ee-8C0" firstAttribute="leading" secondItem="ayj-Zu-Bw3" secondAttribute="leading" id="xq0-tp-gvd"/>
+                                </constraints>
                                 <connections>
-                                    <segue destination="xug-M4-3f3" kind="embed" identifier="seg_imageSlider" id="i8U-yy-GkP"/>
+                                    <outlet property="imageView" destination="2SR-Ee-8C0" id="eJw-Th-D78"/>
                                 </connections>
-                            </containerView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="xLW-AS-YeK" secondAttribute="trailing" id="OcU-Tq-Hjd"/>
-                            <constraint firstItem="xLW-AS-YeK" firstAttribute="bottom" secondItem="7rm-nb-EmP" secondAttribute="top" id="jPU-Gb-Wbe"/>
-                            <constraint firstItem="xLW-AS-YeK" firstAttribute="leading" secondItem="83U-G7-JrX" secondAttribute="leading" id="rAu-Me-rNb"/>
-                            <constraint firstItem="xLW-AS-YeK" firstAttribute="top" secondItem="gby-jl-wEe" secondAttribute="bottom" id="vGd-mh-c2M"/>
-                        </constraints>
-                    </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="zjn-SI-kFL" id="B5g-sE-H2S"/>
+                            <outlet property="delegate" destination="zjn-SI-kFL" id="5sC-xg-1Z5"/>
+                        </connections>
+                    </collectionView>
                     <navigationItem key="navigationItem" title="Zdjęcia" id="YFL-cv-KHB">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="hFD-bj-OoO"/>
                     </navigationItem>
@@ -570,24 +587,6 @@ Poziom alarmowy stężenia średniego 1-godzinnego: 500 μg/m3
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRc-dq-G7W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2786" y="-289"/>
-        </scene>
-        <!--Image Slider View Controller-->
-        <scene sceneID="cr1-dC-APu">
-            <objects>
-                <viewController id="xug-M4-3f3" customClass="TNImageSliderViewController" customModule="TNImageSliderViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2J6-Ps-ebG"/>
-                        <viewControllerLayoutGuide type="bottom" id="ajk-0H-uON"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2Kp-gC-sQl">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xxj-MY-2GY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2649" y="1874"/>
         </scene>
     </scenes>
     <resources>

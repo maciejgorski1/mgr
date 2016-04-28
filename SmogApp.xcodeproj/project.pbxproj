@@ -31,6 +31,7 @@
 		05A34CD61CA4975800EFDDB6 /* TypesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A34CD51CA4975800EFDDB6 /* TypesTableViewController.swift */; };
 		05B5526B1CD017BE006FEFFC /* SwiftOverlays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B5526A1CD017BE006FEFFC /* SwiftOverlays.swift */; };
 		05C1C9CE1CA4565D007B9C4D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C1C9CD1CA4565D007B9C4D /* UIColorExtension.swift */; };
+		05C89E9F1CD2CBFC009730BE /* DemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C89E9E1CD2CBFC009730BE /* DemoCell.swift */; };
 		05ED1D021CCED01400F7F975 /* PollutionConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ED1D011CCED01400F7F975 /* PollutionConstant.swift */; };
 		05F4CC8A1CA337C800522EE0 /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F4CC891CA337C800522EE0 /* CityModel.swift */; };
 /* End PBXBuildFile section */
@@ -76,6 +77,7 @@
 		05A34CD51CA4975800EFDDB6 /* TypesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TypesTableViewController.swift; path = SmogApp/MapViewController/Filter/TypesTableViewController.swift; sourceTree = "<group>"; };
 		05B5526A1CD017BE006FEFFC /* SwiftOverlays.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftOverlays.swift; path = SmogApp/Extensions/SwiftOverlays.swift; sourceTree = "<group>"; };
 		05C1C9CD1CA4565D007B9C4D /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		05C89E9E1CD2CBFC009730BE /* DemoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoCell.swift; path = SmogApp/GalleryViewController/DemoCell.swift; sourceTree = "<group>"; };
 		05ED1D011CCED01400F7F975 /* PollutionConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PollutionConstant.swift; path = SmogApp/Constants/PollutionConstant.swift; sourceTree = "<group>"; };
 		05F4CC891CA337C800522EE0 /* CityModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
 		14032D218B46E7EB1F5A3933 /* Pods-SmogApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmogApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmogApp/Pods-SmogApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				052558511C83102000EB59EF /* GalleryViewController.swift */,
+				05C89E9E1CD2CBFC009730BE /* DemoCell.swift */,
 			);
 			name = GaleryViewController;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				05B5526B1CD017BE006FEFFC /* SwiftOverlays.swift in Sources */,
 				05A34CD61CA4975800EFDDB6 /* TypesTableViewController.swift in Sources */,
 				0525584C1C830CAF00EB59EF /* MenuVCTableViewController.swift in Sources */,
+				05C89E9F1CD2CBFC009730BE /* DemoCell.swift in Sources */,
 				051B661D1C955FA8008B0E40 /* StringExtension.swift in Sources */,
 				05ED1D021CCED01400F7F975 /* PollutionConstant.swift in Sources */,
 				0525584F1C830EDB00EB59EF /* SettingsViewController.swift in Sources */,

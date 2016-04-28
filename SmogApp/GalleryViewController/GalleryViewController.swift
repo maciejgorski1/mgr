@@ -8,13 +8,13 @@
 
 import UIKit
 import RealmSwift
-import TNImageSliderViewController
+import Agrume
 
-class GalleryViewController: UIViewController {
+class GalleryViewController: UICollectionViewController {
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    private let identifier = "Cell"
     var images: [UIImage] = []
-    let imageNames = ["Add.png"]
-    var imageSliderVC: TNImageSliderViewController!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,32 +23,47 @@ class GalleryViewController: UIViewController {
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        
         getImageFromLocalStorage { (isFinished) -> Void in
-            self.imageSliderVC.images = self.images.reverse()
-            var options = TNImageSliderViewOptions()
-            options.pageControlHidden = false
-            options.scrollDirection = .Horizontal
-            options.pageControlCurrentIndicatorTintColor = UIColor.redColor()
-            options.autoSlideIntervalInSeconds = 2
-            options.shouldStartFromBeginning = true
-            options.imageContentMode = .ScaleAspectFit
-
-            self.imageSliderVC.options = options
         }
 
+        let layout = collectionView?.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.itemSize = CGSize(width: CGRectGetWidth(view.bounds), height: CGRectGetHeight(view.bounds))
     }
 
-    override func viewWillAppear(animated: Bool) {
-
+//    override func viewWillAppear(animated: Bool) {
+//
+//    }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//
+//        if (segue.identifier == "seg_imageSlider") {
+//
+//            imageSliderVC = segue.destinationViewController as! TNImageSliderViewController
+//
+//        }
+//
+//    }
+    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return images.count
     }
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 
-        if (segue.identifier == "seg_imageSlider") {
+    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(identifier, forIndexPath: indexPath) as! DemoCell
+        cell.imageView.image = images[indexPath.row]
+        return cell
+    }
 
-            imageSliderVC = segue.destinationViewController as! TNImageSliderViewController
+    // MARK: UICollectionViewDelegate
 
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let agrume = Agrume(images: images, startIndex: indexPath.row, backgroundBlurStyle: .Light)
+        agrume.didScroll = {
+            [unowned self] index in
+            self.collectionView?.scrollToItemAtIndexPath(NSIndexPath(forRow: index, inSection: 0),
+                atScrollPosition: [],
+                animated: false)
         }
-
+        agrume.showFrom(self)
     }
 
     private func getImageFromLocalStorage(callback: (isFinished: Bool) -> Void) {
