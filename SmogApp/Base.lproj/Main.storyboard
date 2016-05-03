@@ -388,7 +388,72 @@ Poziom alarmowy stężenia średniego 1-godzinnego: 500 μg/m3
                     <view key="view" contentMode="scaleToFill" id="OzI-E3-Vfq">
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="72" sectionHeaderHeight="6" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="HE1-97-Ghm">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="alertCell" id="sBv-u7-Oqu" customClass="AlertTableViewCell" customModule="SmogApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="6" width="600" height="72"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sBv-u7-Oqu" id="2Wp-Ry-yg5">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="72"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miasto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbR-eR-fc2">
+                                                    <rect key="frame" x="8" y="0.0" width="584" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="fUo-Ox-0Ja"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWi-8p-4Bf">
+                                                    <rect key="frame" x="8" y="29" width="584" height="35"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="YWi-8p-4Bf" secondAttribute="trailing" id="2Sx-UK-Qx8"/>
+                                                <constraint firstItem="fbR-eR-fc2" firstAttribute="centerX" secondItem="YWi-8p-4Bf" secondAttribute="centerX" id="3fo-2w-h1M"/>
+                                                <constraint firstItem="YWi-8p-4Bf" firstAttribute="top" secondItem="2Wp-Ry-yg5" secondAttribute="topMargin" constant="21" id="S15-85-kUJ"/>
+                                                <constraint firstItem="YWi-8p-4Bf" firstAttribute="bottom" secondItem="2Wp-Ry-yg5" secondAttribute="bottomMargin" id="cwZ-ab-Yyb"/>
+                                                <constraint firstItem="YWi-8p-4Bf" firstAttribute="leading" secondItem="2Wp-Ry-yg5" secondAttribute="leadingMargin" id="g5c-RC-yUO"/>
+                                                <constraint firstItem="fbR-eR-fc2" firstAttribute="leading" secondItem="2Wp-Ry-yg5" secondAttribute="leadingMargin" id="hZL-ZS-aQj"/>
+                                                <constraint firstItem="fbR-eR-fc2" firstAttribute="top" secondItem="2Wp-Ry-yg5" secondAttribute="top" id="kXq-VV-qce"/>
+                                                <constraint firstItem="YWi-8p-4Bf" firstAttribute="top" secondItem="fbR-eR-fc2" secondAttribute="bottom" constant="8" id="mS0-AP-trh"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="fbR-eR-fc2" secondAttribute="trailing" id="wAU-bn-Ufz"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="3fo-2w-h1M"/>
+                                                    <exclude reference="S15-85-kUJ"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.13986433279999999" blue="0.091587552219999993" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="cityLabel" destination="fbR-eR-fc2" id="NTr-4h-dhu"/>
+                                            <outlet property="textlabel" destination="YWi-8p-4Bf" id="OKr-EH-hvS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="HVL-JJ-R8X" id="oEr-03-o0t"/>
+                                    <outlet property="delegate" destination="HVL-JJ-R8X" id="1zI-cR-fAf"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HE1-97-Ghm" firstAttribute="bottom" secondItem="nhS-XL-3wj" secondAttribute="top" id="93V-Lz-crF"/>
+                            <constraint firstItem="HE1-97-Ghm" firstAttribute="top" secondItem="AQ3-vk-d9N" secondAttribute="bottom" id="E8E-lq-0eE"/>
+                            <constraint firstAttribute="trailing" secondItem="HE1-97-Ghm" secondAttribute="trailing" id="T9I-Zt-FTO"/>
+                            <constraint firstItem="HE1-97-Ghm" firstAttribute="leading" secondItem="OzI-E3-Vfq" secondAttribute="leading" id="qmV-rR-7aA"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Ustawienia" id="8hK-EU-UBn">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="sfa-hN-d4c"/>
@@ -396,6 +461,7 @@ Poziom alarmowy stężenia średniego 1-godzinnego: 500 μg/m3
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="menuButton" destination="sfa-hN-d4c" id="RiA-sw-o08"/>
+                        <outlet property="tableView" destination="HE1-97-Ghm" id="ulh-qg-A4V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZdT-uq-WqL" userLabel="First Responder" sceneMemberID="firstResponder"/>

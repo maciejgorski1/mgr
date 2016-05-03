@@ -28,6 +28,7 @@
 		05899A161C81A0F4006068BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05899A151C81A0F4006068BD /* Assets.xcassets */; };
 		05899A191C81A0F4006068BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05899A171C81A0F4006068BD /* LaunchScreen.storyboard */; };
 		05899A241C81A0F5006068BD /* SmogAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05899A231C81A0F5006068BD /* SmogAppTests.swift */; };
+		058B81331CD944FD00A14AB1 /* AlertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B81321CD944FD00A14AB1 /* AlertTableViewCell.swift */; };
 		0599B6351C84B3380090257D /* PollutionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0599B6341C84B3380090257D /* PollutionModel.swift */; };
 		05A34CD41CA4933100EFDDB6 /* PollutionTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A34CD31CA4933100EFDDB6 /* PollutionTypeTableViewCell.swift */; };
 		05A34CD61CA4975800EFDDB6 /* TypesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A34CD51CA4975800EFDDB6 /* TypesTableViewController.swift */; };
@@ -76,6 +77,7 @@
 		05899A1F1C81A0F5006068BD /* SmogAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmogAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05899A231C81A0F5006068BD /* SmogAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmogAppTests.swift; sourceTree = "<group>"; };
 		05899A251C81A0F5006068BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		058B81321CD944FD00A14AB1 /* AlertTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertTableViewCell.swift; path = SmogApp/SettingsViewController/Cell/AlertTableViewCell.swift; sourceTree = "<group>"; };
 		0599B6341C84B3380090257D /* PollutionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PollutionModel.swift; path = SmogApp/RealmModels/PollutionModel.swift; sourceTree = "<group>"; };
 		05A34CD31CA4933100EFDDB6 /* PollutionTypeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PollutionTypeTableViewCell.swift; path = SmogApp/MapViewController/Filter/PollutionTypeTableViewCell.swift; sourceTree = "<group>"; };
 		05A34CD51CA4975800EFDDB6 /* TypesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TypesTableViewController.swift; path = SmogApp/MapViewController/Filter/TypesTableViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 		0525584D1C830EB200EB59EF /* SettingsViewController */ = {
 			isa = PBXGroup;
 			children = (
+				058B81311CD944C100A14AB1 /* Cell */,
 				0525584E1C830EDB00EB59EF /* SettingsViewController.swift */,
 			);
 			name = SettingsViewController;
@@ -239,6 +242,14 @@
 				05899A251C81A0F5006068BD /* Info.plist */,
 			);
 			path = SmogAppTests;
+			sourceTree = "<group>";
+		};
+		058B81311CD944C100A14AB1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				058B81321CD944FD00A14AB1 /* AlertTableViewCell.swift */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		0599B6331C84B3070090257D /* RealmModels */ = {
@@ -439,6 +450,7 @@
 				058945381CB3CE6800FBD163 /* ActualModel.swift in Sources */,
 				054A389D1CCC9F2E0079B159 /* ColorsConstants.swift in Sources */,
 				058945361CB3CD6F00FBD163 /* StationsCoordinates.swift in Sources */,
+				058B81331CD944FD00A14AB1 /* AlertTableViewCell.swift in Sources */,
 				05899A0F1C81A0F4006068BD /* AppDelegate.swift in Sources */,
 				054E2E051C81B3C1004AAACD /* SWRevealViewController.m in Sources */,
 				05C1C9CE1CA4565D007B9C4D /* UIColorExtension.swift in Sources */,
