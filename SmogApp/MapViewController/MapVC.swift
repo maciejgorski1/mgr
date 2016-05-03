@@ -52,9 +52,6 @@ class MapVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
         mapView.myLocationEnabled = true
         self.view = mapView
         mapView.delegate = self
-//        storyBoardMapView.delegate = self
-//        storyBoardMapView.camera = camera
-//        storyBoardMapView.myLocationEnabled = true
 
     }
     func prepareData(pollutionTypeFromNSDefaults: String, callback: (isFinished: Bool) -> Void)
@@ -82,8 +79,11 @@ class MapVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
                             for (_, detailsRow): (String, JSON) in detailsJSON {
                                 if detailsRow["o_wskaznik"].string! == pollutionTypeFromNSDefaults {
                                     color = detailsRow["max"].string!
-                                    pollutionType = detailsRow["par_desc"].string!
-                                    self.mapSetup(coordinates.long, lattitude: coordinates.lat, color: color, stationDescription: stationDesc, pollutionType: pollutionType)
+                                    pollutionType = detailsRow["par_desc"].string!.capitalizedString
+                                    let pollutionValue = "\(detailsRow["o_value"].double!) \(detailsRow["par_unit"].string!) "
+                                    let acquisitionTime = detailsRow["o_czas"].string!
+                                    let stateName = detailsRow["g_nazwa"].string!
+                                    self.mapSetup(coordinates.long, lattitude: coordinates.lat, color: color, stationDescription: stationDesc, pollutionType: pollutionType, percentfOfLimit: pollutionValue, timeOfAcqusition: acquisitionTime, pollutionLevel: stateName)
                                 }
                                 else {
 
@@ -107,8 +107,11 @@ class MapVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
                             if detailsJSON["fo_wskaznik"].string! == pollutionTypeFromNSDefaults {
 
                                 color = detailsJSON["max"].string!
-                                pollutionType = "\(detailsJSON["par_desc"].string!)  "
-                                self.mapSetup(coordinates.long, lattitude: coordinates.lat, color: color, stationDescription: stationDesc, pollutionType: pollutionType)
+                                pollutionType = detailsJSON["par_desc"].string!.capitalizedString
+                                let pollutionValue = "\(detailsJSON["fca_avg_value"].double!) \(detailsJSON["par_unit"].string!) "
+                                let acquisitionTime = detailsJSON["fo_date"].string!
+                                let stateName = Colors.getDescriptionFromID(color)
+                                self.mapSetup(coordinates.long, lattitude: coordinates.lat, color: color, stationDescription: stationDesc, pollutionType: pollutionType, percentfOfLimit: pollutionValue, timeOfAcqusition: acquisitionTime, pollutionLevel: stateName)
                             }
                             else {
 
@@ -128,8 +131,9 @@ class MapVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
         }
     }
 
-    func mapSetup(longitude: Double, lattitude: Double, color: String, stationDescription: String, pollutionType: String)
+    func mapSetup(longitude: Double, lattitude: Double, color: String, stationDescription: String, pollutionType: String, percentfOfLimit: String, timeOfAcqusition: String, pollutionLevel: String)
     {
+        let dataArray: [String] = [stationDescription, pollutionType, percentfOfLimit, timeOfAcqusition, pollutionLevel]
 
         let marker = GMSMarker()
         let position = CLLocationCoordinate2DMake((lattitude), (longitude))
@@ -138,6 +142,7 @@ class MapVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
         marker.map = mapView
         // marker.snippet = pollutionType
         marker.icon = UIImage(named: Colors.getImageNameFromID(color))
+        marker.userData = dataArray
 
     }
     @IBAction func changeMapTypeButtonClicked(sender: AnyObject) {
@@ -176,14 +181,25 @@ class MapVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
     }
 
     func mapView(mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
-        var markerInfoView = NSBundle.mainBundle().loadNibNamed("AnnotationXib", owner: self, options: nil).first as! AnnotationVC
-        markerInfoView.adresLabel.text = "Hahah"
-        markerInfoView.hourLabel.text = "KJjdf"
-        markerInfoView.levelLabel.text = "gfdgd"
+        let markerInfoView = NSBundle.mainBundle().loadNibNamed("AnnotationXib", owner: self, options: nil).first as! AnnotationVC
+
+        if let markerData = marker.userData as? [String] {
+            markerInfoView.adresLabel.text = markerData[0]
+            markerInfoView.pollutionLabel.text = markerData[1]
+            markerInfoView.levelLabel.text = markerData[2]
+            markerInfoView.hourLabel.text = markerData[3]
+            markerInfoView.stateLabel.text = markerData[4]
+
+        } else {
+            markerInfoView.adresLabel.text = " "
+            markerInfoView.hourLabel.text = " "
+            markerInfoView.levelLabel.text = " "
+            markerInfoView.hourLabel.text = ""
+            markerInfoView.stateLabel.text = ""
+
+        }
+
         return markerInfoView
     }
-//    func mapView(mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
-//        // custom view
-//
-//    }
+
 }

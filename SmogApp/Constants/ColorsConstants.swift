@@ -52,6 +52,26 @@ struct Colors {
 
         return color
     }
+   static func getDescriptionFromID(id: String) -> String {
+        var type = ""
+
+        if id == "1" {
+            type = "Bardzo dobry"
+        } else if id == "2" {
+            type = "Dobry"
+        } else if id == "3" {
+            type = "Umiarkowany"
+        } else if id == "4" {
+            type = "Dostateczny"
+        } else if id == "5" {
+            type = "Zły"
+        } else if id == "6" {
+            type = "Bardzo dobry"
+        } else {
+            type = ""
+        }
+        return type
+    }
     static func getImageNameFromID(id: String) -> String {
         var imageName = ""
 
