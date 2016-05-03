@@ -11,16 +11,19 @@ import GoogleMaps
 import RealmSwift
 import SwiftyJSON
 
-class MapVC: UIViewController, GMSMapViewDelegate {
+class MapVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
+    @IBOutlet weak var storyBoardMapView: GMSMapView!
+    @IBOutlet weak var legendView: UIView!
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+
     var locations: Array<String> = []
     let defaults = NSUserDefaults.standardUserDefaults()
     var pollutionType: String = ""
     let camera = GMSCameraPosition.cameraWithLatitude(50.010575,
         longitude: 19.949189, zoom: 7)
-
-    @IBOutlet weak var storyBoardMapView: GMSMapView!
-    @IBOutlet weak var legendView: UIView!
-    @IBOutlet weak var menuButton: UIBarButtonItem!
+    var locationManager = CLLocationManager()
+    var didFindMyLocation = false
+    var mapView = GMSMapView()
 
     override func viewWillAppear(animated: Bool) {
         let button = UIButton(frame: CGRect(x: 0.8 * self.view.frame.size.width, y: 0.9 * self.view.frame.size.height, width: 32.0, height: 32.0))
@@ -36,16 +39,22 @@ class MapVC: UIViewController, GMSMapViewDelegate {
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+
         prepareData(pollutionType) { (isFinished) -> Void in
             self.removeAllOverlays()
         }
     }
 
     func setUpMapView() {
-
-        storyBoardMapView.delegate = self
-        storyBoardMapView.camera = camera
-        storyBoardMapView.myLocationEnabled = true
+        mapView = .mapWithFrame(CGRectZero, camera: camera)
+        mapView.myLocationEnabled = true
+        self.view = mapView
+        mapView.delegate = self
+//        storyBoardMapView.delegate = self
+//        storyBoardMapView.camera = camera
+//        storyBoardMapView.myLocationEnabled = true
 
     }
     func prepareData(pollutionTypeFromNSDefaults: String, callback: (isFinished: Bool) -> Void)
@@ -126,21 +135,20 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         let position = CLLocationCoordinate2DMake((lattitude), (longitude))
 
         marker.position = position
-        marker.map = storyBoardMapView
-        marker.title = stationDescription
-        marker.snippet = pollutionType
+        marker.map = mapView
+        // marker.snippet = pollutionType
         marker.icon = UIImage(named: Colors.getImageNameFromID(color))
 
     }
     @IBAction func changeMapTypeButtonClicked(sender: AnyObject) {
-        if storyBoardMapView.mapType == kGMSTypeNormal {
-            storyBoardMapView.mapType = kGMSTypeSatellite
-        } else if storyBoardMapView.mapType == kGMSTypeSatellite {
-            storyBoardMapView.mapType = kGMSTypeHybrid
-        } else if storyBoardMapView.mapType == kGMSTypeHybrid {
-            storyBoardMapView.mapType = kGMSTypeTerrain
-        } else if storyBoardMapView.mapType == kGMSTypeTerrain {
-            storyBoardMapView.mapType = kGMSTypeNormal
+        if mapView.mapType == kGMSTypeNormal {
+            mapView.mapType = kGMSTypeSatellite
+        } else if mapView.mapType == kGMSTypeSatellite {
+            mapView.mapType = kGMSTypeHybrid
+        } else if mapView.mapType == kGMSTypeHybrid {
+            mapView.mapType = kGMSTypeTerrain
+        } else if mapView.mapType == kGMSTypeTerrain {
+            mapView.mapType = kGMSTypeNormal
         }
 
     }
@@ -152,8 +160,8 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         let dateString = dateFormatter.stringFromDate(date.toLocalTime())
         let fileName = "\(pollutionType)_\(dateString)"
 
-        UIGraphicsBeginImageContextWithOptions(self.storyBoardMapView.frame.size, false, 0);
-        self.storyBoardMapView.drawViewHierarchyInRect(storyBoardMapView.bounds, afterScreenUpdates: true)
+        UIGraphicsBeginImageContextWithOptions(self.mapView.frame.size, false, 0);
+        self.mapView.drawViewHierarchyInRect(self.mapView.bounds, afterScreenUpdates: true)
 
         let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
 
@@ -167,6 +175,13 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         }
     }
 
+    func mapView(mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
+        var markerInfoView = NSBundle.mainBundle().loadNibNamed("AnnotationXib", owner: self, options: nil).first as! AnnotationVC
+        markerInfoView.adresLabel.text = "Hahah"
+        markerInfoView.hourLabel.text = "KJjdf"
+        markerInfoView.levelLabel.text = "gfdgd"
+        return markerInfoView
+    }
 //    func mapView(mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
 //        // custom view
 //

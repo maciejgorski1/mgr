@@ -181,22 +181,10 @@
                         <viewControllerLayoutGuide type="top" id="68X-h4-cr9"/>
                         <viewControllerLayoutGuide type="bottom" id="80K-eD-GpC"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fXK-VO-UxA">
+                    <view key="view" contentMode="scaleToFill" id="fXK-VO-UxA" customClass="GMSMapView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w5d-aq-5Vq" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="44" width="600" height="512"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="w5d-aq-5Vq" firstAttribute="top" secondItem="68X-h4-cr9" secondAttribute="bottom" id="0Ih-Zf-Nq9"/>
-                            <constraint firstItem="w5d-aq-5Vq" firstAttribute="leading" secondItem="fXK-VO-UxA" secondAttribute="leading" id="AqN-YX-Pe4"/>
-                            <constraint firstItem="w5d-aq-5Vq" firstAttribute="bottom" secondItem="80K-eD-GpC" secondAttribute="top" id="IGN-Q2-66d"/>
-                            <constraint firstAttribute="trailing" secondItem="w5d-aq-5Vq" secondAttribute="trailing" id="kCu-kA-Xtm"/>
-                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Mapa" id="fCb-7y-8YG">
@@ -245,7 +233,6 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="menuButton" destination="gbj-P8-byR" id="mUe-P2-swY"/>
-                        <outlet property="storyBoardMapView" destination="w5d-aq-5Vq" id="BjA-Zs-357"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bmN-8M-KP6" userLabel="First Responder" sceneMemberID="firstResponder"/>
