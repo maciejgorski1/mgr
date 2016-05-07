@@ -304,7 +304,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51q-IX-HBr">
                                         <rect key="frame" x="224" y="10" width="46" height="24"/>
-                                        <color key="backgroundColor" red="0.48635827910362661" green="0.61804305214630006" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="Xhv-0i-5pK"/>
                                             <constraint firstAttribute="width" constant="46" id="uLn-4l-1Xj"/>
@@ -318,7 +318,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rte-cB-5en">
                                         <rect key="frame" x="134" y="10" width="36" height="24"/>
-                                        <color key="backgroundColor" red="1" green="0.39082779210000002" blue="0.29010333719999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="36" id="G4T-E9-ZLt"/>
                                             <constraint firstAttribute="height" constant="24" id="rll-K8-qnU"/>
@@ -332,7 +332,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6XZ-p9-Oet">
                                         <rect key="frame" x="84" y="10" width="46" height="24"/>
-                                        <color key="backgroundColor" red="0.91764705879999997" green="0.18823529410000001" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.0028237951807228434" green="0.00056385760771454499" blue="0.0003465904259591516" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="46" id="7KC-Ct-KXP"/>
                                             <constraint firstAttribute="height" constant="24" id="mqx-Vr-FVH"/>
@@ -346,7 +346,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lkd-z6-Vhf">
                                         <rect key="frame" x="44" y="10" width="36" height="24"/>
-                                        <color key="backgroundColor" red="0.37346329807667267" green="0.56417074548192769" blue="0.21993037200127075" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="4s6-F9-meb"/>
                                             <constraint firstAttribute="width" constant="36" id="bYf-c2-4KQ"/>
@@ -360,7 +360,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIU-dY-TDX">
                                         <rect key="frame" x="174" y="10" width="46" height="24"/>
-                                        <color key="backgroundColor" red="0.93725490199999995" green="0.4549019608" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="2mO-fS-2Yn"/>
                                             <constraint firstAttribute="width" constant="46" id="E1L-lw-Kw7"/>
@@ -374,7 +374,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNL-8y-zKB">
                                         <rect key="frame" x="8" y="10" width="32" height="24"/>
-                                        <color key="backgroundColor" red="0.29411764709999999" green="0.82352941180000006" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="IBt-Tu-uEy"/>
                                             <constraint firstAttribute="width" constant="32" id="w15-nt-6ZO"/>
@@ -387,7 +387,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.85262948250375015" green="1" blue="0.74784724206116293" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.18657141200610128" green="1" blue="0.68182833063015413" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="Lkd-z6-Vhf" firstAttribute="centerY" secondItem="Sal-PT-DeQ" secondAttribute="centerY" id="OZU-HV-kK4"/>
                                     <constraint firstItem="6XZ-p9-Oet" firstAttribute="centerY" secondItem="Sal-PT-DeQ" secondAttribute="centerY" id="PIy-RO-kl5"/>

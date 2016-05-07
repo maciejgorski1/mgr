@@ -30,6 +30,10 @@
 		05899A241C81A0F5006068BD /* SmogAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05899A231C81A0F5006068BD /* SmogAppTests.swift */; };
 		058B81331CD944FD00A14AB1 /* AlertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B81321CD944FD00A14AB1 /* AlertTableViewCell.swift */; };
 		058D3B641CDDFFE800CD84C8 /* pm10.html in Resources */ = {isa = PBXBuildFile; fileRef = 058D3B631CDDFFE800CD84C8 /* pm10.html */; };
+		058D3B671CDE02F200CD84C8 /* so2.html in Resources */ = {isa = PBXBuildFile; fileRef = 058D3B661CDE02F200CD84C8 /* so2.html */; };
+		058D3B691CDE034C00CD84C8 /* nox.html in Resources */ = {isa = PBXBuildFile; fileRef = 058D3B681CDE034C00CD84C8 /* nox.html */; };
+		058D3B6B1CDE039500CD84C8 /* ozon.html in Resources */ = {isa = PBXBuildFile; fileRef = 058D3B6A1CDE039500CD84C8 /* ozon.html */; };
+		058D3B6D1CDE03E000CD84C8 /* benzen.html in Resources */ = {isa = PBXBuildFile; fileRef = 058D3B6C1CDE03E000CD84C8 /* benzen.html */; };
 		0599B6351C84B3380090257D /* PollutionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0599B6341C84B3380090257D /* PollutionModel.swift */; };
 		05A251DB1CDD242D004781D3 /* co.html in Resources */ = {isa = PBXBuildFile; fileRef = 05A251DA1CDD242D004781D3 /* co.html */; };
 		05A34CD41CA4933100EFDDB6 /* PollutionTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A34CD31CA4933100EFDDB6 /* PollutionTypeTableViewCell.swift */; };
@@ -81,6 +85,10 @@
 		05899A251C81A0F5006068BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		058B81321CD944FD00A14AB1 /* AlertTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertTableViewCell.swift; path = SmogApp/SettingsViewController/Cell/AlertTableViewCell.swift; sourceTree = "<group>"; };
 		058D3B631CDDFFE800CD84C8 /* pm10.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = pm10.html; path = SmogApp/Information/pm10.html; sourceTree = "<group>"; };
+		058D3B661CDE02F200CD84C8 /* so2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = so2.html; path = SmogApp/Information/files/so2.html; sourceTree = "<group>"; };
+		058D3B681CDE034C00CD84C8 /* nox.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = nox.html; path = SmogApp/Information/files/nox.html; sourceTree = "<group>"; };
+		058D3B6A1CDE039500CD84C8 /* ozon.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = ozon.html; path = SmogApp/Information/files/ozon.html; sourceTree = "<group>"; };
+		058D3B6C1CDE03E000CD84C8 /* benzen.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = benzen.html; path = SmogApp/Information/files/benzen.html; sourceTree = "<group>"; };
 		0599B6341C84B3380090257D /* PollutionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PollutionModel.swift; path = SmogApp/RealmModels/PollutionModel.swift; sourceTree = "<group>"; };
 		05A251DA1CDD242D004781D3 /* co.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = co.html; path = SmogApp/Information/co.html; sourceTree = "<group>"; };
 		05A34CD31CA4933100EFDDB6 /* PollutionTypeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PollutionTypeTableViewCell.swift; path = SmogApp/MapViewController/Filter/PollutionTypeTableViewCell.swift; sourceTree = "<group>"; };
@@ -138,9 +146,8 @@
 		052558471C83092C00EB59EF /* InformationVC */ = {
 			isa = PBXGroup;
 			children = (
+				058D3B651CDE02BE00CD84C8 /* files */,
 				052558481C83095300EB59EF /* InformationVC.swift */,
-				05A251DA1CDD242D004781D3 /* co.html */,
-				058D3B631CDDFFE800CD84C8 /* pm10.html */,
 			);
 			name = InformationVC;
 			sourceTree = "<group>";
@@ -256,6 +263,19 @@
 				058B81321CD944FD00A14AB1 /* AlertTableViewCell.swift */,
 			);
 			name = Cell;
+			sourceTree = "<group>";
+		};
+		058D3B651CDE02BE00CD84C8 /* files */ = {
+			isa = PBXGroup;
+			children = (
+				05A251DA1CDD242D004781D3 /* co.html */,
+				058D3B631CDDFFE800CD84C8 /* pm10.html */,
+				058D3B661CDE02F200CD84C8 /* so2.html */,
+				058D3B681CDE034C00CD84C8 /* nox.html */,
+				058D3B6A1CDE039500CD84C8 /* ozon.html */,
+				058D3B6C1CDE03E000CD84C8 /* benzen.html */,
+			);
+			name = files;
 			sourceTree = "<group>";
 		};
 		0599B6331C84B3070090257D /* RealmModels */ = {
@@ -381,9 +401,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				058D3B6B1CDE039500CD84C8 /* ozon.html in Resources */,
+				058D3B691CDE034C00CD84C8 /* nox.html in Resources */,
+				058D3B671CDE02F200CD84C8 /* so2.html in Resources */,
 				051164841CD8DAB900F844D9 /* AnnotationXib.xib in Resources */,
 				05899A191C81A0F4006068BD /* LaunchScreen.storyboard in Resources */,
 				058D3B641CDDFFE800CD84C8 /* pm10.html in Resources */,
+				058D3B6D1CDE03E000CD84C8 /* benzen.html in Resources */,
 				05899A161C81A0F4006068BD /* Assets.xcassets in Resources */,
 				05899A141C81A0F4006068BD /* Main.storyboard in Resources */,
 				05A251DB1CDD242D004781D3 /* co.html in Resources */,

@@ -19,27 +19,8 @@ class InformationVC: UIViewController {
     @IBOutlet weak var benzenButton: UIButton!
     @IBOutlet weak var ozonButton: UIButton!
 
-    
-    
-    @IBAction func coButtonClicked(sender: AnyObject) {
-    }
-    
-    @IBAction func so2ButtonClicked(sender: AnyObject) {
-    }
+    var myURL = NSBundle.mainBundle().URLForResource("co", withExtension: "html")
 
-    @IBAction func pm10ButtonClicked(sender: AnyObject) {
-    }
-    @IBAction func noxButtonClicked(sender: AnyObject) {
-    }
-    @IBAction func benzenButtonClicked(sender: AnyObject) {
-    }
-    
-    @IBAction func ozonButtonClicked(sender: AnyObject) {
-    }
-    
-    
-    
-    
     override func viewDidLoad() {
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
@@ -47,15 +28,45 @@ class InformationVC: UIViewController {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
 
-        let myURL = NSBundle.mainBundle().URLForResource("co", withExtension: "html")
+//        self.coButton.layer
 
-        // let myWebView: UIWebView = UIWebView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
         let requestObj = NSURLRequest(URL: myURL!)
         myWebView.loadRequest(requestObj)
-        // Set the WebApp URL in this line
-//        myWebView.loadRequest(NSURLRequest(URL: NSURL(string: "http://monitoring.krakow.pios.gov.pl/opis-monitorowanych-substancji#_page_1")!))
-//        myWebView.loadHTMLString(<#T##string: String##String#>, baseURL: <#T##NSURL?#>)
         self.view.addSubview(myWebView)
+    }
+
+    @IBAction func coButtonClicked(sender: AnyObject) {
+        myURL = NSBundle.mainBundle().URLForResource("co", withExtension: "html")
+        let requestObj = NSURLRequest(URL: myURL!)
+        myWebView.loadRequest(requestObj)
+    }
+
+    @IBAction func so2ButtonClicked(sender: AnyObject) {
+        myURL = NSBundle.mainBundle().URLForResource("so2", withExtension: "html")
+        let requestObj = NSURLRequest(URL: myURL!)
+        myWebView.loadRequest(requestObj)
+    }
+
+    @IBAction func pm10ButtonClicked(sender: AnyObject) {
+        myURL = NSBundle.mainBundle().URLForResource("pm10", withExtension: "html")
+        let requestObj = NSURLRequest(URL: myURL!)
+        myWebView.loadRequest(requestObj)
+    }
+    @IBAction func noxButtonClicked(sender: AnyObject) {
+        myURL = NSBundle.mainBundle().URLForResource("nox", withExtension: "html")
+        let requestObj = NSURLRequest(URL: myURL!)
+        myWebView.loadRequest(requestObj)
+    }
+    @IBAction func benzenButtonClicked(sender: AnyObject) {
+        myURL = NSBundle.mainBundle().URLForResource("benzen", withExtension: "html")
+        let requestObj = NSURLRequest(URL: myURL!)
+        myWebView.loadRequest(requestObj)
+    }
+
+    @IBAction func ozonButtonClicked(sender: AnyObject) {
+        myURL = NSBundle.mainBundle().URLForResource("ozon", withExtension: "html")
+        let requestObj = NSURLRequest(URL: myURL!)
+        myWebView.loadRequest(requestObj)
     }
 
 }
