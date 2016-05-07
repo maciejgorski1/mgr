@@ -12,14 +12,34 @@ class InformationVC: UIViewController {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var myWebView: UIWebView!
-    /*
-     // Only override drawRect: if you perform custom drawing.
-     // An empty implementation adversely affects performance during animation.
-     override func drawRect(rect: CGRect) {
-     // Drawing code
-     }
-     */
+    @IBOutlet weak var coButton: UIButton!
+    @IBOutlet weak var so2Button: UIButton!
+    @IBOutlet weak var pm10Button: UIButton!
+    @IBOutlet weak var noxButton: UIButton!
+    @IBOutlet weak var benzenButton: UIButton!
+    @IBOutlet weak var ozonButton: UIButton!
 
+    
+    
+    @IBAction func coButtonClicked(sender: AnyObject) {
+    }
+    
+    @IBAction func so2ButtonClicked(sender: AnyObject) {
+    }
+
+    @IBAction func pm10ButtonClicked(sender: AnyObject) {
+    }
+    @IBAction func noxButtonClicked(sender: AnyObject) {
+    }
+    @IBAction func benzenButtonClicked(sender: AnyObject) {
+    }
+    
+    @IBAction func ozonButtonClicked(sender: AnyObject) {
+    }
+    
+    
+    
+    
     override func viewDidLoad() {
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
