@@ -9,8 +9,8 @@ pod 'Alamofire', '<= 3.2.0'
 pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 pod 'RealmSwift', '<= 0.98.3'
 pod 'GoogleMaps'
-pod 'TNImageSliderViewController'
 pod 'Agrume', :git => 'https://github.com/JanGorman/Agrume.git'
+pod 'SCLAlertView'
 end
 
 target 'SmogAppTests' do

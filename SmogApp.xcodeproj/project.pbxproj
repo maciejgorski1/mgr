@@ -43,6 +43,7 @@
 		05C89E9F1CD2CBFC009730BE /* DemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C89E9E1CD2CBFC009730BE /* DemoCell.swift */; };
 		05ED1D021CCED01400F7F975 /* PollutionConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ED1D011CCED01400F7F975 /* PollutionConstant.swift */; };
 		05F4CC8A1CA337C800522EE0 /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F4CC891CA337C800522EE0 /* CityModel.swift */; };
+		D297617F1CE2F64C0077C267 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D297617E1CE2F64C0077C267 /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		05F4CC891CA337C800522EE0 /* CityModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
 		14032D218B46E7EB1F5A3933 /* Pods-SmogApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmogApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmogApp/Pods-SmogApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A922D983BDEB298DDFED8B75 /* Pods-SmogApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmogApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmogApp/Pods-SmogApp.release.xcconfig"; sourceTree = "<group>"; };
+		D297617E1CE2F64C0077C267 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = SmogApp/Extensions/Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				05C1C9CD1CA4565D007B9C4D /* UIColorExtension.swift */,
 				05B5526A1CD017BE006FEFFC /* SwiftOverlays.swift */,
 				0508F9EF1CD125180010A2E6 /* NSDateExtension.swift */,
+				D297617E1CE2F64C0077C267 /* Reachability.swift */,
 			);
 			name = Extenstions;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 				05C89E9F1CD2CBFC009730BE /* DemoCell.swift in Sources */,
 				051B661D1C955FA8008B0E40 /* StringExtension.swift in Sources */,
 				05ED1D021CCED01400F7F975 /* PollutionConstant.swift in Sources */,
+				D297617F1CE2F64C0077C267 /* Reachability.swift in Sources */,
 				0525584F1C830EDB00EB59EF /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -628,11 +632,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SmogApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = moo.idk.SmogApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SmogApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -644,11 +651,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SmogApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = moo.idk.SmogApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SmogApp-Bridging-Header.h";
 			};
 			name = Release;

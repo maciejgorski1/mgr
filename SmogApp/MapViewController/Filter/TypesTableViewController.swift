@@ -22,7 +22,7 @@ class TypesTableViewController: UITableViewController {
     func getLanguageDictionary () -> Dictionary<String, String> {
 
         if possibleTypesDictionary.isEmpty {
-            possibleTypesDictionary = ["pm10": "Pył zawieszony PM10", "pm2.5": "Pył zawieszony PM2.5", "no2": "Dwutlenek azotu (NO2)", "so2": "Dwutlenek siarki (SO2)", "co": "Tlenek węgla (CO)", "o3": "Ozon (O3)", "bzn": "Benzen C6H6", "caqi": "CAQI"]
+            possibleTypesDictionary = ["pm10": "Pył zawieszony PM10", "pm2.5": "Pył zawieszony PM2.5", "no2": "Dwutlenek azotu (NO2)", "so2": "Dwutlenek siarki (SO2)", "co": "Tlenek węgla (CO)", "o3": "Ozon (O3)"]
         }
         return possibleTypesDictionary
 

@@ -7,16 +7,16 @@ PODS:
   - Realm/Headers (0.98.3)
   - RealmSwift (0.98.3):
     - Realm (= 0.98.3)
+  - SCLAlertView (0.5.6)
   - SwiftyJSON (2.3.2)
-  - TNImageSliderViewController (1.0.4)
 
 DEPENDENCIES:
   - Agrume (from `https://github.com/JanGorman/Agrume.git`)
   - Alamofire (<= 3.2.0)
   - GoogleMaps
   - RealmSwift (<= 0.98.3)
+  - SCLAlertView
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
-  - TNImageSliderViewController
 
 EXTERNAL SOURCES:
   Agrume:
@@ -38,7 +38,7 @@ SPEC CHECKSUMS:
   GoogleMaps: 8935220056a6cc8e9ca298b4da4ae530620aa71b
   Realm: c6a7d00221a2d5177810a674aebd40c5e0b70b0f
   RealmSwift: d6ecad6e4c2a645d6ac956c2c7e9efb375f39c31
+  SCLAlertView: c2b916952520d96cf5e886a38053f1b8c3da502e
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
-  TNImageSliderViewController: 2517ca7b658e2cfd35f12e02c3cacac7056e0010
 
 COCOAPODS: 0.39.0
