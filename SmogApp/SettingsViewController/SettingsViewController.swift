@@ -56,8 +56,6 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
 
                 }
                 if index == 23 {
-                    self.alerts["Dupa"] = "Kupa"
-                    self.alerts["pupoa"] = "Dupahfjdfjlgjdfklgjdklfgjdfklgj lgdfjlkgjdfklgjdfklgjdfklgj dgdkjfgkl djg dfkljg dkljg"
                     callback(isFinished: true)
                 }
             })

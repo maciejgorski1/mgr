@@ -26,7 +26,8 @@ class MapVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
     var didFindMyLocation = false
     var mapView = GMSMapView()
 
-    override func viewWillAppear(animated: Bool) {
+
+    override func viewDidAppear(animated: Bool) {
         let button = UIButton(frame: CGRect(x: 0.8 * self.view.frame.size.width, y: 0.9 * self.view.frame.size.height, width: 32.0, height: 32.0))
         button.setImage(UIImage(named: "camera"), forState: .Normal)
         button.addTarget(self, action: #selector(MapVC.btnTouched(_:)), forControlEvents: .TouchUpInside)
@@ -40,6 +41,7 @@ class MapVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
 

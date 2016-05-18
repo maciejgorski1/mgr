@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Catamaran-Regular.ttf">
+            <string>Catamaran-Regular</string>
+        </mutableArray>
+        <mutableArray key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -12,7 +23,7 @@
             <rect key="frame" x="0.0" y="0.0" width="206" height="150"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aaa" translatesAutoresizingMaskIntoConstraints="NO" id="Y9W-i5-wxX">
+                <imageView userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tlo" translatesAutoresizingMaskIntoConstraints="NO" id="Y9W-i5-wxX">
                     <rect key="frame" x="0.0" y="0.0" width="206" height="150"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Godzina pomiaru" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9N-rJ-Fn5">
@@ -20,16 +31,15 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="24" id="dgc-Fb-JWz"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Adres" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tnc-4N-aEv">
-                    <rect key="frame" x="8" y="16" width="143" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adres" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tnc-4N-aEv">
+                    <rect key="frame" x="8" y="16" width="53" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="LjN-BN-ekz"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="22"/>
+                    <fontDescription key="fontDescription" name="Catamaran-Regular" family="Catamaran" pointSize="22"/>
                     <color key="textColor" red="0.2122775475770517" green="0.69445353403141363" blue="0.22769949280527402" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -38,8 +48,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="24" id="ZJQ-dc-AH5"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poziom %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wr3-Gu-lDf">
@@ -47,17 +56,16 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="24" id="G7I-ST-mFk"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zanieczyeszczenie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xae-x0-r2x">
-                    <rect key="frame" x="6" y="40" width="194" height="32"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zanieczyeszczenie" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="Xae-x0-r2x">
+                    <rect key="frame" x="0.0" y="54" width="194" height="32"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="32" id="3Zb-LA-PJt"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
-                    <color key="textColor" red="1" green="0.13986433279999999" blue="0.091587552219999993" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="19"/>
+                    <color key="textColor" red="0.14071534524937146" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
@@ -67,14 +75,14 @@
                 <constraint firstItem="QJw-aj-JCn" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.52" id="79y-VU-pJc"/>
                 <constraint firstItem="QJw-aj-JCn" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.4" id="8SH-pP-FaC"/>
                 <constraint firstItem="Tnc-4N-aEv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="BZ9-GM-8cb"/>
-                <constraint firstItem="QJw-aj-JCn" firstAttribute="top" secondItem="Xae-x0-r2x" secondAttribute="bottom" constant="22" id="BkL-sK-pM9"/>
+                <constraint firstItem="QJw-aj-JCn" firstAttribute="top" secondItem="Xae-x0-r2x" secondAttribute="bottom" constant="8" id="BkL-sK-pM9"/>
                 <constraint firstItem="Y9W-i5-wxX" firstAttribute="centerX" secondItem="Xae-x0-r2x" secondAttribute="centerX" id="F6L-cg-5k3"/>
                 <constraint firstItem="Y9W-i5-wxX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="IGQ-c0-PgV"/>
                 <constraint firstItem="Wr3-Gu-lDf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="IKb-yc-CbU"/>
-                <constraint firstAttribute="trailing" secondItem="Xae-x0-r2x" secondAttribute="trailing" constant="6" id="JlU-pw-mDB"/>
+                <constraint firstAttribute="trailing" secondItem="Xae-x0-r2x" secondAttribute="trailing" constant="12" id="JlU-pw-mDB"/>
                 <constraint firstItem="Tnc-4N-aEv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="ME2-bO-Bgl"/>
                 <constraint firstAttribute="trailing" secondItem="QJw-aj-JCn" secondAttribute="trailing" constant="8" id="Ma3-17-Sgf"/>
-                <constraint firstItem="Wr3-Gu-lDf" firstAttribute="top" secondItem="Xae-x0-r2x" secondAttribute="bottom" constant="22" id="Opm-5B-s0z"/>
+                <constraint firstItem="Wr3-Gu-lDf" firstAttribute="top" secondItem="Xae-x0-r2x" secondAttribute="bottom" constant="8" id="Opm-5B-s0z"/>
                 <constraint firstItem="q9N-rJ-Fn5" firstAttribute="top" secondItem="QJw-aj-JCn" secondAttribute="bottom" constant="4" id="Uwb-Ko-410"/>
                 <constraint firstItem="QJw-aj-JCn" firstAttribute="leading" secondItem="Wr3-Gu-lDf" secondAttribute="trailing" constant="4" id="VPn-ad-W3Z"/>
                 <constraint firstAttribute="bottom" secondItem="Y9W-i5-wxX" secondAttribute="bottom" id="XV5-gS-dud"/>
@@ -82,7 +90,7 @@
                 <constraint firstAttribute="bottom" secondItem="q9N-rJ-Fn5" secondAttribute="bottom" constant="4" id="eY7-R7-l98"/>
                 <constraint firstItem="q9N-rJ-Fn5" firstAttribute="top" secondItem="Wr3-Gu-lDf" secondAttribute="bottom" constant="4" id="eox-6n-mTD"/>
                 <constraint firstItem="Y9W-i5-wxX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fT4-z9-xL3"/>
-                <constraint firstItem="Xae-x0-r2x" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="6" id="giB-2A-HvU"/>
+                <constraint firstItem="Xae-x0-r2x" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="giB-2A-HvU"/>
                 <constraint firstAttribute="trailing" secondItem="q9N-rJ-Fn5" secondAttribute="trailing" constant="8" id="gym-cu-xts"/>
                 <constraint firstItem="Wr3-Gu-lDf" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.4" id="iOR-uP-zub"/>
                 <constraint firstItem="q9N-rJ-Fn5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="kCR-dK-xsn"/>
@@ -115,6 +123,6 @@
         </view>
     </objects>
     <resources>
-        <image name="aaa" width="236" height="236"/>
+        <image name="tlo" width="490" height="363"/>
     </resources>
 </document>

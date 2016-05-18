@@ -6,6 +6,9 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <mutableArray key="Catamaran-Regular.ttf">
+            <string>Catamaran-Regular</string>
+        </mutableArray>
         <mutableArray key="Lato-Regular.ttf">
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
@@ -40,8 +43,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bYb-GB-5Jl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.7079184991719869" green="1" blue="0.43507411594406309" alpha="1" colorSpace="calibratedRGB"/>
-                        <imageView key="tableFooterView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pogo" id="SmP-OR-sI6">
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <imageView key="tableFooterView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" id="SmP-OR-sI6">
                             <rect key="frame" x="0.0" y="220" width="600" height="378"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
@@ -55,9 +58,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SmogApp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3e-N0-71U">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SmogApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3e-N0-71U">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                                    <color key="backgroundColor" red="0.29190191400024512" green="1" blue="0.31301906134865154" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -78,15 +80,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Globe-32" translatesAutoresizingMaskIntoConstraints="NO" id="cc2-zb-eic">
-                                                    <rect key="frame" x="8" y="6" width="32" height="32"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map2" translatesAutoresizingMaskIntoConstraints="NO" id="cc2-zb-eic">
+                                                    <rect key="frame" x="8" y="10" width="24" height="24"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="32" id="bg7-1G-XVp"/>
-                                                        <constraint firstAttribute="width" constant="32" id="eHV-MR-grj"/>
+                                                        <constraint firstAttribute="height" constant="24" id="bg7-1G-XVp"/>
+                                                        <constraint firstAttribute="width" constant="24" id="eHV-MR-grj"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mapa zanieczyszczeń" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhW-cT-tA7">
-                                                    <rect key="frame" x="44" y="12" width="556" height="21"/>
+                                                    <rect key="frame" x="36" y="12" width="564" height="21"/>
                                                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -124,16 +126,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zagrożenia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4v-sg-ZW4">
-                                                    <rect key="frame" x="44" y="12" width="548" height="21"/>
+                                                    <rect key="frame" x="36" y="12" width="556" height="21"/>
                                                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="warning" translatesAutoresizingMaskIntoConstraints="NO" id="Mdh-wP-8YB">
-                                                    <rect key="frame" x="8" y="6" width="32" height="32"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="siren" translatesAutoresizingMaskIntoConstraints="NO" id="Mdh-wP-8YB">
+                                                    <rect key="frame" x="8" y="10" width="24" height="24"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="32" id="41N-fL-iUh"/>
-                                                        <constraint firstAttribute="height" constant="32" id="bdT-dF-Zlh"/>
+                                                        <constraint firstAttribute="width" constant="24" id="41N-fL-iUh"/>
+                                                        <constraint firstAttribute="height" constant="24" id="bdT-dF-Zlh"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
@@ -167,16 +169,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Galeria" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yyj-Av-pj2">
-                                                    <rect key="frame" x="44" y="12" width="548" height="21"/>
+                                                    <rect key="frame" x="36" y="12" width="556" height="21"/>
                                                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dNt-S0-YNq">
-                                                    <rect key="frame" x="8" y="6" width="32" height="32"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo-camera" translatesAutoresizingMaskIntoConstraints="NO" id="dNt-S0-YNq">
+                                                    <rect key="frame" x="8" y="10" width="24" height="24"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="32" id="1MB-3A-nT1"/>
-                                                        <constraint firstAttribute="width" constant="32" id="Mcs-QC-dmg"/>
+                                                        <constraint firstAttribute="height" constant="24" id="1MB-3A-nT1"/>
+                                                        <constraint firstAttribute="width" constant="24" id="Mcs-QC-dmg"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
@@ -210,16 +212,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opis monitorowanych substancji" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PmL-AY-RPx">
-                                                    <rect key="frame" x="44" y="12" width="548" height="21"/>
+                                                    <rect key="frame" x="36" y="12" width="556" height="21"/>
                                                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dcO-ho-hkA">
-                                                    <rect key="frame" x="8" y="6" width="32" height="32"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information-point" translatesAutoresizingMaskIntoConstraints="NO" id="dcO-ho-hkA">
+                                                    <rect key="frame" x="8" y="10" width="24" height="24"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="32" id="9gr-jI-qzf"/>
-                                                        <constraint firstAttribute="width" constant="32" id="hRd-2a-NrU"/>
+                                                        <constraint firstAttribute="height" constant="24" id="9gr-jI-qzf"/>
+                                                        <constraint firstAttribute="width" constant="24" id="hRd-2a-NrU"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
@@ -516,9 +518,12 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="6" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="HE1-97-Ghm">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="LlR-Sa-X8Q">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="6" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="HE1-97-Ghm">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="alertCell" id="sBv-u7-Oqu" customClass="AlertTableViewCell" customModule="SmogApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="6" width="600" height="100"/>
@@ -529,19 +534,17 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miasto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbR-eR-fc2">
                                                     <rect key="frame" x="8" y="0.0" width="584" height="21"/>
-                                                    <color key="backgroundColor" red="0.37346329810000001" green="0.56417074550000001" blue="0.21993037200000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="fUo-Ox-0Ja"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" red="0.37346329810000001" green="0.56417074550000001" blue="0.21993037200000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWi-8p-4Bf">
                                                     <rect key="frame" x="8" y="29" width="584" height="63"/>
-                                                    <color key="backgroundColor" red="0.97959807981927716" green="0.0020264527101651157" blue="0.050475404057464313" alpha="0.81842672413793105" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.912109375" green="0.912109375" blue="0.912109375" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.97959807980000002" green="0.00202645271" blue="0.05047540406" alpha="0.81842672409999995" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -578,9 +581,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="LlR-Sa-X8Q" firstAttribute="top" secondItem="AQ3-vk-d9N" secondAttribute="bottom" id="7jQ-6B-QSU"/>
                             <constraint firstItem="HE1-97-Ghm" firstAttribute="bottom" secondItem="nhS-XL-3wj" secondAttribute="top" id="93V-Lz-crF"/>
-                            <constraint firstItem="HE1-97-Ghm" firstAttribute="top" secondItem="AQ3-vk-d9N" secondAttribute="bottom" constant="-65" id="E8E-lq-0eE"/>
+                            <constraint firstItem="HE1-97-Ghm" firstAttribute="top" secondItem="AQ3-vk-d9N" secondAttribute="bottom" id="E8E-lq-0eE"/>
+                            <constraint firstItem="LlR-Sa-X8Q" firstAttribute="leading" secondItem="OzI-E3-Vfq" secondAttribute="leading" id="MPp-Az-iAV"/>
+                            <constraint firstAttribute="trailing" secondItem="LlR-Sa-X8Q" secondAttribute="trailing" id="Q6l-CD-W5S"/>
                             <constraint firstAttribute="trailing" secondItem="HE1-97-Ghm" secondAttribute="trailing" id="T9I-Zt-FTO"/>
+                            <constraint firstItem="nhS-XL-3wj" firstAttribute="top" secondItem="LlR-Sa-X8Q" secondAttribute="bottom" id="UyS-UV-FSb"/>
                             <constraint firstItem="HE1-97-Ghm" firstAttribute="leading" secondItem="OzI-E3-Vfq" secondAttribute="leading" id="qmV-rR-7aA"/>
                         </constraints>
                     </view>
@@ -729,27 +736,29 @@
         <scene sceneID="VFn-Mt-rak">
             <objects>
                 <tableViewController id="G8K-y1-6O1" customClass="TypesTableViewController" customModule="SmogApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="nwB-ol-vDo">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="nwB-ol-vDo">
+                        <rect key="frame" x="0.0" y="44" width="600" height="556"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TypeCell" textLabel="Ubj-rD-sqX" style="IBUITableViewCellStyleDefault" id="vFP-4D-ktt">
-                                <rect key="frame" x="0.0" y="66" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vFP-4D-ktt" id="74p-W2-yXK">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ubj-rD-sqX">
-                                            <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                            <rect key="frame" x="15" y="0.0" width="570" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="Catamaran-Regular" family="Catamaran" pointSize="20"/>
+                                            <color key="textColor" red="0.97959807980000002" green="0.00202645271" blue="0.05047540406" alpha="0.81842672409999995" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -757,6 +766,7 @@
                             <outlet property="delegate" destination="G8K-y1-6O1" id="Ngu-kH-Kie"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Filtruj" id="6dJ-7J-Ygn">
                         <barButtonItem key="rightBarButtonItem" title="OK" id="YPB-h7-TX1">
                             <connections>
@@ -765,6 +775,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRc-dq-G7W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -774,9 +785,12 @@
     <resources>
         <image name="Filter-32" width="32" height="32"/>
         <image name="Globe-32" width="32" height="32"/>
+        <image name="information-point" width="512" height="512"/>
+        <image name="logo" width="370" height="352"/>
+        <image name="map2" width="512" height="512"/>
         <image name="menu" width="22" height="22"/>
-        <image name="pogo" width="772" height="1054"/>
-        <image name="warning" width="24" height="21"/>
+        <image name="photo-camera" width="512" height="512"/>
+        <image name="siren" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="vtg-sK-yZz"/>
