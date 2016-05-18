@@ -33,11 +33,8 @@ struct StationsCoordinates {
             longitude = 19.569869 // olkusz
             lattitude = 50.277569
         case 7:
-            longitude = 19.830422 // skawina
-            lattitude = 49.971047
-        case 8:
-            longitude = 20.053492 // suchabeskidzka
-            lattitude = 50.057678
+            longitude = 19.82833300 // skawina
+            lattitude = 49.97500000
         case 11:
             longitude = 19.477464 // trzebina
             lattitude = 50.159406
@@ -57,8 +54,8 @@ struct StationsCoordinates {
             longitude = 20.992580 // tarnow
             lattitude = 50.018263
         case 54:
-            longitude = 20.439511 // bochnia
-            lattitude = 49.969017
+            longitude = 20.43000000 // bochnia
+            lattitude = 49.96888900
         case 55:
             longitude = 20.60638900 // brzesko
             lattitude = 49.96888900
@@ -92,6 +89,9 @@ struct StationsCoordinates {
         case 516:
             longitude = 20.28871700 // proszowice
             lattitude = 50.19313900
+        case 518:
+            longitude = 19.58861100 // suchabeskidzka
+            lattitude = 49.74027800
         case 520:
             longitude = 21.05416700 // tuchow
             lattitude = 49.89500000
@@ -104,9 +104,9 @@ struct StationsCoordinates {
         case 519:
             longitude = 19.47055600 // trzebinia
             lattitude = 50.15972200
-        case 524:
-            longitude = 20.053492 // gminaklaj
-            lattitude = 50.057678
+//        case 524:
+//            longitude = 20.053492 // gminaklaj
+//            lattitude = 50.057678
         default:
             longitude = 20.053492
             lattitude = 50.057678

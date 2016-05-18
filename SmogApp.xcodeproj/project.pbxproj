@@ -35,6 +35,8 @@
 		058D3B6B1CDE039500CD84C8 /* ozon.html in Resources */ = {isa = PBXBuildFile; fileRef = 058D3B6A1CDE039500CD84C8 /* ozon.html */; };
 		058D3B6D1CDE03E000CD84C8 /* benzen.html in Resources */ = {isa = PBXBuildFile; fileRef = 058D3B6C1CDE03E000CD84C8 /* benzen.html */; };
 		0599B6351C84B3380090257D /* PollutionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0599B6341C84B3380090257D /* PollutionModel.swift */; };
+		059BD5CD1CECC08300EA78D1 /* Catamaran-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 059BD5CB1CECC08300EA78D1 /* Catamaran-Regular.ttf */; };
+		059BD5CE1CECC08300EA78D1 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 059BD5CC1CECC08300EA78D1 /* Lato-Regular.ttf */; };
 		05A251DB1CDD242D004781D3 /* co.html in Resources */ = {isa = PBXBuildFile; fileRef = 05A251DA1CDD242D004781D3 /* co.html */; };
 		05A34CD41CA4933100EFDDB6 /* PollutionTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A34CD31CA4933100EFDDB6 /* PollutionTypeTableViewCell.swift */; };
 		05A34CD61CA4975800EFDDB6 /* TypesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A34CD51CA4975800EFDDB6 /* TypesTableViewController.swift */; };
@@ -91,6 +93,8 @@
 		058D3B6A1CDE039500CD84C8 /* ozon.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = ozon.html; path = SmogApp/Information/files/ozon.html; sourceTree = "<group>"; };
 		058D3B6C1CDE03E000CD84C8 /* benzen.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = benzen.html; path = SmogApp/Information/files/benzen.html; sourceTree = "<group>"; };
 		0599B6341C84B3380090257D /* PollutionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PollutionModel.swift; path = SmogApp/RealmModels/PollutionModel.swift; sourceTree = "<group>"; };
+		059BD5CB1CECC08300EA78D1 /* Catamaran-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Catamaran-Regular.ttf"; sourceTree = "<group>"; };
+		059BD5CC1CECC08300EA78D1 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		05A251DA1CDD242D004781D3 /* co.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = co.html; path = SmogApp/Information/co.html; sourceTree = "<group>"; };
 		05A34CD31CA4933100EFDDB6 /* PollutionTypeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PollutionTypeTableViewCell.swift; path = SmogApp/MapViewController/Filter/PollutionTypeTableViewCell.swift; sourceTree = "<group>"; };
 		05A34CD51CA4975800EFDDB6 /* TypesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TypesTableViewController.swift; path = SmogApp/MapViewController/Filter/TypesTableViewController.swift; sourceTree = "<group>"; };
@@ -242,6 +246,7 @@
 		05899A0D1C81A0F4006068BD /* SmogApp */ = {
 			isa = PBXGroup;
 			children = (
+				059BD5CF1CECC08900EA78D1 /* Fonts */,
 				05899A0E1C81A0F4006068BD /* AppDelegate.swift */,
 				05899A121C81A0F4006068BD /* Main.storyboard */,
 				05899A151C81A0F4006068BD /* Assets.xcassets */,
@@ -290,6 +295,15 @@
 				058945391CB3CF1F00FBD163 /* DetailsModel.swift */,
 			);
 			name = RealmModels;
+			sourceTree = "<group>";
+		};
+		059BD5CF1CECC08900EA78D1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				059BD5CB1CECC08300EA78D1 /* Catamaran-Regular.ttf */,
+				059BD5CC1CECC08300EA78D1 /* Lato-Regular.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		05A34CD21CA492F100EFDDB6 /* Filter */ = {
@@ -407,9 +421,11 @@
 				058D3B6B1CDE039500CD84C8 /* ozon.html in Resources */,
 				058D3B691CDE034C00CD84C8 /* nox.html in Resources */,
 				058D3B671CDE02F200CD84C8 /* so2.html in Resources */,
+				059BD5CD1CECC08300EA78D1 /* Catamaran-Regular.ttf in Resources */,
 				051164841CD8DAB900F844D9 /* AnnotationXib.xib in Resources */,
 				05899A191C81A0F4006068BD /* LaunchScreen.storyboard in Resources */,
 				058D3B641CDDFFE800CD84C8 /* pm10.html in Resources */,
+				059BD5CE1CECC08300EA78D1 /* Lato-Regular.ttf in Resources */,
 				058D3B6D1CDE03E000CD84C8 /* benzen.html in Resources */,
 				05899A161C81A0F4006068BD /* Assets.xcassets in Resources */,
 				05899A141C81A0F4006068BD /* Main.storyboard in Resources */,
