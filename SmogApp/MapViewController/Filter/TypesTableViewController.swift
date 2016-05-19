@@ -31,7 +31,7 @@ class TypesTableViewController: UITableViewController {
     override func viewDidLoad() {
 
         super.viewDidLoad()
-        tableView.backgroundView = UIImageView(image: UIImage(named: "logo"))
+        tableView.backgroundView = UIImageView(image: UIImage(named: "logopogo"))
         let defaults = NSUserDefaults.standardUserDefaults()
         debugPrint(defaults.stringForKey(PollutionChosen.Pollution)!)
         getLanguageDictionary()
