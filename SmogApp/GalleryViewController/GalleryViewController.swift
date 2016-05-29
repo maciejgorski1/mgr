@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RealmSwift
 import Agrume
 
 class GalleryViewController: UICollectionViewController {
@@ -31,18 +30,6 @@ class GalleryViewController: UICollectionViewController {
         layout.itemSize = CGSize(width: CGRectGetWidth(view.bounds), height: CGRectGetHeight(view.bounds))
     }
 
-//    override func viewWillAppear(animated: Bool) {
-//
-//    }
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//
-//        if (segue.identifier == "seg_imageSlider") {
-//
-//            imageSliderVC = segue.destinationViewController as! TNImageSliderViewController
-//
-//        }
-//
-//    }
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return images.count
     }

@@ -8,7 +8,6 @@
 
 import UIKit
 import GoogleMaps
-import RealmSwift
 import SwiftyJSON
 import SCLAlertView
 
