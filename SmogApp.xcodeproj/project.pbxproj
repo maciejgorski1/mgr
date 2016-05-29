@@ -21,8 +21,6 @@
 		054E2E051C81B3C1004AAACD /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 054E2E041C81B3C1004AAACD /* SWRevealViewController.m */; };
 		057B3C031C81A5C800FCCC8B /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057B3C021C81A5C800FCCC8B /* RequestManager.swift */; };
 		058945361CB3CD6F00FBD163 /* StationsCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058945351CB3CD6F00FBD163 /* StationsCoordinates.swift */; };
-		058945381CB3CE6800FBD163 /* ActualModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058945371CB3CE6800FBD163 /* ActualModel.swift */; };
-		0589453A1CB3CF1F00FBD163 /* DetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058945391CB3CF1F00FBD163 /* DetailsModel.swift */; };
 		05899A0F1C81A0F4006068BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05899A0E1C81A0F4006068BD /* AppDelegate.swift */; };
 		05899A141C81A0F4006068BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05899A121C81A0F4006068BD /* Main.storyboard */; };
 		05899A161C81A0F4006068BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05899A151C81A0F4006068BD /* Assets.xcassets */; };
@@ -34,7 +32,6 @@
 		058D3B691CDE034C00CD84C8 /* nox.html in Resources */ = {isa = PBXBuildFile; fileRef = 058D3B681CDE034C00CD84C8 /* nox.html */; };
 		058D3B6B1CDE039500CD84C8 /* ozon.html in Resources */ = {isa = PBXBuildFile; fileRef = 058D3B6A1CDE039500CD84C8 /* ozon.html */; };
 		058D3B6D1CDE03E000CD84C8 /* benzen.html in Resources */ = {isa = PBXBuildFile; fileRef = 058D3B6C1CDE03E000CD84C8 /* benzen.html */; };
-		0599B6351C84B3380090257D /* PollutionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0599B6341C84B3380090257D /* PollutionModel.swift */; };
 		059BD5CD1CECC08300EA78D1 /* Catamaran-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 059BD5CB1CECC08300EA78D1 /* Catamaran-Regular.ttf */; };
 		059BD5CE1CECC08300EA78D1 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 059BD5CC1CECC08300EA78D1 /* Lato-Regular.ttf */; };
 		05A251DB1CDD242D004781D3 /* co.html in Resources */ = {isa = PBXBuildFile; fileRef = 05A251DA1CDD242D004781D3 /* co.html */; };
@@ -44,7 +41,6 @@
 		05C1C9CE1CA4565D007B9C4D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C1C9CD1CA4565D007B9C4D /* UIColorExtension.swift */; };
 		05C89E9F1CD2CBFC009730BE /* DemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C89E9E1CD2CBFC009730BE /* DemoCell.swift */; };
 		05ED1D021CCED01400F7F975 /* PollutionConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ED1D011CCED01400F7F975 /* PollutionConstant.swift */; };
-		05F4CC8A1CA337C800522EE0 /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F4CC891CA337C800522EE0 /* CityModel.swift */; };
 		D297617F1CE2F64C0077C267 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D297617E1CE2F64C0077C267 /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,8 +71,6 @@
 		054E2E041C81B3C1004AAACD /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		057B3C021C81A5C800FCCC8B /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RequestManager.swift; path = SmogApp/Managers/RequestManager.swift; sourceTree = "<group>"; };
 		058945351CB3CD6F00FBD163 /* StationsCoordinates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StationsCoordinates.swift; path = SmogApp/Constants/StationsCoordinates.swift; sourceTree = "<group>"; };
-		058945371CB3CE6800FBD163 /* ActualModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActualModel.swift; path = SmogApp/RealmModels/ActualModel.swift; sourceTree = "<group>"; };
-		058945391CB3CF1F00FBD163 /* DetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailsModel.swift; path = SmogApp/RealmModels/DetailsModel.swift; sourceTree = "<group>"; };
 		05899A0B1C81A0F4006068BD /* SmogApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmogApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05899A0E1C81A0F4006068BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05899A131C81A0F4006068BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -92,7 +86,6 @@
 		058D3B681CDE034C00CD84C8 /* nox.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = nox.html; path = SmogApp/Information/files/nox.html; sourceTree = "<group>"; };
 		058D3B6A1CDE039500CD84C8 /* ozon.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = ozon.html; path = SmogApp/Information/files/ozon.html; sourceTree = "<group>"; };
 		058D3B6C1CDE03E000CD84C8 /* benzen.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = benzen.html; path = SmogApp/Information/files/benzen.html; sourceTree = "<group>"; };
-		0599B6341C84B3380090257D /* PollutionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PollutionModel.swift; path = SmogApp/RealmModels/PollutionModel.swift; sourceTree = "<group>"; };
 		059BD5CB1CECC08300EA78D1 /* Catamaran-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Catamaran-Regular.ttf"; sourceTree = "<group>"; };
 		059BD5CC1CECC08300EA78D1 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		05A251DA1CDD242D004781D3 /* co.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = co.html; path = SmogApp/Information/co.html; sourceTree = "<group>"; };
@@ -102,7 +95,6 @@
 		05C1C9CD1CA4565D007B9C4D /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		05C89E9E1CD2CBFC009730BE /* DemoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoCell.swift; path = SmogApp/GalleryViewController/DemoCell.swift; sourceTree = "<group>"; };
 		05ED1D011CCED01400F7F975 /* PollutionConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PollutionConstant.swift; path = SmogApp/Constants/PollutionConstant.swift; sourceTree = "<group>"; };
-		05F4CC891CA337C800522EE0 /* CityModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
 		14032D218B46E7EB1F5A3933 /* Pods-SmogApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmogApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmogApp/Pods-SmogApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A922D983BDEB298DDFED8B75 /* Pods-SmogApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmogApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmogApp/Pods-SmogApp.release.xcconfig"; sourceTree = "<group>"; };
 		D297617E1CE2F64C0077C267 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = SmogApp/Extensions/Reachability.swift; sourceTree = "<group>"; };
@@ -218,7 +210,6 @@
 			children = (
 				058945341CB3CD3700FBD163 /* Constants */,
 				051B661B1C955F81008B0E40 /* Extenstions */,
-				0599B6331C84B3070090257D /* RealmModels */,
 				052558501C830FD000EB59EF /* GaleryViewController */,
 				0525584D1C830EB200EB59EF /* SettingsViewController */,
 				0525584A1C830C8E00EB59EF /* MenuViewController */,
@@ -284,17 +275,6 @@
 				058D3B6C1CDE03E000CD84C8 /* benzen.html */,
 			);
 			name = files;
-			sourceTree = "<group>";
-		};
-		0599B6331C84B3070090257D /* RealmModels */ = {
-			isa = PBXGroup;
-			children = (
-				0599B6341C84B3380090257D /* PollutionModel.swift */,
-				05F4CC891CA337C800522EE0 /* CityModel.swift */,
-				058945371CB3CE6800FBD163 /* ActualModel.swift */,
-				058945391CB3CF1F00FBD163 /* DetailsModel.swift */,
-			);
-			name = RealmModels;
 			sourceTree = "<group>";
 		};
 		059BD5CF1CECC08900EA78D1 /* Fonts */ = {
@@ -498,7 +478,6 @@
 				051E60F61C8302F7004FF0D1 /* MapVC.swift in Sources */,
 				052558491C83095300EB59EF /* InformationVC.swift in Sources */,
 				057B3C031C81A5C800FCCC8B /* RequestManager.swift in Sources */,
-				058945381CB3CE6800FBD163 /* ActualModel.swift in Sources */,
 				054A389D1CCC9F2E0079B159 /* ColorsConstants.swift in Sources */,
 				058945361CB3CD6F00FBD163 /* StationsCoordinates.swift in Sources */,
 				058B81331CD944FD00A14AB1 /* AlertTableViewCell.swift in Sources */,
@@ -506,12 +485,9 @@
 				054E2E051C81B3C1004AAACD /* SWRevealViewController.m in Sources */,
 				05C1C9CE1CA4565D007B9C4D /* UIColorExtension.swift in Sources */,
 				0508F9F01CD125180010A2E6 /* NSDateExtension.swift in Sources */,
-				0599B6351C84B3380090257D /* PollutionModel.swift in Sources */,
-				0589453A1CB3CF1F00FBD163 /* DetailsModel.swift in Sources */,
 				05A34CD41CA4933100EFDDB6 /* PollutionTypeTableViewCell.swift in Sources */,
 				052558521C83102000EB59EF /* GalleryViewController.swift in Sources */,
 				051164861CD8DDF900F844D9 /* AnnotationVC.swift in Sources */,
-				05F4CC8A1CA337C800522EE0 /* CityModel.swift in Sources */,
 				05B5526B1CD017BE006FEFFC /* SwiftOverlays.swift in Sources */,
 				05A34CD61CA4975800EFDDB6 /* TypesTableViewController.swift in Sources */,
 				0525584C1C830CAF00EB59EF /* MenuVCTableViewController.swift in Sources */,
