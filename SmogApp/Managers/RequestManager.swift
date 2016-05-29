@@ -12,7 +12,7 @@ import Alamofire
 typealias ResponseHandler = (response: Response<AnyObject, NSError>) -> Void
 
 struct RequestManager {
-    private static var BaseURL = {
+    private static var BaseURL: String {
 
         return "http://powietrze.malopolska.pl/_powietrzeapi/api/dane?act=danemiasta&ci_id="
 
@@ -37,7 +37,6 @@ struct RequestManager {
     static func citiesWithHandler(cityID: Int, completionHandler: ResponseHandler)
     {
         let url = "\(BaseURL)\(cityID)"
-        // debugPrint(url)
         manager.request(.GET, url, headers: headers).responseJSON(completionHandler: completionHandler)
     }
 }

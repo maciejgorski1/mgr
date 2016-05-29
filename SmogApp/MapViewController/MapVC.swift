@@ -138,6 +138,9 @@ class MapVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
                         callback(isFinished: true)
                     }
 
+                } else {
+                
+                
                 }
 
             })

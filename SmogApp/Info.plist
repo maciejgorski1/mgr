@@ -37,11 +37,9 @@
 	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
-			<key>powietrze.malopolska.pl/data/data.php?</key>
+			<key>powietrze.malopolska.pl</key>
 			<dict>
 				<key>NSIncludesSubdomains</key>
 				<true/>
