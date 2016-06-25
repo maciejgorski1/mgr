@@ -15,10 +15,13 @@
 		051E60F61C8302F7004FF0D1 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051E60F51C8302F7004FF0D1 /* MapVC.swift */; };
 		052558491C83095300EB59EF /* InformationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052558481C83095300EB59EF /* InformationVC.swift */; };
 		0525584C1C830CAF00EB59EF /* MenuVCTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525584B1C830CAF00EB59EF /* MenuVCTableViewController.swift */; };
-		0525584F1C830EDB00EB59EF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525584E1C830EDB00EB59EF /* SettingsViewController.swift */; };
+		0525584F1C830EDB00EB59EF /* AlertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525584E1C830EDB00EB59EF /* AlertsViewController.swift */; };
 		052558521C83102000EB59EF /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052558511C83102000EB59EF /* GalleryViewController.swift */; };
 		054A389D1CCC9F2E0079B159 /* ColorsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054A389C1CCC9F2E0079B159 /* ColorsConstants.swift */; };
 		054E2E051C81B3C1004AAACD /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 054E2E041C81B3C1004AAACD /* SWRevealViewController.m */; };
+		055EA4271D1EF2F700AD7819 /* Information.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 055EA4261D1EF2F700AD7819 /* Information.storyboard */; };
+		055EA42B1D1EF5F500AD7819 /* Gallery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 055EA42A1D1EF5F500AD7819 /* Gallery.storyboard */; };
+		055EA42D1D1EF6B500AD7819 /* Alerts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 055EA42C1D1EF6B500AD7819 /* Alerts.storyboard */; };
 		057B3C031C81A5C800FCCC8B /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057B3C021C81A5C800FCCC8B /* RequestManager.swift */; };
 		058945361CB3CD6F00FBD163 /* StationsCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058945351CB3CD6F00FBD163 /* StationsCoordinates.swift */; };
 		05899A0F1C81A0F4006068BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05899A0E1C81A0F4006068BD /* AppDelegate.swift */; };
@@ -63,12 +66,15 @@
 		051E60F51C8302F7004FF0D1 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapVC.swift; path = SmogApp/MapViewController/MapVC.swift; sourceTree = "<group>"; };
 		052558481C83095300EB59EF /* InformationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InformationVC.swift; path = SmogApp/Information/InformationVC.swift; sourceTree = "<group>"; };
 		0525584B1C830CAF00EB59EF /* MenuVCTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuVCTableViewController.swift; path = SmogApp/MenuVC/MenuVCTableViewController.swift; sourceTree = "<group>"; };
-		0525584E1C830EDB00EB59EF /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = SmogApp/SettingsViewController/SettingsViewController.swift; sourceTree = "<group>"; };
+		0525584E1C830EDB00EB59EF /* AlertsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertsViewController.swift; path = SmogApp/SettingsViewController/AlertsViewController.swift; sourceTree = "<group>"; };
 		052558511C83102000EB59EF /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GalleryViewController.swift; path = SmogApp/GalleryViewController/GalleryViewController.swift; sourceTree = "<group>"; };
 		054A389C1CCC9F2E0079B159 /* ColorsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorsConstants.swift; path = SmogApp/Constants/ColorsConstants.swift; sourceTree = "<group>"; };
 		054E2E021C81B3C1004AAACD /* SmogApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmogApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		054E2E031C81B3C1004AAACD /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		054E2E041C81B3C1004AAACD /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		055EA4261D1EF2F700AD7819 /* Information.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Information.storyboard; path = SmogApp/Information/Information.storyboard; sourceTree = "<group>"; };
+		055EA42A1D1EF5F500AD7819 /* Gallery.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Gallery.storyboard; path = SmogApp/GalleryViewController/Gallery.storyboard; sourceTree = "<group>"; };
+		055EA42C1D1EF6B500AD7819 /* Alerts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Alerts.storyboard; path = SmogApp/SettingsViewController/Alerts.storyboard; sourceTree = "<group>"; };
 		057B3C021C81A5C800FCCC8B /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RequestManager.swift; path = SmogApp/Managers/RequestManager.swift; sourceTree = "<group>"; };
 		058945351CB3CD6F00FBD163 /* StationsCoordinates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StationsCoordinates.swift; path = SmogApp/Constants/StationsCoordinates.swift; sourceTree = "<group>"; };
 		05899A0B1C81A0F4006068BD /* SmogApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmogApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +144,7 @@
 				051E60F51C8302F7004FF0D1 /* MapVC.swift */,
 				051164831CD8DAB900F844D9 /* AnnotationXib.xib */,
 				051164851CD8DDF900F844D9 /* AnnotationVC.swift */,
+				05899A121C81A0F4006068BD /* Main.storyboard */,
 			);
 			name = MapViewController;
 			sourceTree = "<group>";
@@ -147,6 +154,7 @@
 			children = (
 				058D3B651CDE02BE00CD84C8 /* files */,
 				052558481C83095300EB59EF /* InformationVC.swift */,
+				055EA4261D1EF2F700AD7819 /* Information.storyboard */,
 			);
 			name = InformationVC;
 			sourceTree = "<group>";
@@ -159,18 +167,20 @@
 			name = MenuViewController;
 			sourceTree = "<group>";
 		};
-		0525584D1C830EB200EB59EF /* SettingsViewController */ = {
+		0525584D1C830EB200EB59EF /* AlertsViewController */ = {
 			isa = PBXGroup;
 			children = (
 				058B81311CD944C100A14AB1 /* Cell */,
-				0525584E1C830EDB00EB59EF /* SettingsViewController.swift */,
+				0525584E1C830EDB00EB59EF /* AlertsViewController.swift */,
+				055EA42C1D1EF6B500AD7819 /* Alerts.storyboard */,
 			);
-			name = SettingsViewController;
+			name = AlertsViewController;
 			sourceTree = "<group>";
 		};
 		052558501C830FD000EB59EF /* GaleryViewController */ = {
 			isa = PBXGroup;
 			children = (
+				055EA42A1D1EF5F500AD7819 /* Gallery.storyboard */,
 				052558511C83102000EB59EF /* GalleryViewController.swift */,
 				05C89E9E1CD2CBFC009730BE /* DemoCell.swift */,
 			);
@@ -211,7 +221,7 @@
 				058945341CB3CD3700FBD163 /* Constants */,
 				051B661B1C955F81008B0E40 /* Extenstions */,
 				052558501C830FD000EB59EF /* GaleryViewController */,
-				0525584D1C830EB200EB59EF /* SettingsViewController */,
+				0525584D1C830EB200EB59EF /* AlertsViewController */,
 				0525584A1C830C8E00EB59EF /* MenuViewController */,
 				052558471C83092C00EB59EF /* InformationVC */,
 				051E60F41C8302A8004FF0D1 /* MapViewController */,
@@ -239,7 +249,6 @@
 			children = (
 				059BD5CF1CECC08900EA78D1 /* Fonts */,
 				05899A0E1C81A0F4006068BD /* AppDelegate.swift */,
-				05899A121C81A0F4006068BD /* Main.storyboard */,
 				05899A151C81A0F4006068BD /* Assets.xcassets */,
 				05899A171C81A0F4006068BD /* LaunchScreen.storyboard */,
 				05899A1A1C81A0F4006068BD /* Info.plist */,
@@ -399,8 +408,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				058D3B6B1CDE039500CD84C8 /* ozon.html in Resources */,
+				055EA42B1D1EF5F500AD7819 /* Gallery.storyboard in Resources */,
+				055EA42D1D1EF6B500AD7819 /* Alerts.storyboard in Resources */,
 				058D3B691CDE034C00CD84C8 /* nox.html in Resources */,
 				058D3B671CDE02F200CD84C8 /* so2.html in Resources */,
+				055EA4271D1EF2F700AD7819 /* Information.storyboard in Resources */,
 				059BD5CD1CECC08300EA78D1 /* Catamaran-Regular.ttf in Resources */,
 				051164841CD8DAB900F844D9 /* AnnotationXib.xib in Resources */,
 				05899A191C81A0F4006068BD /* LaunchScreen.storyboard in Resources */,
@@ -495,7 +507,7 @@
 				051B661D1C955FA8008B0E40 /* StringExtension.swift in Sources */,
 				05ED1D021CCED01400F7F975 /* PollutionConstant.swift in Sources */,
 				D297617F1CE2F64C0077C267 /* Reachability.swift in Sources */,
-				0525584F1C830EDB00EB59EF /* SettingsViewController.swift in Sources */,
+				0525584F1C830EDB00EB59EF /* AlertsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +536,7 @@
 				05899A131C81A0F4006068BD /* Base */,
 			);
 			name = Main.storyboard;
+			path = SmogApp;
 			sourceTree = "<group>";
 		};
 		05899A171C81A0F4006068BD /* LaunchScreen.storyboard */ = {

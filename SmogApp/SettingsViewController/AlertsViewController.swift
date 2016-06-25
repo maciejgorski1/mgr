@@ -9,7 +9,7 @@
 import UIKit
 import SwiftyJSON
 
-class SettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AlertsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var menuButton: UIBarButtonItem!

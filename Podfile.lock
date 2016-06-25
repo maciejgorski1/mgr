@@ -2,11 +2,6 @@ PODS:
   - Agrume (2.3.0)
   - Alamofire (3.2.0)
   - GoogleMaps (1.13.1)
-  - Realm (0.98.3):
-    - Realm/Headers (= 0.98.3)
-  - Realm/Headers (0.98.3)
-  - RealmSwift (0.98.3):
-    - Realm (= 0.98.3)
   - SCLAlertView (0.5.6)
   - SwiftyJSON (2.3.2)
 
@@ -14,7 +9,6 @@ DEPENDENCIES:
   - Agrume (from `https://github.com/JanGorman/Agrume.git`)
   - Alamofire (<= 3.2.0)
   - GoogleMaps
-  - RealmSwift (<= 0.98.3)
   - SCLAlertView
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
 
@@ -36,8 +30,6 @@ SPEC CHECKSUMS:
   Agrume: 7ac838a5be139db6ea452de479c417264cd5650d
   Alamofire: 4da478599fccddff361205c8929333d7fe18dceb
   GoogleMaps: 8935220056a6cc8e9ca298b4da4ae530620aa71b
-  Realm: c6a7d00221a2d5177810a674aebd40c5e0b70b0f
-  RealmSwift: d6ecad6e4c2a645d6ac956c2c7e9efb375f39c31
   SCLAlertView: c2b916952520d96cf5e886a38053f1b8c3da502e
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
