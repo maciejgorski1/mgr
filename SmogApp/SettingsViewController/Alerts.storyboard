@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -41,35 +41,25 @@
                                                     <color key="textColor" red="0.37346329810000001" green="0.56417074550000001" blue="0.21993037200000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CXd-KX-Nwm">
-                                                    <rect key="frame" x="8" y="29" width="584" height="63"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.97959807980000002" green="0.00202645271" blue="0.05047540406" alpha="0.81842672409999995" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gT5-qK-qmb" customClass="UIWebView">
+                                                    <rect key="frame" x="8" y="37" width="584" height="55"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="CXd-KX-Nwm" secondAttribute="trailing" id="Dxh-6L-2Vd"/>
-                                                <constraint firstItem="CXd-KX-Nwm" firstAttribute="leading" secondItem="F7t-Fp-dDR" secondAttribute="leadingMargin" id="EvA-QP-hGw"/>
-                                                <constraint firstItem="EOP-2Z-lSs" firstAttribute="centerX" secondItem="CXd-KX-Nwm" secondAttribute="centerX" id="FkR-uS-Lae"/>
-                                                <constraint firstItem="CXd-KX-Nwm" firstAttribute="top" secondItem="EOP-2Z-lSs" secondAttribute="bottom" constant="8" id="Y09-HN-fud"/>
-                                                <constraint firstItem="CXd-KX-Nwm" firstAttribute="top" secondItem="F7t-Fp-dDR" secondAttribute="topMargin" constant="21" id="aGj-K1-tzZ"/>
+                                                <constraint firstItem="gT5-qK-qmb" firstAttribute="top" secondItem="EOP-2Z-lSs" secondAttribute="bottom" constant="16" id="HXS-lh-J5M"/>
+                                                <constraint firstAttribute="trailing" secondItem="gT5-qK-qmb" secondAttribute="trailing" constant="8" id="VkE-qn-DsX"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="EOP-2Z-lSs" secondAttribute="trailing" id="eZl-1y-XDu"/>
+                                                <constraint firstAttribute="bottom" secondItem="gT5-qK-qmb" secondAttribute="bottom" constant="8" id="fsC-wT-mr5"/>
+                                                <constraint firstItem="gT5-qK-qmb" firstAttribute="leading" secondItem="F7t-Fp-dDR" secondAttribute="leading" constant="8" id="lq4-8t-hXV"/>
                                                 <constraint firstItem="EOP-2Z-lSs" firstAttribute="leading" secondItem="F7t-Fp-dDR" secondAttribute="leadingMargin" id="nC1-ff-LTN"/>
-                                                <constraint firstItem="CXd-KX-Nwm" firstAttribute="bottom" secondItem="F7t-Fp-dDR" secondAttribute="bottomMargin" id="nJY-Yg-HsL"/>
                                                 <constraint firstItem="EOP-2Z-lSs" firstAttribute="top" secondItem="F7t-Fp-dDR" secondAttribute="top" id="p23-y2-Veb"/>
                                             </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="FkR-uS-Lae"/>
-                                                    <exclude reference="aGj-K1-tzZ"/>
-                                                </mask>
-                                            </variation>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.98097690879999999" green="1" blue="0.9827699392" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="cityLabel" destination="EOP-2Z-lSs" id="e8o-hj-Isz"/>
-                                            <outlet property="textlabel" destination="CXd-KX-Nwm" id="8OC-iM-AJF"/>
+                                            <outlet property="webviewContenView" destination="gT5-qK-qmb" id="Nzw-W7-lNC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

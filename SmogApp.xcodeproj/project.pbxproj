@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		034D323F0DED150C62D1A1A3 /* Pods_SmogApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00FBF8F5BB91CA8CA73AE94A /* Pods_SmogApp.framework */; };
 		0508F9F01CD125180010A2E6 /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0508F9EF1CD125180010A2E6 /* NSDateExtension.swift */; };
 		051164841CD8DAB900F844D9 /* AnnotationXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 051164831CD8DAB900F844D9 /* AnnotationXib.xib */; };
 		051164861CD8DDF900F844D9 /* AnnotationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051164851CD8DDF900F844D9 /* AnnotationVC.swift */; };
@@ -44,7 +43,9 @@
 		05C1C9CE1CA4565D007B9C4D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C1C9CD1CA4565D007B9C4D /* UIColorExtension.swift */; };
 		05C89E9F1CD2CBFC009730BE /* DemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C89E9E1CD2CBFC009730BE /* DemoCell.swift */; };
 		05ED1D021CCED01400F7F975 /* PollutionConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ED1D011CCED01400F7F975 /* PollutionConstant.swift */; };
+		41BF429841A5D4DC9CEAE280 /* Pods_SmogAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E40F84BB5F1A03A51765F9E /* Pods_SmogAppTests.framework */; };
 		D297617F1CE2F64C0077C267 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D297617E1CE2F64C0077C267 /* Reachability.swift */; };
+		E940AA408B512F7458710694 /* Pods_SmogApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A405D03461529188F7B169 /* Pods_SmogApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +59,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00FBF8F5BB91CA8CA73AE94A /* Pods_SmogApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmogApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0508F9EF1CD125180010A2E6 /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSDateExtension.swift; path = SmogApp/Extensions/NSDateExtension.swift; sourceTree = "<group>"; };
 		051164831CD8DAB900F844D9 /* AnnotationXib.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AnnotationXib.xib; path = SmogApp/MapViewController/AnnotationXib.xib; sourceTree = "<group>"; };
 		051164851CD8DDF900F844D9 /* AnnotationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnnotationVC.swift; path = SmogApp/MapViewController/AnnotationVC.swift; sourceTree = "<group>"; };
@@ -101,9 +101,13 @@
 		05C1C9CD1CA4565D007B9C4D /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		05C89E9E1CD2CBFC009730BE /* DemoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoCell.swift; path = SmogApp/GalleryViewController/DemoCell.swift; sourceTree = "<group>"; };
 		05ED1D011CCED01400F7F975 /* PollutionConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PollutionConstant.swift; path = SmogApp/Constants/PollutionConstant.swift; sourceTree = "<group>"; };
-		14032D218B46E7EB1F5A3933 /* Pods-SmogApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmogApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmogApp/Pods-SmogApp.debug.xcconfig"; sourceTree = "<group>"; };
-		A922D983BDEB298DDFED8B75 /* Pods-SmogApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmogApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmogApp/Pods-SmogApp.release.xcconfig"; sourceTree = "<group>"; };
+		1E40F84BB5F1A03A51765F9E /* Pods_SmogAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmogAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39019C3EACF29287E0D578DD /* Pods-SmogAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmogAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmogAppTests/Pods-SmogAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		A9E88409D69E5E67C1202F40 /* Pods-SmogAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmogAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmogAppTests/Pods-SmogAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C7AC07AD90AE4AE3BC392E42 /* Pods-SmogApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmogApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmogApp/Pods-SmogApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D297617E1CE2F64C0077C267 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = SmogApp/Extensions/Reachability.swift; sourceTree = "<group>"; };
+		DDD4D2C11416AD5B2A1B8E90 /* Pods-SmogApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmogApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmogApp/Pods-SmogApp.release.xcconfig"; sourceTree = "<group>"; };
+		E6A405D03461529188F7B169 /* Pods_SmogApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmogApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				034D323F0DED150C62D1A1A3 /* Pods_SmogApp.framework in Frameworks */,
+				E940AA408B512F7458710694 /* Pods_SmogApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41BF429841A5D4DC9CEAE280 /* Pods_SmogAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,8 +235,8 @@
 				05899A0D1C81A0F4006068BD /* SmogApp */,
 				05899A221C81A0F5006068BD /* SmogAppTests */,
 				05899A0C1C81A0F4006068BD /* Products */,
-				40CD6AE5B97DD0F9FDA87CC8 /* Pods */,
-				3889CBDF414A70C44ECD403B /* Frameworks */,
+				18F34A30F258249E51D9D365 /* Pods */,
+				97F067B2FDFF845162E0F55C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -304,21 +309,24 @@
 			name = Filter;
 			sourceTree = "<group>";
 		};
-		3889CBDF414A70C44ECD403B /* Frameworks */ = {
+		18F34A30F258249E51D9D365 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				00FBF8F5BB91CA8CA73AE94A /* Pods_SmogApp.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		40CD6AE5B97DD0F9FDA87CC8 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				14032D218B46E7EB1F5A3933 /* Pods-SmogApp.debug.xcconfig */,
-				A922D983BDEB298DDFED8B75 /* Pods-SmogApp.release.xcconfig */,
+				C7AC07AD90AE4AE3BC392E42 /* Pods-SmogApp.debug.xcconfig */,
+				DDD4D2C11416AD5B2A1B8E90 /* Pods-SmogApp.release.xcconfig */,
+				A9E88409D69E5E67C1202F40 /* Pods-SmogAppTests.debug.xcconfig */,
+				39019C3EACF29287E0D578DD /* Pods-SmogAppTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		97F067B2FDFF845162E0F55C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6A405D03461529188F7B169 /* Pods_SmogApp.framework */,
+				1E40F84BB5F1A03A51765F9E /* Pods_SmogAppTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,12 +336,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05899A281C81A0F5006068BD /* Build configuration list for PBXNativeTarget "SmogApp" */;
 			buildPhases = (
-				B205FC46FE085DDCD536E951 /* Check Pods Manifest.lock */,
+				150A622BD2E8C856F7317F86 /* [CP] Check Pods Manifest.lock */,
 				05899A071C81A0F4006068BD /* Sources */,
 				05899A081C81A0F4006068BD /* Frameworks */,
 				05899A091C81A0F4006068BD /* Resources */,
-				55E09AAB4A75217F1F4D5695 /* Embed Pods Frameworks */,
-				6B64137510E6DABA977BA143 /* Copy Pods Resources */,
+				4F783AE5CE153CB080B9B002 /* [CP] Embed Pods Frameworks */,
+				17D90A5ADFB79295311ACE98 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -348,9 +356,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05899A2B1C81A0F5006068BD /* Build configuration list for PBXNativeTarget "SmogAppTests" */;
 			buildPhases = (
+				C3A506B9DD3178B45352971F /* [CP] Check Pods Manifest.lock */,
 				05899A1B1C81A0F5006068BD /* Sources */,
 				05899A1C1C81A0F5006068BD /* Frameworks */,
 				05899A1D1C81A0F5006068BD /* Resources */,
+				C5C42D513F50A410987C2C35 /* [CP] Embed Pods Frameworks */,
+				6B3CE311C134B7A61EA83F29 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -435,29 +446,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		55E09AAB4A75217F1F4D5695 /* Embed Pods Frameworks */ = {
+		150A622BD2E8C856F7317F86 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmogApp/Pods-SmogApp-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		6B64137510E6DABA977BA143 /* Copy Pods Resources */ = {
+		17D90A5ADFB79295311ACE98 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,19 +476,64 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmogApp/Pods-SmogApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B205FC46FE085DDCD536E951 /* Check Pods Manifest.lock */ = {
+		4F783AE5CE153CB080B9B002 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmogApp/Pods-SmogApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B3CE311C134B7A61EA83F29 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmogAppTests/Pods-SmogAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3A506B9DD3178B45352971F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C5C42D513F50A410987C2C35 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmogAppTests/Pods-SmogAppTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -633,7 +689,7 @@
 		};
 		05899A291C81A0F5006068BD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14032D218B46E7EB1F5A3933 /* Pods-SmogApp.debug.xcconfig */;
+			baseConfigurationReference = C7AC07AD90AE4AE3BC392E42 /* Pods-SmogApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -652,7 +708,7 @@
 		};
 		05899A2A1C81A0F5006068BD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A922D983BDEB298DDFED8B75 /* Pods-SmogApp.release.xcconfig */;
+			baseConfigurationReference = DDD4D2C11416AD5B2A1B8E90 /* Pods-SmogApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -670,6 +726,7 @@
 		};
 		05899A2C1C81A0F5006068BD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9E88409D69E5E67C1202F40 /* Pods-SmogAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SmogAppTests/Info.plist;
@@ -682,6 +739,7 @@
 		};
 		05899A2D1C81A0F5006068BD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39019C3EACF29287E0D578DD /* Pods-SmogAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SmogAppTests/Info.plist;

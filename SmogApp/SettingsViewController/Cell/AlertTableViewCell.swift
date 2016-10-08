@@ -10,6 +10,6 @@ import UIKit
 
 class AlertTableViewCell: UITableViewCell {
     @IBOutlet weak var cityLabel: UILabel!
-    @IBOutlet weak var textlabel: UILabel!
+    @IBOutlet weak var webviewContenView: UIWebView!
 
 }

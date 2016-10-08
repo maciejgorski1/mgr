@@ -11,13 +11,14 @@ import SwiftyJSON
 import SCLAlertView
 
 
-class AlertsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AlertsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIWebViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     var alerts = [String: String]()
-    
+    var contentHeights : [CGFloat] = [0.0, 0.0]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -91,13 +92,31 @@ class AlertsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let htmlHeight = contentHeights[indexPath.row]
+
         let cell = tableView.dequeueReusableCellWithIdentifier("alertCell", forIndexPath: indexPath) as! AlertTableViewCell
         let sortedAllerts = self.alerts.keys.sort()
         let alertIndex = [sortedAllerts[indexPath.row]].first!
         let messagesArray = self.alerts[alertIndex]
-        
+
         cell.cityLabel.text = alertIndex
-        cell.textlabel.text = messagesArray
+        cell.webviewContenView.tag = indexPath.row
+        cell.webviewContenView.delegate = self
+        cell.webviewContenView.loadHTMLString(messagesArray!, baseURL: nil)
+        cell.webviewContenView.frame = CGRectMake(0, 0, cell.frame.size.width, htmlHeight)
         return cell
+    }
+
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
+    {
+        return 150
+    }
+
+    func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        if navigationType == UIWebViewNavigationType.LinkClicked {
+            UIApplication.sharedApplication().openURL(request.URL!)
+            return false
+        }
+        return true
     }
 }
