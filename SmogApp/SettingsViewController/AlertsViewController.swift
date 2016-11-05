@@ -17,7 +17,6 @@ class AlertsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     var alerts = [String: String]()
-    var contentHeights : [CGFloat] = [0.0, 0.0]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,7 +91,6 @@ class AlertsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let htmlHeight = contentHeights[indexPath.row]
 
         let cell = tableView.dequeueReusableCellWithIdentifier("alertCell", forIndexPath: indexPath) as! AlertTableViewCell
         let sortedAllerts = self.alerts.keys.sort()
@@ -103,7 +101,7 @@ class AlertsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.webviewContenView.tag = indexPath.row
         cell.webviewContenView.delegate = self
         cell.webviewContenView.loadHTMLString(messagesArray!, baseURL: nil)
-        cell.webviewContenView.frame = CGRectMake(0, 0, cell.frame.size.width, htmlHeight)
+        cell.webviewContenView.frame = CGRectMake(0, 0, cell.frame.size.width, 350)
         return cell
     }
 
