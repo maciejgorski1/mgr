@@ -8,15 +8,11 @@
 
 import UIKit
 
-protocol TypesTableViewControllerDelegate: class {
-    func typesController(controller: TypesTableViewController, didSelectTypes types: [String])
-}
 
 class TypesTableViewController: UITableViewController {
 
     var possibleTypesDictionary = [String: String]()
     var selectedTypes: [String]!
-    weak var delegate: TypesTableViewControllerDelegate!
     var selectedKey = ""
 
     func getLanguageDictionary () -> Dictionary<String, String> {
